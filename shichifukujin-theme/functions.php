@@ -9,13 +9,12 @@ function add_async_defer_script($url) {
       return $url;
   }
   add_filter('clean_url', 'add_async_defer_script', 11, 1);
-   
+
 
   function enqueue_scripts() {
     $version = '1.0.0';
     wp_enqueue_style('css-reset',DIRE.'/styles/vendors/css-reset.css',array(), $version);
-    wp_enqueue_style('fonts-adobi','https://use.typekit.net/bkx0sau.css', false);
-    wp_enqueue_style('fonts-googleapis','https://fonts.googleapis.com/css?family=Noto+Sans+JP:wght@300;500;700|family=Noto+Serif+JP:wght@300;500;700&display=swap', false);
+    wp_enqueue_style('fonts-googleapis','https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:wght@400;800|family=Noto+Sans+JP:wght@400;600&display=swap', false);
     wp_enqueue_style('swiper-bundle.min.css',DIRE.'/styles/vendors/swiper-bundle.min.css',array(), $version);
     wp_enqueue_style('style.css',DIRE.'/style.css',array(), $version);
     wp_enqueue_script('fontawesome','https://kit.fontawesome.com/2bf622374b.js', false);
@@ -44,7 +43,7 @@ add_filter('document_title_parts','my_document_title_parts');
 function my_document_title_parts($title){
  if(is_home()){
   unset($title['tagline']);
-  $title['title']= 'aomaruOriginalThema';
+  $title['title']= '社会福祉法人天佑会七福神';
  }
  return $title;
 }
