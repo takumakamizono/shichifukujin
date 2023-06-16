@@ -31,15 +31,18 @@ main {
   z-index: 100;
   @include mq(lg) {
     height: $navHeight;
-    background: $mainColor-o;
+    background: $cWhite;
+    border-bottom: 2px solid $mainColor;
   }
 
   &.triggered {
-    background: rgba(46, 87, 149, 0.3);
+    background: rgba(238, 238, 238, 0.5);
     box-shadow: 0px 0 28px -3px rgba(102, 102, 102, 0.5);
+    border-bottom: 2px solid $mainColor-o;
   }
 
   &__inner {
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,11 +54,11 @@ main {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-
     display: none;
-
     @include mq(lg) {
-      display: block;
+      display: flex;
+      align-items: center;
+      height: 100%;
     }
   }
 
@@ -64,16 +67,22 @@ main {
     align-items: center;
     list-style: none;
     padding: 0;
+    height: 100%;
   }
 
   &__li {
-    margin: 5px;
+    display: flex;
+    align-items: center;
     position: relative;
+    height: 100%;
     & > a {
-      color: $cWhite;
+      color: $main-txt;
       text-decoration: none;
       text-transform: uppercase;
       padding: 10px 15px;
+      height: 100%;
+      display: flex;
+      align-items: center;
     }
     &:not(:nth-child(5), :last-child) {
       &.current-menu-item {
@@ -95,8 +104,12 @@ main {
       background: $cBtnColor;
       padding: 10px 15px;
       box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+      & > a {
+        color: $cWhite;
+        font-weight: 800;
+      }
       &:hover {
-        background-color: $mainColor;
+        background-color: $SubColor;
         box-shadow: none;
       }
     }
