@@ -11,7 +11,7 @@ class HeroSlider {
       effect: "fade",
       centeredSlides: true,
       slidesPerView: 1,
-      speed: 3000,
+      speed: 4000,
       stopOnLastSlide: true,
       crossFade: true,
     });
@@ -20,7 +20,7 @@ class HeroSlider {
   start(options = {}) {
     options = Object.assign(
       {
-        delay: 4000,
+        delay: 6000,
         disableOnInteraction: false,
       },
       options

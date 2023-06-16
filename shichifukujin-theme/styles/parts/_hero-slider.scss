@@ -36,12 +36,6 @@
     & .hero__title {
       opacity: 1;
       transform: translate(-50%, -50%);
-      &::before {
-        @include animation($name: hero_scaleX, $duration: 0.8s, $delay: 1.5s);
-      }
-      &::after {
-        @include animation($name: hero_scaleX, $duration: 0.9s, $delay: 1.7s);
-      }
     }
     & .hero__logo {
       opacity: 1;
@@ -71,49 +65,14 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, calc(-50% + 20px));
+    transform: translate(-50%, calc(-50% + 40px));
     color: $cWhite;
     font-size: 16px;
     letter-spacing: 0.1em;
     font-weight: 700;
     z-index: 2;
     opacity: 0;
-    transition: opacity 1s ease 1s, transform 1.2s ease 1s;
-    @include mq(sm) {
-      font-size: 20px;
-    }
-    @include mq(md) {
-      text-align: left;
-      width: 90%;
-      top: 70%;
-      font-size: 25px;
-      letter-spacing: 0.3em;
-    }
-    @include mq(lg) {
-      font-size: 30px;
-    }
-    @include mq(xl) {
-      font-size: 40px;
-    }
-    &::before,
-    &::after {
-      display: block;
-      position: absolute;
-      content: "";
-      height: 2px;
-      width: 95%;
-      margin: 0 auto;
-      bottom: 10%;
-      left: 0;
-      background: $mainColor;
-      transform: scaleX(0);
-      transform-origin: left;
-    }
-    &::after {
-      bottom: 5%;
-      height: 1px;
-      background: $cWhite;
-    }
+    transition: opacity 2s ease 2s, transform 2s ease 2s;
   }
   &__logo {
     width: 100%;

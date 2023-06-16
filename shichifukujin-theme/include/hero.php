@@ -3,7 +3,9 @@
             <div class="swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="hero__title">美しい天降川や霧島の山々</div>
+                  <div class="hero__title">
+                  <img class="hero__title-img" src="<?= get_template_directory_uri(); ?>/images/hero_title.png" alt="">
+                  </div>
                 <?php if(get_field('top_img01',222)): ?>      
               <img src="<?php the_field('top_img01',222);?>" alt="スライド画像01">
               <?php else: ?>
@@ -11,7 +13,9 @@
               <?php endif; ?>
                 </div>
                 <div class="swiper-slide">
-                  <div class="hero__title">そこに住む人々の環境を守りながら</div>
+                  <div class="hero__title">
+                  <img class="hero__title-img" src="<?= get_template_directory_uri(); ?>/images/hero_title.png" alt="">
+                  </div>
                   <?php if(get_field('top_img02',222)): ?>      
               <img src="<?php the_field('top_img02',222);?>" alt="スライド画像02">
               <?php else: ?>
@@ -19,8 +23,10 @@
               <?php endif; ?>
                 </div>
                 <div class="swiper-slide" data-swiper-autoplay="6000">
-                  <div class="hero__title">皆さまとともに歩み続けます</div>
-                  <div class="hero__logo">株式会社川原建設</div>
+                  <div class="hero__title">
+                  <img class="hero__title-img" src="<?= get_template_directory_uri(); ?>/images/hero_title.png" alt="">
+                  </div>
+                 
                   <?php if(get_field('top_img03',222)): ?>      
               <img src="<?php the_field('top_img03',222);?>" alt="スライド画像03">
               <?php else: ?>
