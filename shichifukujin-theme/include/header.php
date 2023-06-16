@@ -1,7 +1,14 @@
 <div class="header__inner appear up">
             <h1 class="logo item">
+            
               <a href="<?= esc_url(home_url('/')); ?>">
-             original theme 
+              <div class="logo__img">
+              <img class="logo__img" src="<?= get_template_directory_uri(); ?>/images/logo.png" alt="">
+              </div>
+              <div class="logo__tit">
+                <span>社会福祉法人</span>
+             <span>天佑会</span> 
+             </div>
              </a>
 </h1>
             <nav class="header__nav">
