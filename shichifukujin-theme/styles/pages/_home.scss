@@ -312,10 +312,16 @@ main {
 }
 
 .company {
-  background: $cBgGray;
+  padding-top: 50px;
+  background-image: url(./images/company-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   @extend .mb-lg;
-
   &__inner {
+    @extend .content-width;
+  }
+  &__overview,
+  &__institution {
     position: relative;
     z-index: 0;
     @extend .flex;
@@ -332,10 +338,8 @@ main {
     @extend .mb-sm;
     height: 300px;
     transition: box-shadow 0.5s ease 1.6s;
-
-    &.inview {
-      box-shadow: inset 0 0 30px $mainColor;
-    }
+    border: 5px solid $cWhite;
+    border-radius: 10px;
 
     @include mq(md) {
       flex-basis: 50%;
@@ -365,8 +369,11 @@ main {
       align-items: flex-end;
       flex-basis: 47%;
     }
+    @include mq(lg) {
+      padding: 50px 0px 50px 100px;
+    }
     @include mq(xl) {
-      padding: 50px 0px 50px 300px;
+      padding: 50px 0px 50px 200px;
     }
 
     &.inview {
@@ -381,7 +388,10 @@ main {
     position: relative;
     font-size: 30px;
     @include mq(lg) {
-      font-size: 60px;
+      font-size: 50px;
+    }
+    @include mq(xl) {
+      font-size: 55px;
     }
 
     &::before {
@@ -407,6 +417,7 @@ main {
   }
 
   &__description {
+    color: $cWhite;
     @include mq(lg) {
       margin-bottom: 40px;
     }
