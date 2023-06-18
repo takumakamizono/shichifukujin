@@ -433,6 +433,88 @@ main {
   }
 }
 
+.detailed-info {
+  position: relative;
+  @extend .mb-lg;
+  &__inner {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1080px;
+    @extend .flex;
+    justify-content: space-between;
+  }
+  &__block {
+    position: relative;
+    margin-bottom: 60px;
+    @include mq(md) {
+      flex-basis: 49%;
+    }
+    @include mq(lg) {
+      flex-basis: 32%;
+    }
+  }
+
+  &__text {
+    background: $cWhite;
+    padding: 15px 20px;
+
+    & > a {
+      background: $mainColor;
+      color: $cWhite;
+    }
+  }
+  &__desc {
+    margin-bottom: 10px;
+  }
+  &__tit {
+    z-index: 100;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    display: inline-block;
+    background: $SubColor;
+    @extend .font-sm;
+    color: $cWhite;
+    font-weight: 600;
+    padding: 15px 20px;
+  }
+  &__bg {
+    height: 77.5%;
+    background: $BgColor;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    &::before {
+      content: "";
+      background: url(./images/detailed-bg-top-sp.png) no-repeat center/cover;
+      top: -90px;
+      height: 90px;
+      position: absolute;
+      width: 100%;
+      @include mq(lg) {
+        top: -295px;
+        height: 296px;
+        background: url(./images/detailed-bg-t.png) no-repeat center/cover;
+      }
+    }
+    &::after {
+      content: "";
+      bottom: -90px;
+      width: 100%;
+      height: 90px;
+      position: absolute;
+      background: url(./images/detailed-bg-sp.png) no-repeat center/cover;
+      @include mq(lg) {
+        bottom: -296px;
+        height: 296px;
+        background: url(./images/detailed-bg.png) no-repeat center/cover;
+      }
+    }
+  }
+}
+
 .works {
   @extend .content-width;
   @extend .mb-lg;
