@@ -39,7 +39,6 @@
 
   &.shadow {
     box-shadow: none;
-
     &:hover {
       transform: translate(-0.3px, -0.3px);
       box-shadow: 2px 2px 4px 0 rgba(46, 88, 149, 0.6);
@@ -47,8 +46,11 @@
   }
 
   &.solid {
-    box-shadow: 2px 2px 0 0 $cBlack;
+    box-shadow: 2px 2px 0 0 $cRedColor-s;
     border-radius: 7px;
+    background: $cRedColor;
+    color: $cWhite;
+    font-weight: 900;
 
     &:hover {
       transform: translate(2px, 2px);
@@ -116,6 +118,27 @@
         transform: none;
         opacity: 1;
       }
+    }
+  }
+  &.shadow02 {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 500px;
+    color: $cWhite;
+    background-color: $cRedColor;
+    border-bottom: 5px solid $cRedColor-s;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 0;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 100;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: bold;
+    &:hover {
+      margin-top: 3px;
+      border-bottom: 2px solid $cRedColor-s;
     }
   }
 }
