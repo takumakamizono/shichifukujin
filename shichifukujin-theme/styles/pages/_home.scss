@@ -812,7 +812,7 @@ main {
     }
 
     & > a {
-      color: $cWhite;
+      color: $main-txt;
       text-decoration: none;
     }
     &:last-child {
@@ -823,26 +823,26 @@ main {
   }
 
   & .logo {
-    font-size: 17px;
-
-    @include mq(lg) {
-      font-size: 35px;
+    justify-content: center;
+    @include mq(md) {
+      justify-content: flex-start;
+    }
+    & > a {
+      text-decoration: none;
+      color: $mainColor;
       display: flex;
       align-items: center;
     }
-    &::before {
-      height: 24px;
-      width: 24px;
-      margin-right: 5px;
-      content: "";
-      display: inline-block;
-      vertical-align: middle;
-      background: url(./images/logo_white.png) no-repeat;
-      background-size: contain;
-      @include mq(lg) {
-        height: 35px;
-        width: 35px;
+    &__tit {
+      & span {
+        font-size: 25px;
+        &:nth-child(1) {
+          font-size: 12px;
+        }
       }
+    }
+    &__img {
+      padding: 4px;
     }
   }
   &__address {
@@ -850,7 +850,7 @@ main {
     list-style: none;
     padding: 0;
     @extend .font-sm;
-    color: $cWhite;
+
     @extend .mb-sm;
   }
   &__copyright {
@@ -870,16 +870,6 @@ main {
     & img {
       margin: 0 auto;
     }
-  }
-}
-
-.logo {
-  font-size: 30px;
-  display: flex;
-  color: $cWhite;
-  font-weight: 600;
-  &__img {
-    height: 100%;
   }
 }
 
