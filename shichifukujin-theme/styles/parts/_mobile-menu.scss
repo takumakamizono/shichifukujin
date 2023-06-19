@@ -14,19 +14,38 @@ $cMenuOpen: $cWhite;
   }
 
   & .logo {
-    padding: 0 40px;
-    font-size: 23px;
-    color: $mainColor;
-    font-weight: 800;
-    margin-bottom: 10px;
+    justify-content: center;
+
+    & > a {
+      text-decoration: none;
+      color: $mainColor;
+      display: flex;
+      align-items: center;
+    }
+    &__tit {
+      & span {
+        font-size: 25px;
+        &:nth-child(1) {
+          font-size: 12px;
+        }
+      }
+    }
+    &__img {
+      padding: 4px;
+    }
   }
 
   &__btn {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
     background-color: unset;
     border: none;
     outline: none !important;
     cursor: pointer;
-
+    background: $mainColor;
     @include mq(lg) {
       display: none;
     }

@@ -109,7 +109,7 @@ img {
 }
 
 .main-title {
-  @extend .font-xl;
+  @extend .font-lg;
 
   margin-bottom: 0;
   display: block;
@@ -438,5 +438,15 @@ img {
         }
       }
     }
+  }
+}
+
+.logo {
+  font-size: 30px;
+  display: flex;
+  color: $cWhite;
+  font-weight: 600;
+  &__img {
+    width: 30px;
   }
 }
