@@ -231,8 +231,8 @@ main {
       border-radius: 2px;
       flex-basis: 18%;
       text-align: center;
-      background-color: $mainColor;
-      color: $cWhite;
+      border: 1px solid $mainColor;
+      color: $mainColor;
       & li {
         list-style-type: none;
       }
