@@ -62,6 +62,11 @@ $cMenuOpen: $cWhite;
         margin-bottom: 0;
       }
     }
+
+    & > img {
+      width: 28px;
+      margin: 0 auto;
+    }
   }
   &__cover {
     position: absolute;
@@ -89,7 +94,15 @@ $cMenuOpen: $cWhite;
     padding: 0 30px;
     transition: transform 0.3s, opacity 0.2s;
     opacity: 0;
-    border-bottom: 1px dotted $mainColor;
+    background-image: linear-gradient(
+      to right,
+      $mainColor 2px,
+      transparent 2px
+    );
+    background-size: 10px 2px;
+    background-repeat: repeat-x;
+    background-position: right bottom;
+
     &::after {
       content: "\f0da";
       font-family: "Font Awesome 5 free";
@@ -98,6 +111,7 @@ $cMenuOpen: $cWhite;
       left: 42px;
       top: 50%;
       transform: translateY(-50%);
+      color: $mainColor;
     }
     &:hover {
       background: $mainColor;
