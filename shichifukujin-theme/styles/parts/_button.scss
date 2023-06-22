@@ -4,10 +4,9 @@
   position: relative;
   display: inline-block;
   background-color: $cWhite;
-  // border: 1px solid $cBlack;
-  //font-weight: 600;
+
   padding: 10px 40px;
-  // margin: 10px auto;
+
   cursor: pointer;
   transition: all 0.3s;
   color: $cBlack;
@@ -59,6 +58,7 @@
   }
 
   &.slide-bg {
+    border-radius: 60px;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -68,7 +68,7 @@
       display: inline-block;
       width: 100%;
       height: 100%;
-      background-color: $cBlack;
+      background-color: $SubColor;
       position: absolute;
       top: 0;
       left: 0;
@@ -139,6 +139,13 @@
     &:hover {
       margin-top: 3px;
       border-bottom: 2px solid $cRedColor-s;
+    }
+    &::after {
+      content: "\f061";
+      font-family: "Font Awesome 5 free";
+      font-weight: 600;
+      position: absolute;
+      right: 20px;
     }
   }
 }
