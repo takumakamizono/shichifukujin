@@ -1,10 +1,12 @@
 <?php
 /*
 Template Name: サイトマップ
+// Description:サイトマップのテンプレート
 Template Post Type: page
-*/
-?>
 
+*/
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
   <head>
