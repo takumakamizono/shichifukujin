@@ -27,7 +27,7 @@
                       $news = get_term_by('slug','news','category');
                       $news_link = get_term_link($news,'category')
                       ?>
-                    <a href="<?= esc_url($news_link); ?>"  class="btn slide-bg item">more</a>
+                    <a href="<?= esc_url($news_link); ?>"  class="btn slide-bg item">お知らせ一覧へ</a>
                   </div>
                   <?php else: ?>
                     <div class="notice__notinfo">
