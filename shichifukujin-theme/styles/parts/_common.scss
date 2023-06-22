@@ -107,6 +107,9 @@ img {
   text-align: center;
   @extend .mb-md;
 }
+.section-titles-left {
+  @extend .mb-md;
+}
 
 .main-title {
   @extend .font-lg;
@@ -121,6 +124,19 @@ img {
   @extend .font-sm;
   @extend .mb-sm;
   color: $cSubTitle;
+}
+.content-title {
+  @extend .font-lg;
+  margin-bottom: 0;
+  display: block;
+  font-weight: 900;
+}
+.content-subtitle {
+  @extend .font-lr;
+  margin-bottom: 0;
+  display: block;
+  font-weight: 900;
+  color: $mainColor;
 }
 
 .arrow-downarrow {
