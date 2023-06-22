@@ -847,8 +847,10 @@ main {
     list-style: none;
     padding: 0;
     @extend .font-sm;
-
     @extend .mb-sm;
+    &-icon {
+      font-size: 30px;
+    }
   }
   &__copyright {
     background: $cWhite;
@@ -861,11 +863,6 @@ main {
       @include mq(md) {
         display: inline;
       }
-    }
-  }
-  &__img {
-    & img {
-      margin: 0 auto;
     }
   }
 }
