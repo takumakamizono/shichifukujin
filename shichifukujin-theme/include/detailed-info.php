@@ -1,15 +1,6 @@
 
 <section class="detailed-info">
-    
-<div class="section-titles">
-                  <h2 class="main-title">
-                  社会福祉法人天祐会とは
-                  </h2>
-                  <p class="sub-title tween-animate-title">
-                  company
-                  </p>
-                </div>
-                <div class="detailed-info__inner">
+               <div class="detailed-info__inner">
                     <div class="detailed-info__block">
                     <div class="detailed-info__tit">
                         ご入居までの流れ
