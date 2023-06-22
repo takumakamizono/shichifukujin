@@ -27,5 +27,7 @@
               <span></span>
               <span></span>
               <span></span>
+              <img src="<?= get_template_directory_uri(); ?>/images/txt_menu01.png" alt="">
             </button>
+           
           </div>
