@@ -295,7 +295,8 @@ main {
   &__btn {
     text-align: center;
     @include mq(lg) {
-      text-align: right;
+      display: flex;
+      justify-content: flex-end;
     }
     & .btn {
       max-width: 300px;
