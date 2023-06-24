@@ -315,9 +315,9 @@ main {
   }
 }
 
-.company {
+.about {
   padding-top: 80px;
-  background-image: url(./images/company-bg.jpg);
+  background-image: url(./images/about-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   @extend .mb-lg;
@@ -381,7 +381,7 @@ main {
     }
 
     &.inview {
-      & .company__title::before {
+      & .about__title::before {
         @include animation($name: scaleX, $duration: 0.3s, $delay: 1.5s);
       }
     }
