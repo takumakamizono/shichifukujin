@@ -38,46 +38,58 @@
             </div>
           </div>
    <?php elseif(is_archive()):?>
-    <?php 
-    $category = get_queried_object();
-    $cat_slug = $category->category_nicename;
-    $cat_name = $category->cat_name;
-?>
+   <?php
+    $post_type = 'service';
+    $post_type_object = get_post_type_object($post_type);
+    ?>
       <div class="hero-sub">    
         <div class="hero-sub__inner">
-              <div class="hero-sub__titles">               
-              <h2 class="hero-sub__maintitle "><?=  esc_html($cat_slug); ?></h2>
-              <p class="hero-sub__subtitle"><?=  esc_html($cat_name); ?></p>           
+              <div class="hero-sub__titles">    
+              <?php if(is_category('news') || in_category('news')):  ?>  
+                <?php
+                  $category = get_queried_object();
+                  $cat_slug = $category->category_nicename;
+                  $cat_name = $category->cat_name;
+                  ?>               
+              <h2 class="hero-sub__maintitle "><?=  esc_html($cat_name); ?></h2>
+              <p class="hero-sub__subtitle"><?=  esc_html($cat_slug); ?></p>
+              <?php  elseif($post_type_object):?> 
+                <?php
+                $menu_name = $post_type_object->labels->menu_name;
+                $name = $post_type_object->labels->name;
+                 ?> 
+              <h2 class="hero-sub__maintitle "><?=  esc_html($menu_name); ?></h2>
+              <p class="hero-sub__subtitle"><?=  esc_html($name); ?></p>
+              <?php endif; ?>        
               </div>
               <div class="hero-sub__img"> 
                 <?php if(is_category('news') || in_category('news')):  ?>      
-                  <img src="<?php the_field('news_img',210);?>" alt="お知らせのヘッダー画像">           
-                <?php elseif(is_category('works') || in_category('works') ): ?>
-                  <img src="<?php the_field('works_img',210);?>" alt="施工実績のヘッダー画像">  
-                
-                         
+                  <img src="<?php the_field('news_img',210);?>" alt="お知らせのヘッダー画像">                    
              <?php endif; ?>
             </div>     
         </div>
       </div>
       <?php elseif(is_single()):?>
-    <?php 
+   
+      <div class="hero-sub">    
+        <div class="hero-sub__inner">
+              <div class="hero-sub__titles">  
+              <?php if(is_category('news') || in_category('news')):  ?> 
+                <?php 
     $category = get_the_category();
     $cat_slug = $category[0]->category_nicename;
     $cat_name = $category[0]->name;
-?>
-      <div class="hero-sub">    
-        <div class="hero-sub__inner">
-              <div class="hero-sub__titles">               
-              <h2 class="hero-sub__maintitle "><?=  esc_html($cat_slug); ?></h2>
-              <p class="hero-sub__subtitle"><?=  esc_html($cat_name); ?></p>           
+    ?> 
+              <h2 class="hero-sub__maintitle "><?=  esc_html($cat_name); ?></h2>
+              <p class="hero-sub__subtitle"><?=  esc_html($cat_slug); ?></p>  
+              <?php  elseif("service"):?>             
+              <h2 class="hero-sub__maintitle "><?=  the_title();?></h2>
+              <!-- <p class="hero-sub__subtitle"><?=  esc_html($name); ?></p>   -->
+              <?php endif; ?>       
               </div>
               <div class="hero-sub__img"> 
                 <?php if(is_category('news') || in_category('news')):  ?>  
                  <img src="<?php the_field('news_img',210);?>" alt="お知らせのヘッダー画像">
-                <?php elseif(is_category('works') || in_category('works') ): ?>
-                  <img src="<?php the_field('works_img',210);?>" alt="施工実績のヘッダー画像">  
-
              <?php endif; ?>
             </div>     
         </div>
@@ -90,8 +102,8 @@ $slug = $page->post_name;
         <div class="hero-sub">    
         <div class="hero-sub__inner">
               <div class="hero-sub__titles">
-              <h2 class="hero-sub__maintitle "><?= strtoupper($post->post_name); ?></h2>
-              <p class="hero-sub__subtitle"><?php the_title(); ?></p>
+              <h2 class="hero-sub__maintitle "><?php the_title(); ?></h2>
+              <p class="hero-sub__subtitle"><?= strtoupper($post->post_name); ?></p>
               </div>
               <div class="hero-sub__img"> 
               <?php if(has_post_thumbnail()): ?>        
