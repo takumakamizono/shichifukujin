@@ -3,13 +3,13 @@
 .btn {
   position: relative;
   display: inline-block;
-  background-color: $cWhite;
-
+  background-color: $cRedColor;
+  border-radius: 60px;
   padding: 10px 40px;
 
   cursor: pointer;
   transition: all 0.3s;
-  color: $cBlack;
+  color: $cWhite;
   text-decoration: none !important;
 
   &.float:hover {
@@ -40,7 +40,7 @@
     box-shadow: none;
     &:hover {
       transform: translate(-0.3px, -0.3px);
-      box-shadow: 2px 2px 4px 0 rgba(46, 88, 149, 0.6);
+      box-shadow: 2px 2px 4px 0 $cRedColor-s;
     }
   }
 
