@@ -129,3 +129,10 @@ add_filter('use_block_editor_for_post',function($use_block_editor,$post){
   }
   return $use_block_editor;
 },10,2);
+
+
+
+add_action( 'init', function() { 
+	remove_post_type_support( 'service', 'editor' ); 
+}, 99);
+
