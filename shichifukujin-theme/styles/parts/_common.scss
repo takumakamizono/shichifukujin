@@ -83,22 +83,31 @@ img {
   }
 }
 .font-md {
-  font-size: 17px;
+  font-size: 15px;
 
+  @include mq(lg) {
+    font-size: 17px;
+  }
   @include mq(lg) {
     font-size: 19px;
   }
 }
 .font-lr {
-  font-size: 17px;
+  font-size: 15px;
 
+  @include mq(md) {
+    font-size: 20px;
+  }
   @include mq(lg) {
     font-size: 23px;
   }
 }
 .font-lg {
-  font-size: 25px;
+  font-size: 19px;
 
+  @include mq(md) {
+    font-size: 25px;
+  }
   @include mq(lg) {
     font-size: 36px;
   }
@@ -112,19 +121,34 @@ img {
 }
 .section-titles {
   text-align: center;
-  @extend .mb-md;
+  @extend .mb-lr;
 }
 .section-titles-left {
-  @extend .mb-md;
+  @extend .mb-lr;
 }
 
 .main-title {
   @extend .font-lg;
-
   margin-bottom: 0;
   display: block;
   font-weight: 900;
-  color: $mainColor;
+  color: $cOrange;
+  & span {
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.16em;
+    &::after {
+      bottom: -26px;
+      height: 16px;
+      background-size: 16px auto;
+      position: absolute;
+      width: 100%;
+      content: "";
+      background-repeat: space repeat;
+      background-image: url(./images/bg_dot01.png);
+      left: 0;
+    }
+  }
 }
 
 .sub-title {
