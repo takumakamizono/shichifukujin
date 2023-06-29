@@ -1,11 +1,9 @@
 <section class="about">
 <div class="section-titles">
                   <h2 class="main-title">
-                  社会福祉法人天祐会とは
+                    <span>社会福祉法人天祐会とは</span>          
                   </h2>
-                  <p class="sub-title tween-animate-title">
-                  about
-                  </p>
+                 
                 </div>
                 <div class="about__inner">
                   <div class="about__overview">

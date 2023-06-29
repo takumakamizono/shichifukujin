@@ -1,11 +1,8 @@
 <section class="news" >
             <div class="section-titles">
                   <h2 class="main-title">
-                    お知らせ
-                  </h2>
-                  <p class="sub-title tween-animate-title">
-                  news
-                  </p>
+                    <span>お知らせ</span>           
+                  </h2>            
                 </div>
                 <div  class="news__inner">
                 <?php

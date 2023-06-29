@@ -1,7 +1,8 @@
 <section class="family-page">
 <div class="section-titles">
                   <h2 class="main-title">
-                  ご入居様ご家族ページ
+                    <span>ご入居様ご家族ページ</span>
+                  
                   </h2>         
                 </div>
        <div class="family-page__btn">

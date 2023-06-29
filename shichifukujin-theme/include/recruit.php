@@ -1,11 +1,8 @@
 <section class="recruit">
 <div class="section-titles">
                   <h2 class="main-title">
-                  採用について
-                  </h2>    
-                  <p class="sub-title tween-animate-title">
-                  recruit
-                  </p>     
+                    <span>採用について</span>             
+                  </h2>                    
                 </div>
       
 
