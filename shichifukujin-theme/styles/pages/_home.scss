@@ -76,6 +76,7 @@ main {
     position: relative;
     height: 100%;
     & > a {
+      position: relative;
       color: $main-txt;
       text-decoration: none;
       text-transform: uppercase;
@@ -88,13 +89,33 @@ main {
       &.current-menu-item {
         & > a {
           font-weight: 800;
-          border-bottom: 2px solid $cWhite;
+          &::after {
+            bottom: -1px;
+            height: 16px;
+            background-size: 16px auto;
+            position: absolute;
+            width: 100%;
+            content: "";
+            background-repeat: space repeat;
+            background-image: url(./images/bg_dot01.png);
+            left: 0;
+          }
         }
       }
       & > a {
         &:hover {
           font-weight: 800;
-          border-bottom: 2px solid $cWhite;
+          &::after {
+            bottom: -1px;
+            height: 16px;
+            background-size: 16px auto;
+            position: absolute;
+            width: 100%;
+            content: "";
+            background-repeat: space repeat;
+            background-image: url(./images/bg_dot01.png);
+            left: 0;
+          }
         }
       }
     }
