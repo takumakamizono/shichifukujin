@@ -4,18 +4,23 @@
   position: relative;
   display: inline-block;
   background-color: $cRedColor;
-  border-radius: 60px;
   padding: 10px 40px;
-
   cursor: pointer;
   transition: all 0.3s;
   color: $cWhite;
   text-decoration: none !important;
-
-  &.float:hover {
-    background-color: $cBlack;
-    color: $cWhite;
-    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+  &.float {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid $cOrange;
+    background: $cWhite;
+    color: $cOrange;
+    font-weight: 900;
+    &:hover {
+      background-color: $cOrange;
+      color: $cWhite;
+      box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+    }
   }
 
   &.filled {
@@ -58,7 +63,6 @@
   }
 
   &.slide-bg {
-    border-radius: 60px;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -133,7 +137,7 @@
     margin: 0 auto;
     position: absolute;
     z-index: 100;
-    border-radius: 50px;
+    border-radius: 60px;
     text-align: center;
     font-weight: bold;
     &:hover {
