@@ -475,3 +475,118 @@ img {
     width: 30px;
   }
 }
+
+.table01 {
+  width: 100%;
+  border-collapse: collapse;
+  & tr {
+    border-bottom: 1px solid #9f9f9f;
+  }
+  & th,
+  & td {
+    padding: 24px 0;
+    border: none;
+    @include mq(lg) {
+      padding: 24px 0;
+      border: none;
+    }
+  }
+  & th {
+    width: 35%;
+    text-align: left;
+    @extend .font-sm;
+    @include mq(lg) {
+      width: 50%;
+    }
+  }
+  & td {
+    @extend .font-sm;
+    letter-spacing: 0.1em;
+    line-height: 1.8;
+  }
+}
+
+.table02 {
+  table-layout: fixed;
+  width: 100%;
+  @extend .font-sm;
+  white-space: nowrap;
+  border-spacing: 5px;
+  min-width: 500px;
+  @extend .mb-sm;
+
+  & th,
+  & td {
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 0;
+  }
+  & th {
+    background-color: $cOrange;
+    color: white;
+  }
+  & td {
+    background-color: #e9e6e1;
+  }
+}
+
+.table03 {
+  width: 100%;
+  & th {
+    position: relative;
+    text-align: left;
+    width: 15%;
+    &::after {
+      display: block;
+      content: "";
+      width: 30px;
+      height: 2px;
+      background-color: #333;
+      position: absolute;
+      top: calc(50% - 1px);
+      right: -15px;
+    }
+  }
+  & td {
+    text-align: left;
+    padding: 7px 0 7px 30px;
+    width: 85%;
+  }
+}
+
+.table-wrap {
+  overflow-x: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 320px;
+
+  &::-webkit-scrollbar {
+    width: 12px; /* スクロールバーの幅を指定（適宜変更してください） */
+    border-radius: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(235, 155, 113, 0.5); /* スクロールバーの色を指定 */
+    border-radius: 6px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $cOrange; /* ホバー時のスクロールバーの色を指定 */
+  }
+}
+
+.border-frame {
+  border: 2px solid $cOrange;
+  border-radius: 10px;
+  padding: 10px 8px;
+  @include mq(md) {
+    padding: 15px 20px;
+  }
+  @include mq(lg) {
+    padding: 20px 30px;
+  }
+}
+
+.table-desc {
+  font-size: 12px;
+  @extend .flex;
+  justify-content: space-between;
+}
