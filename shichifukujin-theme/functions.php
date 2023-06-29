@@ -107,7 +107,7 @@ function redirect_thanks_page() {
 }
 
 function twpp_change_excerpt_length( $length ) {
-  return 20; 
+  return 100; 
 }
 add_filter( 'excerpt_length', 'twpp_change_excerpt_length', 999 );
 
@@ -136,3 +136,11 @@ add_action( 'init', function() {
 	remove_post_type_support( 'service', 'editor' ); 
 }, 99);
 
+
+function taxonomy_orderby_description( $orderby, $args ) {
+  if ( $args['orderby'] == 'description' ) {
+    $orderby = 'tt.description';
+  }
+  return $orderby;
+}
+add_filter( 'get_terms_orderby', 'taxonomy_orderby_description', 10, 2 );
