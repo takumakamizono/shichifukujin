@@ -2,24 +2,11 @@
 @use "../parts/common" as *;
 @use "../parts/button" as *;
 
-.notice {
-  @extend .content-width;
-  @extend .mb-lg;
-  &__notinfo {
-    text-align: center;
-    width: 100%;
-    & p {
-      padding-top: 80px;
-      @extend.mb-lg;
-    }
-  }
-}
-
 .single {
   min-height: 60vh;
   &__inner {
     @extend .content-width;
-    max-width: 1000px;
+    max-width: $contentMaxWidth1000;
     @extend .pb-lg;
   }
   &__content {
@@ -82,9 +69,9 @@
 
 .service {
   @extend .content-width;
-  @extend .pb-lg;
+
   &__inner {
-    max-width: 1000px;
+    max-width: $contentMaxWidth1000;
     margin: 0 auto;
     @extend .flex960;
     justify-content: space-between;
@@ -176,7 +163,7 @@
   }
   &__sec02-inner {
     @extend .content-width;
-    max-width: 1000px;
+    max-width: $contentMaxWidth1000;
   }
   &__sec02-title {
     @extend .font-lr;
@@ -231,7 +218,7 @@
   }
   &__sec03-inner {
     @extend .content-width;
-    max-width: 1000px;
+    max-width: $contentMaxWidth1000;
   }
   &__sec03-box {
     @extend .mb-lr;
@@ -266,7 +253,7 @@
   }
   &__sec04-inner {
     @extend .content-width;
-    max-width: 1000px;
+    max-width: $contentMaxWidth1000;
   }
   &__sec04-ul {
     padding: 0;
@@ -319,7 +306,7 @@
   }
   &__access-inner {
     @extend .content-width;
-    max-width: 1000px;
+    max-width: $contentMaxWidth1000;
     @extend .flex;
     justify-content: space-between;
   }
@@ -388,7 +375,7 @@
 }
 
 .service-pageNav {
-  max-width: 1000px;
+  max-width: $contentMaxWidth1000;
   margin: 0 auto;
 
   @extend .mb-lr;

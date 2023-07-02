@@ -213,7 +213,7 @@ main {
   }
 }
 .news {
-  max-width: 1000px;
+  max-width: $contentMaxWidth1000;
 
   @extend .content-width;
   @extend .mb-lg;
@@ -665,7 +665,7 @@ main {
     @extend .content-width;
     border-radius: 10px;
     padding: 30px 10px;
-    max-width: 1000px;
+    max-width: $contentMaxWidth1000;
     @include mq(lg) {
       padding: 80px 50px 100px;
     }
