@@ -37,6 +37,8 @@
              
             </div>
           </div>
+
+
    <?php elseif(is_archive()):?>
    <?php
     $post_type = 'service';
@@ -45,7 +47,7 @@
       <div class="hero-sub">    
         <div class="hero-sub__inner">
               <div class="hero-sub__titles">    
-              <?php if(is_category('news') || in_category('news')):  ?>  
+              <?php if(is_category()):  ?>  
                 <?php
                   $category = get_queried_object();
                   $cat_slug = $category->category_nicename;
@@ -70,21 +72,36 @@
         </div>
       </div>
       <?php elseif(is_single()):?>
+        <?php
+    $post_type = 'service';
+    $post_type_object = get_post_type_object($post_type);
+   
+    ?>
    
       <div class="hero-sub">    
         <div class="hero-sub__inner">
               <div class="hero-sub__titles">  
-              <?php if(is_category('news') || in_category('news')):  ?> 
-                <?php 
-    $category = get_the_category();
-    $cat_slug = $category[0]->category_nicename;
-    $cat_name = $category[0]->name;
-    ?> 
-              <h2 class="hero-sub__maintitle "><?=  esc_html($cat_name); ?></h2>
-              <p class="hero-sub__subtitle"><?=  esc_html($cat_slug); ?></p>  
-              <?php  elseif("service"):?>             
-              <h2 class="hero-sub__maintitle "><?=  the_title();?></h2>
-              <!-- <p class="hero-sub__subtitle"><?=  esc_html($name); ?></p>   -->
+              <?php if(is_singular('post')): ?>
+    <?php
+    $categories = get_the_category();
+    if (!empty($categories)) {
+      $cat_slug = $categories[0]->slug;
+      $cat_name = $categories[0]->name;
+    }
+    ?>
+    <h2 class="hero-sub__maintitle"><?= esc_html($cat_name); ?></h2>
+    <p class="hero-sub__subtitle"><?= esc_html($cat_slug); ?></p>
+
+            
+              <?php elseif($post_type_object):  ?> 
+                <?php
+                $menu_name = $post_type_object->labels->menu_name;
+                $name = $post_type_object->labels->name;
+                 ?> 
+                <h2 class="hero-sub__maintitle "><?=  esc_html($menu_name)?></h2>
+              <p class="hero-sub__subtitle"><?=  esc_html($name); ?></p>  
+       
+               
               <?php endif; ?>       
               </div>
               <div class="hero-sub__img"> 
