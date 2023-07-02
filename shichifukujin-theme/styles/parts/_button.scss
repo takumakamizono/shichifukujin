@@ -10,16 +10,31 @@
   color: $cWhite;
   text-decoration: none !important;
   &.float {
-    padding: 10px 20px;
+    padding: 20px 22px;
     border-radius: 50px;
     border: 1px solid $cOrange;
     background: $cWhite;
     color: $cOrange;
     font-weight: 900;
+    min-width: 100%;
+    font-size: 12px;
+    &::before {
+      content: "\f0da";
+      font-family: "Font Awesome 5 free";
+      font-weight: 600;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $cOrange;
+    }
     &:hover {
       background-color: $cOrange;
       color: $cWhite;
       box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+      &::before {
+        color: $cWhite;
+      }
     }
   }
 
