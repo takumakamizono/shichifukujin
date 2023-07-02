@@ -132,9 +132,7 @@ add_filter('use_block_editor_for_post',function($use_block_editor,$post){
 
 
 
-add_action( 'init', function() { 
-	remove_post_type_support( 'service', 'editor' ); 
-}, 99);
+
 
 
 function taxonomy_orderby_description( $orderby, $args ) {
@@ -144,3 +142,25 @@ function taxonomy_orderby_description( $orderby, $args ) {
   return $orderby;
 }
 add_filter( 'get_terms_orderby', 'taxonomy_orderby_description', 10, 2 );
+
+
+
+
+add_action( 'admin_init', function() {
+  $taxonomy = 'facility'; 
+  $term_slug = 'nursing';
+  $post_type = 'service'; 
+
+  global $pagenow;
+
+  
+  if ( $pagenow === 'post.php' && isset( $_GET['post'] ) ) {
+      $post_id = $_GET['post'];  
+      if ( has_term( $term_slug, $taxonomy, $post_id ) ) {
+          $post = get_post( $post_id );     
+          if ( $post && $post->post_type === $post_type ) {
+              remove_post_type_support( $post_type, 'editor' );
+          }
+      }
+  }
+} );
