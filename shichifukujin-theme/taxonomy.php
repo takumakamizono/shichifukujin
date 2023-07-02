@@ -1,3 +1,10 @@
+<?php
+$term = get_queried_object();
+$term_id = $term->term_id;
+$taxonomy = $term->taxonomy;
+$count = get_term($term_id, $taxonomy)->count;
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -27,10 +34,13 @@
                       echo esc_html ($facility->name);
                      }  ?>
                   </span>
-                  </h2>       
+                  </h2>
+                  <p class="number-of-facilities"><?= esc_html($facility->name);?><span><?= esc_html($count);?>施設</span>をご紹介します</p>
                 </div>
-             
+              
+            
                 <div class="service__inner">
+                  
              <?php if(have_posts()): ?>   
               <?php while(have_posts()):the_post(); ?>
                   <?php get_template_part('include/service-inside'); ?>

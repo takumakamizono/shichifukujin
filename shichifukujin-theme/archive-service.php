@@ -1,3 +1,7 @@
+<?php
+$count_posts = wp_count_posts('service');
+$total_posts = $count_posts->publish;
+?>
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -24,7 +28,9 @@
                     <span>
                   施設一覧
                   </span>
-                  </h2>       
+                  </h2>  
+                  <p class="number-of-facilities">鹿児島市内で５つのエリアを中心に老人ホーム・グループホーム・デイサービス・就労支援・スクールなど<span><?= esc_html($total_posts);?>事業所</span>を展開しています。</p>
+
                 </div>
                 <?php
                 $facilitys = get_terms([
@@ -56,8 +62,7 @@
                      $args=[
                        'post_type'=> 'service',
                        'posts_per_page' => -1,
-                       
-           
+ 
                      ];
                      $taxquerysp =['relation'=> 'AND'];
                      $taxquerysp[]=[
