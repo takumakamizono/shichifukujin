@@ -491,6 +491,7 @@ main {
   }
   &__desc {
     margin-bottom: 10px;
+    font-size: 14px;
   }
   &__tit {
     z-index: 100;
@@ -644,6 +645,9 @@ main {
 .contact {
   margin-top: 80px;
   margin-bottom: 150px;
+  @include mq(lg) {
+    margin-bottom: 0;
+  }
   &__inner {
     background-image: url(images/bg_contact_sp.jpg);
     height: 200px;
