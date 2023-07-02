@@ -229,6 +229,7 @@
                   </section>
 
                 </div>
+                </div>
           </div>
             <?php endwhile; ?>
             <?php endif; ?>
