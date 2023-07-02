@@ -402,3 +402,61 @@
     }
   }
 }
+.page-wrap {
+  @extend .mb-lg;
+  max-width: $contentMaxWidth1000;
+  margin: 0 auto;
+}
+
+.page-procedure {
+  &__inner {
+    @extend .page-wrap;
+    @extend .flex;
+    justify-content: space-between;
+  }
+  &__box {
+    @extend .mb-md;
+    &:nth-child(1) {
+      flex-basis: 100%;
+      @extend .flex;
+      & .page-procedure__img {
+        flex-basis: 48%;
+      }
+      & .page-procedure__texts {
+        flex-basis: 50%;
+      }
+      & .page-procedure__inner {
+        width: 100%;
+      }
+      @include mq(md) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+    }
+    flex-basis: 48%;
+  }
+  &__img {
+    @extend .mb-sm;
+  }
+  &__texts {
+    display: flex;
+    align-items: center;
+    min-height: 150px;
+    justify-content: center;
+  }
+  &__title {
+    text-align: center;
+    color: $mainColor;
+  }
+  &__desc {
+    padding: 15px 10px;
+    @extend .font-sm;
+    & > ul {
+      padding: 0;
+      list-style: none;
+    }
+  }
+  &__desc-tit {
+    margin-bottom: 10px;
+  }
+}
