@@ -15,6 +15,10 @@
                         </div>  
                       </div>
                       <div class="sl-service__sec01-img">
-                         <img src=" <?php the_field('top_img'); ?>" alt="">
-                        </div>
+                      <?php if(has_post_thumbnail()): ?>
+                     <?php the_post_thumbnail('full'); ?>    
+                     <?php else: ?>       
+                      <img src="https://placehold.jp/340x230.png" alt=""> 
+                      <?php endif; ?>
+                      </div>
                     </div>
