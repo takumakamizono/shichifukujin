@@ -11,7 +11,7 @@
       <dl class="sl-service__access-dl">
         <dt>所在地</dt>
         <dd><?php the_field('location');?></dd>
-        <dt>バスでお越しの方</dt>
+        <dt><?php the_field('type');?>でお越しの方</dt>
         <dd><?php the_field('transportation');?></dd>
       </dl>
       </div>

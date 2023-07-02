@@ -46,7 +46,7 @@
                         </dd>
                       </dl>
                       </div>
-                    <?php endif; ?>
+                   
                       <div class="sl-service__sec02-innerBox">
                         <h5 class="sl-service__sec02-innerTitle">眠りスキャン</h5>
                         <div class="sl-service__sec02-innerDesc">
@@ -99,5 +99,6 @@
 
                      </div>
                      </div>
+                     <?php endif; ?>
                       </div>
                     </div>
