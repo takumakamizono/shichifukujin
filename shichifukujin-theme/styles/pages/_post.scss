@@ -79,6 +79,12 @@
   &__item {
     flex-basis: 48%;
     @extend .mb-lr;
+    box-shadow: 1px 1px 10px rgba(176, 176, 176, 0.1);
+    border-radius: 10px;
+    padding: 5px;
+    @include mq(md) {
+      padding: 10px;
+    }
   }
   &__img {
     @extend .mb-sm;
@@ -87,9 +93,7 @@
       border-radius: 10px;
     }
   }
-  &__contents {
-    padding: 20px 10px;
-  }
+
   &__title {
     @extend .font-lr;
     font-weight: 900;
@@ -111,13 +115,10 @@
     letter-spacing: 0.06em;
     line-height: 2;
     margin-bottom: 20px;
-    min-height: 200px;
-    @include mq(lg) {
-      min-height: 290px;
-    }
   }
   &__btn {
     text-align: center;
+    @extend .mb-sm;
     & > a {
       border-radius: 60px;
     }
