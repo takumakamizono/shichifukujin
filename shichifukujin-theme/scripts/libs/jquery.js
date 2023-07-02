@@ -30,3 +30,30 @@ jQuery(function () {
     return false;
   });
 });
+
+$(".accordion-table table tbody tr:nth-child(1)").on("click", function () {
+  var findElm = $(this).next(".accordion-table table tbody tr:nth-child(2)");
+  event.preventDefault(); //ブラウザ動作の無効化
+  $(findElm).slideToggle();
+
+  if ($(this).hasClass("close")) {
+    $(this).removeClass("close");
+    $(this).removeClass("open");
+  } else {
+    $(this).addClass("close");
+  }
+});
+
+$(window).on("load", function () {
+  $(".accordion-table table tbody").addClass("open");
+  $(".open").each(function (index, element) {
+    var Title = $(element).children(
+      ".accordion-table table tbody tr:nth-child(2)"
+    );
+    $(Title).addClass("close");
+    var Box = $(element).children(
+      ".accordion-table table tbody tr:nth-child(2)"
+    );
+    $(Box).slideUp(500);
+  });
+});
