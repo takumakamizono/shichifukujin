@@ -1,19 +1,19 @@
 <div class="sl-service__sec02">
                     <div class="sl-service__sec02-inner">
-                      <div class="sl-service__sec02-box">
-                      <h4 class="sl-service__sec02-title">
+                      <div class="texts-blocks__box">
+                      <h4 class="texts-blocks__title">
                         <span> ユニットケアとは？</span>
                      </h4>
-                     <div class="sl-service__sec02-desc">
+                     <div class="texts-blocks__desc">
                       <p>ユニットケアとは、ご自宅での生活環境にできる限り近づけた生活を送ることです。他の入居者様や介護スタッフと共同生活をしながら、入居者様一人ひとりの個性や生活リズムに応じて暮らしていけるようにサポートすることをいいます。</p>
                       <p>通常、入居者様個人のプライバシーが守られる「個室」と、他の入居者様や介護スタッフと交流するための「居間」（共同生活室）があり、入居者様10人前後を一つの「ユニット」として位置づけ、各ユニットごとに顔なじみの介護スタッフが、入居者様の個性や生活リズムを尊重した暮らしをサポートするものです。</p>
                      </div>
                       </div>
-                      <div class="sl-service__sec02-box">
-                      <h4 class="sl-service__sec02-title">
+                      <div class="texts-blocks__box">
+                      <h4 class="texts-blocks__title">
                          <span>わたしたちが目指すもの</span>                    
                      </h4>
-                     <div class="sl-service__sec02-desc">
+                     <div class="texts-blocks__desc">
                       <p>私たちが目指すのは、「お引越しする」という、入居前と同じ生活を送る感覚。
                          今までの暮らしと同じように暮らすことを目的としているので、ただ、七福神にお引越しするだけのことです。
                          １０人は家族のようにリビングで過ごし、休みたい時には自分の部屋に戻ります。</p>
@@ -23,14 +23,14 @@
                       </div>
                       <?php $post_slug = get_post_field('post_name', get_post());?>
                    <?php if($post_slug === 'service_silkroad'): ?>
-                      <div class="sl-service__sec02-box">
-                      <h4 class="sl-service__sec02-title">
+                      <div class="texts-blocks__box">
+                      <h4 class="texts-blocks__title">
                         <span>シルクロード七福神から心を込めた７つのケア</span>    
                      </h4>
-                     <div class="sl-service__sec02-desc">
-                      <div class="sl-service__sec02-innerBox">
-                      <dl class="sl-service__sec02-dl">
-                        <dt class="sl-service__sec02-innerTitle">認知症改善プログラム</dt>
+                     <div class="texts-blocks__desc">
+                      <div class="texts-blocks__innerBox">
+                      <dl class="texts-blocks__dl">
+                        <dt class="texts-blocks__innerTitle">認知症改善プログラム</dt>
                         <dd>
                           <p>５つのプログラムを一体的に組み合わせて脳を刺激させます。</p>
                           <p>「脳と心と体」が「楽しく活性」します。自分らしさを取り戻します。</p>
@@ -47,51 +47,51 @@
                       </dl>
                       </div>
                    
-                      <div class="sl-service__sec02-innerBox">
-                        <h5 class="sl-service__sec02-innerTitle">眠りスキャン</h5>
-                        <div class="sl-service__sec02-innerDesc">
+                      <div class="texts-blocks__innerBox">
+                        <h5 class="texts-blocks__innerTitle">眠りスキャン</h5>
+                        <div class="texts-blocks__innerDesc">
                           <p>お部屋にいる入所者様の睡眠状態を把握することで、安心した介護ができています。 <br>
 睡眠の状態だけでなく心拍数や呼吸数などを訪室しなくても確認できるので利用者様の眠りを妨げることなく、快適な夜を提供することができ、かつ利用者様の急変にもいち早く対応することができるシステムを導入しています。</p>
                         </div>
                         </div>
-                      <div class="sl-service__sec02-innerBox">
-                        <h5 class="sl-service__sec02-innerTitle">アニマルセラピー</h5>
-                        <div class="sl-service__sec02-innerDesc">
+                      <div class="texts-blocks__innerBox">
+                        <h5 class="texts-blocks__innerTitle">アニマルセラピー</h5>
+                        <div class="texts-blocks__innerDesc">
                           <p>お部屋にいる入所者様の睡眠状態を把握することで、安心した介護ができています。 <br>
 睡眠の状態だけでなく心拍数や呼吸数などを訪室しなくても確認できるので利用者様の眠りを妨げることなく、快適な夜を提供することができ、かつ利用者様の急変にもいち早く対応することができるシステムを導入しています。</p>
                         </div>
                         </div>
-                      <div class="sl-service__sec02-innerBox">
-                        <h5 class="sl-service__sec02-innerTitle">薬膳料理</h5>
-                        <div class="sl-service__sec02-innerDesc">
+                      <div class="texts-blocks__innerBox">
+                        <h5 class="texts-blocks__innerTitle">薬膳料理</h5>
+                        <div class="texts-blocks__innerDesc">
                           <p>お部屋にいる入所者様の睡眠状態を把握することで、安心した介護ができています。 <br>
 睡眠の状態だけでなく心拍数や呼吸数などを訪室しなくても確認できるので利用者様の眠りを妨げることなく、快適な夜を提供することができ、かつ利用者様の急変にもいち早く対応することができるシステムを導入しています。</p>
                         </div>
                         </div>
-                      <div class="sl-service__sec02-innerBox">
-                        <h5 class="sl-service__sec02-innerTitle">生活リハビリ</h5>
-                        <div class="sl-service__sec02-innerDesc">
+                      <div class="texts-blocks__innerBox">
+                        <h5 class="texts-blocks__innerTitle">生活リハビリ</h5>
+                        <div class="texts-blocks__innerDesc">
                           <p>お部屋にいる入所者様の睡眠状態を把握することで、安心した介護ができています。 <br>
 睡眠の状態だけでなく心拍数や呼吸数などを訪室しなくても確認できるので利用者様の眠りを妨げることなく、快適な夜を提供することができ、かつ利用者様の急変にもいち早く対応することができるシステムを導入しています。</p>
                         </div>
                         </div>
-                      <div class="sl-service__sec02-innerBox">
-                        <h5 class="sl-service__sec02-innerTitle">生活リハビリ</h5>
-                        <div class="sl-service__sec02-innerDesc">
+                      <div class="texts-blocks__innerBox">
+                        <h5 class="texts-blocks__innerTitle">生活リハビリ</h5>
+                        <div class="texts-blocks__innerDesc">
                           <p>お部屋にいる入所者様の睡眠状態を把握することで、安心した介護ができています。 <br>
 睡眠の状態だけでなく心拍数や呼吸数などを訪室しなくても確認できるので利用者様の眠りを妨げることなく、快適な夜を提供することができ、かつ利用者様の急変にもいち早く対応することができるシステムを導入しています。</p>
                         </div>
                         </div>
-                      <div class="sl-service__sec02-innerBox">
-                        <h5 class="sl-service__sec02-innerTitle">活発な地域交流</h5>
-                        <div class="sl-service__sec02-innerDesc">
+                      <div class="texts-blocks__innerBox">
+                        <h5 class="texts-blocks__innerTitle">活発な地域交流</h5>
+                        <div class="texts-blocks__innerDesc">
                           <p>お部屋にいる入所者様の睡眠状態を把握することで、安心した介護ができています。 <br>
 睡眠の状態だけでなく心拍数や呼吸数などを訪室しなくても確認できるので利用者様の眠りを妨げることなく、快適な夜を提供することができ、かつ利用者様の急変にもいち早く対応することができるシステムを導入しています。</p>
                         </div>
                         </div>
-                      <div class="sl-service__sec02-innerBox">
-                        <h5 class="sl-service__sec02-innerTitle">看取り（施設で最期の日まで）</h5>
-                        <div class="sl-service__sec02-innerDesc">
+                      <div class="texts-blocks__innerBox">
+                        <h5 class="texts-blocks__innerTitle">看取り（施設で最期の日まで）</h5>
+                        <div class="texts-blocks__innerDesc">
                           <p>お部屋にいる入所者様の睡眠状態を把握することで、安心した介護ができています。 <br>
 睡眠の状態だけでなく心拍数や呼吸数などを訪室しなくても確認できるので利用者様の眠りを妨げることなく、快適な夜を提供することができ、かつ利用者様の急変にもいち早く対応することができるシステムを導入しています。</p>
                         </div>
