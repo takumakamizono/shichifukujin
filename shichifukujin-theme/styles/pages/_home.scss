@@ -213,10 +213,13 @@ main {
   }
 }
 .news {
-  max-width: $contentMaxWidth1000;
-
   @extend .content-width;
   @extend .mb-lg;
+  &__inner {
+    max-width: $contentMaxWidth1000;
+    margin: 0 auto;
+    min-height: 200px;
+  }
   &__list {
     list-style: none;
     padding: 0;
