@@ -68,11 +68,12 @@
 }
 
 .service {
-  @extend .content-width;
-
   &__inner {
     max-width: $contentMaxWidth1000;
+    width: 90%;
     margin: 0 auto;
+  }
+  &__blocks {
     @extend .flex960;
     justify-content: space-between;
   }
@@ -97,9 +98,8 @@
   &__title {
     @extend .font-lr;
     font-weight: 900;
-    @extend .mb-sm;
+    margin-bottom: 10px;
     color: $cOrange;
-    padding: 20px 0;
   }
   &__subtitle {
     @extend .font-md;
@@ -109,6 +109,10 @@
     padding: 10px 20px;
     margin-bottom: 10px;
     font-weight: 600;
+  }
+  &__location {
+    @extend .font-sm;
+    @extend .mb-sm;
   }
   &__desc {
     @extend .font-sm;
