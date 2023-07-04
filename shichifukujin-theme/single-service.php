@@ -18,8 +18,8 @@
             <!-- <?php get_template_part('include/side-left'); ?> -->
             <main>
             <section class="sl-custom">
+            <?php get_template_part('include/breadcrumb'); ?> 
               <div class="sl-custom__inner">
-                  <?php get_template_part('include/breadcrumb'); ?> 
                 <?php if(have_posts()): ?>
                   <?php while(have_posts()):the_post(); ?> 
                   <article id="post-<?php the_ID(); ?>" class="sl-service" >
@@ -36,6 +36,8 @@
                     <?php if ($term->slug === 'nursing'):?>
                   <?php get_template_part('service_inc/single-nursing'); ?>
                   <?php elseif($term->slug === 'group'): ?>
+                  <?php get_template_part('service_inc/single-group'); ?>
+                  <?php else: ?>
                   <?php get_template_part('service_inc/single-group'); ?>
                  <?php endif; ?> 
                  <?php endforeach; ?> 

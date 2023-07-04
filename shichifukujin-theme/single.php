@@ -18,8 +18,8 @@
             <?php get_template_part('include/side-left'); ?>
             <main>
             <section class="single">
+            <?php get_template_part('include/breadcrumb'); ?> 
               <div class="single__inner">
-                  <?php get_template_part('include/breadcrumb'); ?> 
                 <?php if(have_posts()): ?>
                   <?php while(have_posts()):the_post(); ?> 
                   <article id="post-<?php the_ID(); ?>" <?php post_class('single__content') ?> >
