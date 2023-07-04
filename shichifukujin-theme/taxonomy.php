@@ -40,7 +40,7 @@ $count = get_term($term_id, $taxonomy)->count;
               
             
                 <div class="service__inner">
-                  
+                <div class="service__blocks">
              <?php if(have_posts()): ?>   
               <?php while(have_posts()):the_post(); ?>
                   <?php get_template_part('include/service-inside'); ?>
@@ -54,6 +54,7 @@ $count = get_term($term_id, $taxonomy)->count;
             <?php endif; ?>
 
               
+                </div>
                 </div>
               </section>   
         

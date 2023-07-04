@@ -32,6 +32,7 @@ $total_posts = $count_posts->publish;
                   <p class="number-of-facilities">鹿児島市内で５つのエリアを中心に老人ホーム・グループホーム・デイサービス・就労支援・スクールなど<span><?= esc_html($total_posts);?>事業所</span>を展開しています。</p>
 
                 </div>
+                <div class="service__inner">
                 <?php
                 $facilitys = get_terms([
                 'taxonomy'=>'facility',
@@ -57,7 +58,7 @@ $total_posts = $count_posts->publish;
                         <h3 class="main-title"> <span><?= esc_html($facility->name); ?></span></h3>
                       </div>
 
-                <div class="service__inner">
+                <div class="service__blocks">
                 <?php
                      $args=[
                        'post_type'=> 'service',
@@ -93,7 +94,7 @@ $total_posts = $count_posts->publish;
          <?php endif; ?>
 
               
-              
+         </div>
               </section>   
         
               <?php get_template_part('include/contact'); ?>
