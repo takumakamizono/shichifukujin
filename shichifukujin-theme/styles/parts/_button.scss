@@ -167,6 +167,10 @@
       right: 20px;
     }
   }
+  &.btn-off {
+    background: $lightGray;
+    cursor: auto;
+  }
 }
 .btn02 {
   border-bottom: 1px solid $mainColor;
