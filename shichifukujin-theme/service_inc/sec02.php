@@ -1,5 +1,5 @@
-<div class="sl-service__sec02">
-                    <div class="sl-service__sec02-inner">
+<div class="texts-blocks">
+                    <div class="texts-blocks__inner">
                       <div class="texts-blocks__box">
                       <h4 class="texts-blocks__title">
                         <span> ユニットケアとは？</span>
