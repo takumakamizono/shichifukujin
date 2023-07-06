@@ -37,8 +37,10 @@
                   <?php get_template_part('service_inc/single-nursing'); ?>
                   <?php elseif($term->slug === 'group'): ?>
                   <?php get_template_part('service_inc/single-group'); ?>
-                  <?php else: ?>
-                  <?php get_template_part('service_inc/single-group'); ?>
+                  <?php elseif($term->slug === 'day'): ?>
+                  <?php get_template_part('service_inc/single-day'); ?>
+                  <?php elseif($term->slug === 'support'): ?>
+                  <?php get_template_part('service_inc/single-support'); ?>
                  <?php endif; ?> 
                  <?php endforeach; ?> 
                  <?php endif; ?>  
