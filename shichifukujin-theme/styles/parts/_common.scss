@@ -131,7 +131,6 @@ img {
   & span {
     position: relative;
     display: inline-block;
-    letter-spacing: 0.16em;
     &::after {
       bottom: -26px;
       height: 16px;
@@ -143,6 +142,9 @@ img {
       background-image: url(./images/bg_dot01.png);
       left: 0;
     }
+  }
+  @include mq(md) {
+    letter-spacing: 0.16em;
   }
 }
 
