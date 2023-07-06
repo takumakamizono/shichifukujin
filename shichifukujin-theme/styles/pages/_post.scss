@@ -282,10 +282,7 @@
   @extend .font-lr;
   font-weight: 900;
   max-width: 800px;
-  text-align: left;
-  @include mq(lg) {
-    text-align: center;
-  }
+  text-align: center;
 
   & > span {
     color: $cOrange;
