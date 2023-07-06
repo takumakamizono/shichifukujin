@@ -102,16 +102,11 @@ img {
     font-size: 23px;
   }
 }
-.font-lg {
-  font-size: 19px;
 
-  @include mq(md) {
-    font-size: 25px;
-  }
-  @include mq(lg) {
-    font-size: 36px;
-  }
+.font-lg {
+  font-size: clamp(17px, 4vw, 36px);
 }
+
 .font-xl {
   font-size: 28px;
 
