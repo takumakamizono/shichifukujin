@@ -12,18 +12,18 @@
   <table class="table02 width-auto ">
   <?php
 $levels = [
-  'stage2level3', 
-  'stage2level4', 
-  'stage2level5',
-  'stage3_1level3',
-  'stage3_1level4',
-  'stage3_1level5',
-  'stage3_2level3',
-  'stage3_2level4',
-  'stage3_2level5',
-  'stage4level3',
-  'stage4level4',
-  'stage4level5',
+  'pro1sup2',
+  'pro1nursing1',
+  'pro1nursing2',
+  'pro1nursing3',
+  'pro1nursing4',
+  'pro1nursing5',
+  'pro2sup2',
+  'pro2nursing1',
+  'pro2nursing2',
+  'pro2nursing3',
+  'pro2nursing4',
+  'pro2nursing5'
 ]; // フィールド名の配列
 $formatted_values = [];
 
@@ -40,28 +40,28 @@ foreach ($levels as $level) {
   
   <tr>
   <th>要支援2</th>
-    <td><?= $formatted_values[0] . '円'; ?></td>
+    <td><?= esc_html_e($formatted_values[0] . '円'); ?></td>
   
   </tr>
   <tr>
   <th>要介護1</th>
-    <td><?= $formatted_values[3] . '円'; ?></td>
+    <td><?= esc_html_e($formatted_values[1] . '円'); ?></td>
    
   </tr>
   <tr>
   <th>要介護2</th>
-    <td><?= $formatted_values[6] . '円'; ?></td>
+    <td><?= esc_html_e($formatted_values[2] . '円'); ?></td>
    
   </tr>
   <tr>
   <th>要介護3</th>
-    <td><?= $formatted_values[9] . '円'; ?></td>
+    <td><?= esc_html_e($formatted_values[3] . '円'); ?></td>
   </tr>
   <th>要介護4</th>
-    <td><?= $formatted_values[9] . '円'; ?></td>
+    <td><?= esc_html_e($formatted_values[4] . '円'); ?></td>
   </tr>
   <th>要介護5</th>
-    <td><?= $formatted_values[9] . '円'; ?></td>
+    <td><?= esc_html_e($formatted_values[5] . '円'); ?></td>
   </tr>
 </table>
 </div>
@@ -73,22 +73,6 @@ foreach ($levels as $level) {
 <div class="table-wrap">
   <table class="table02 width-auto ">
   <?php
-$levels = [
-  'stage2level3', 
-  'stage2level4', 
-  'stage2level5',
-  'stage3_1level3',
-  'stage3_1level4',
-  'stage3_1level5',
-  'stage3_2level3',
-  'stage3_2level4',
-  'stage3_2level5',
-  'stage4level3',
-  'stage4level4',
-  'stage4level5',
-]; // フィールド名の配列
-$formatted_values = [];
-
 foreach ($levels as $level) {
   $value = get_field($level);
   if (empty($value)) {
@@ -102,28 +86,28 @@ foreach ($levels as $level) {
   
   <tr>
   <th>要支援2</th>
-    <td><?= $formatted_values[0] . '円'; ?></td>
+    <td><?= esc_html_e($formatted_values[6] . '円'); ?></td>
   
   </tr>
   <tr>
   <th>要介護1</th>
-    <td><?= $formatted_values[3] . '円'; ?></td>
+    <td><?= esc_html_e($formatted_values[7] . '円'); ?></td>
    
   </tr>
   <tr>
   <th>要介護2</th>
-    <td><?= $formatted_values[6] . '円'; ?></td>
+    <td><?= esc_html_e($formatted_values[8] . '円'); ?></td>
    
   </tr>
   <tr>
   <th>要介護3</th>
-    <td><?= $formatted_values[9] . '円'; ?></td>
+    <td><?= esc_html_e($formatted_values[9] . '円'); ?></td>
   </tr>
   <th>要介護4</th>
-    <td><?= $formatted_values[9] . '円'; ?></td>
+    <td><?= esc_html_e($formatted_values[10] . '円'); ?></td>
   </tr>
   <th>要介護5</th>
-    <td><?= $formatted_values[9] . '円'; ?></td>
+    <td><?= esc_html_e($formatted_values[11] . '円'); ?></td>
   </tr>
 </table>
 </div>
