@@ -645,3 +645,58 @@
   }
 }
 
+.cardinfo {
+  padding-top: 40px;
+  @extend .mb-lg;
+  @include mq(lg) {
+    padding-top: 80px;
+  }
+  &__inner {
+    max-width: $contentMaxWidth1000;
+    margin: 0 auto;
+    width: 90%;
+    @extend .mb-lg;
+  }
+  &__blocks {
+    @extend .flex;
+    justify-content: space-between;
+  }
+
+  &__block {
+    @extend .mb-md;
+    @include mq(md) {
+      flex-basis: 49%;
+    }
+    @include mq(lg) {
+      flex-basis: 33%;
+    }
+  }
+  &__img {
+    width: 100%;
+    margin-bottom: 20px;
+    & > img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  &__txt {
+    & > h5 {
+      @extend .font-sm;
+      margin-bottom: 10px;
+      & > span {
+        display: block;
+        font-size: 12px;
+      }
+    }
+    & > p {
+      font-size: 14px;
+    }
+  }
+  &__desc {
+    @extend .font-sm;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+}
