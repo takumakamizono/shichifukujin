@@ -1,39 +1,39 @@
-<div class="sl-service__sec03">
+<div class="surround-contents ">
     
     <div class="section-titles">
    <h3 class="main-title"><span>施設の紹介</span></h3>            
  </div>
-   <div class="sl-service__sec03-inner">
-   <div class="sl-service__sec03-box">
-    <ul class="sl-service__sec03-imgs">
+   <div class="surround-contents__inner">
+   <div class="surround-contents__box">
+    <ul class="image-display">
     <?php if(get_field('img01')): ?>
-      <li class="sl-service__sec03-img">
+      <li class="image-display__img">
         <img src="<?php the_field('img01');?>" alt="">
       </li>
       <?php endif; ?>
       <?php if(get_field('img02')): ?>
-      <li class="sl-service__sec03-img">
+      <li class="image-display__img">
         <img src="<?php the_field('img02');?>" alt="">
       </li>
       <?php endif; ?>
       <?php if(get_field('img03')): ?>
-      <li class="sl-service__sec03-img">
+      <li class="image-display__img">
         <img src="<?php the_field('img03');?>" alt="">
       </li>
       <?php endif; ?>
       <?php if(get_field('img04')): ?>
-      <li class="sl-service__sec03-img">
+      <li class="image-display__img">
         <img src="<?php the_field('img04');?>" alt="">
       </li>
       <?php endif; ?>
       <?php if(get_field('img05')): ?>
-      <li class="sl-service__sec03-img">
+      <li class="image-display__img">
         <img src="<?php the_field('img05');?>" alt="">
       </li>
       <?php endif; ?>
     </ul>
     </div>
-    <div class="sl-service__sec03-box">
+    <div class="surround-contents__box">
     <div class="content-title">
     <h4 class="main-title">設備概要</h4>
   </div>
@@ -77,17 +77,22 @@
 </tr>
 </table>
   </div>
-  <div class="sl-service__sec03-box">
+  <div class="surround-contents__box">
+
+  <div class="info-with-imgs">
     <div class="content-title">
     <h4 class="main-title">1日の流れ</h4>
   </div>
-  <div class="sl-service__sec03-desc">
+  <div class="info-with-imgs__desc">
     <p>今までの生活スタイルをそのまま継続します。  <br> 一人ひとり違う生活時間、皆さまの24時間を尊重します。
 起床時間や食事の時間は自由です。個別ケアで対応します。</p>
   </div>
-  <div class="sl-service__sec03-img">
+  <div class="info-with-imgs__img">
     <img src="<?= get_template_directory_uri(); ?>/images/charge-schedule.jpg" alt="">
   </div>
   </div>
+  </div>
+
+
   </div>            
  </div>
