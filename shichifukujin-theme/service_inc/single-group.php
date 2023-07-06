@@ -8,6 +8,8 @@
 <?php if($post_slug === 'lalachance'): ?>  
 <?php get_template_part('service_inc/sec-price'); ?>
 <?php endif; ?>  
+
+ <?php get_template_part('service_inc/sec-try'); ?>
  <?php get_template_part('service_inc/sec-summary'); ?>
- <?php get_template_part('service_inc/service_access'); ?>
+ <?php get_template_part('service_inc/service-access'); ?>
  
