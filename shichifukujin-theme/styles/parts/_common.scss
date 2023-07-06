@@ -486,12 +486,20 @@ img {
 .table01 {
   width: 100%;
   border-collapse: collapse;
+  & tbody {
+    display: flex;
+    flex-direction: column;
+  }
   & tr {
+    display: flex;
+    flex-direction: column;
     border-bottom: 1px solid #9f9f9f;
+    @include mq(lg) {
+      flex-direction: row;
+    }
   }
   & th,
   & td {
-    padding: 24px 0;
     border: none;
     @include mq(lg) {
       padding: 24px 0;
@@ -499,17 +507,49 @@ img {
     }
   }
   & th {
+    padding: 20px 0 10px 0;
     width: 35%;
     text-align: left;
     @extend .font-sm;
+
     @include mq(lg) {
       width: 50%;
     }
   }
   & td {
     @extend .font-sm;
-    letter-spacing: 0.1em;
     line-height: 1.8;
+    & p {
+      margin-bottom: 10px;
+    }
+    & span {
+      background: $cOrange;
+      padding: 4px 10px;
+      color: $cWhite;
+      border-radius: 3px;
+    }
+    & ul {
+      list-style: none;
+      padding-left: 15px;
+      margin: 10px 0;
+
+      & li {
+        position: relative;
+        &::before {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 600;
+          content: "\f00c";
+          font-size: 17px;
+          color: $cOrange;
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          top: 0;
+
+          left: -23px;
+        }
+      }
+    }
   }
 }
 
