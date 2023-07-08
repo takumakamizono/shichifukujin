@@ -460,6 +460,11 @@
     justify-content: space-between;
   }
   &__box-img {
+.image-box {
+  @extend .mb-lr;
+  @extend .flex;
+  justify-content: space-between;
+  &__img {
     @extend .mb-sm;
 
     & > img {
