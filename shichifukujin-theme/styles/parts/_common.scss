@@ -37,6 +37,14 @@ img {
   }
 }
 
+.mt-md {
+  margin-top: 30px !important;
+
+  @include mq(lg) {
+    margin-top: 60px !important;
+  }
+}
+
 .pb-sm {
   padding-bottom: 16px !important;
 }
@@ -515,7 +523,7 @@ img {
     @extend .font-sm;
 
     @include mq(lg) {
-      width: 50%;
+      width: 28%;
     }
   }
   & td {
@@ -526,9 +534,15 @@ img {
     }
     & span {
       background: $cOrange;
-      padding: 4px 10px;
+      padding: 2px 3px;
       color: $cWhite;
       border-radius: 3px;
+      display: block;
+      text-align: center;
+      @include mq(md) {
+        display: inline-block;
+        padding: 6px 10px;
+      }
     }
     & ul {
       list-style: none;
