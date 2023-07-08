@@ -1,10 +1,13 @@
+<?php $post_slug = get_post_field('post_name', get_post());?>
 <div class="surround-contents">
-    
-   
    <div class="surround-contents__inner">
     <div class="surround-contents__box">
     <div class="content-title">
+    <?php if($post_slug === 'school'): ?>
+    <h4 class="main-title">講座内容</h4>
+    <?php else: ?>  
     <h4 class="main-title">施設概要</h4>
+    <?php endif; ?>  
   </div>
  
 <table class="table01">
