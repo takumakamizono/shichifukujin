@@ -148,12 +148,12 @@ add_filter( 'get_terms_orderby', 'taxonomy_orderby_description', 10, 2 );
 
 add_action( 'admin_init', function() {
   $taxonomy = 'facility'; 
-  $term_slug = 'nursing';
+  $term_slug = ['nursing','group','day','support'
+  ];
   $post_type = 'service'; 
 
   global $pagenow;
 
-  
   if ( $pagenow === 'post.php' && isset( $_GET['post'] ) ) {
       $post_id = $_GET['post'];  
       if ( has_term( $term_slug, $taxonomy, $post_id ) ) {
