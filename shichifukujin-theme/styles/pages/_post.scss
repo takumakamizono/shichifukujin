@@ -754,6 +754,13 @@
     }
   }
 }
+.table-blocks {
+  &__inner {
+    max-width: $contentMaxWidth1000;
+    margin: 0 auto;
+    width: 90%;
+  }
+}
 .banner {
   background: $BgColor;
   min-height: 300px;
