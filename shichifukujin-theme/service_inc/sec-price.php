@@ -57,9 +57,11 @@ foreach ($levels as $level) {
   <th>要介護3</th>
     <td><?= esc_html_e($formatted_values[3] . '円'); ?></td>
   </tr>
+  <tr>
   <th>要介護4</th>
     <td><?= esc_html_e($formatted_values[4] . '円'); ?></td>
   </tr>
+  <tr>
   <th>要介護5</th>
     <td><?= esc_html_e($formatted_values[5] . '円'); ?></td>
   </tr>
