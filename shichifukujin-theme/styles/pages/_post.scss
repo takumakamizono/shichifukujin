@@ -700,6 +700,55 @@
     letter-spacing: 0.06em;
   }
 }
+
+.txtimg-block {
+  max-width: $contentMaxWidth1000;
+  margin: 0 auto;
+  width: 90%;
+  @extend .mb-lr;
+
+  &__box {
+    @extend .flex960;
+    justify-content: space-between;
+    display: flex;
+    @extend .mb-md;
+  }
+  &__title {
+    @extend .font-md;
+    margin-bottom: 20px;
+    color: $cOrange;
+  }
+
+  &__texts {
+    flex-basis: 55%;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__desc {
+    line-height: 2;
+    letter-spacing: 0.06em;
+    @extend .font-sm;
+    & ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  }
+  &__img {
+    flex-basis: 42%;
+    margin-left: 10px;
+    display: flex;
+
+    & img {
+      border-radius: 10px;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}
 .banner {
   background: $BgColor;
   min-height: 300px;
