@@ -414,9 +414,10 @@
     margin: 0 auto;
     width: 90%;
   }
-  &__box {
-    @extend .mb-lr;
-  }
+}
+
+.text-box {
+  @extend .mb-lr;
   &__title {
     @extend .font-md;
     @extend .mb-md;
@@ -442,6 +443,19 @@
     line-height: 2;
     letter-spacing: 0.06em;
     @extend .font-sm;
+    & h5 {
+      @extend .font-md;
+      margin-bottom: 5px;
+      color: $cOrange;
+      & > span {
+        margin-right: 3px;
+        @extend .font-lr;
+      }
+    }
+    & p {
+      @extend .font-sm;
+      @extend .mb-sm;
+    }
   }
   &__innerBox {
     @extend .mb-sm;
@@ -455,11 +469,13 @@
     line-height: 2;
     letter-spacing: 0.06em;
   }
-  &__box-imgs {
-    @extend .flex;
-    justify-content: space-between;
+  @include mq(lg) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  &__box-img {
+}
+
 .image-box {
   @extend .mb-lr;
   @extend .flex;
@@ -479,6 +495,7 @@
     }
   }
 }
+
 .sec-price {
   @extend .mb-lg;
   &__inner {
