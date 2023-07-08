@@ -747,3 +747,82 @@
   }
 }
 
+.school-content {
+  &__inner {
+    max-width: $contentMaxWidth1000;
+    margin: 0 auto;
+    width: 90%;
+  }
+  &__blocks {
+    @extend .mb-lg;
+  }
+  &__blocks-inner {
+    @extend .flex960;
+    justify-content: space-between;
+  }
+  &__box {
+    @extend .mb-md;
+    flex-basis: 49%;
+    padding: 20px 20px;
+    background: $BgColor;
+    border-radius: 10px;
+    @include mq(md) {
+      padding: 30px 40px;
+    }
+  }
+  &__box-head {
+    padding: 20px 0;
+    position: relative;
+    margin-bottom: 20px;
+
+    &::after {
+      bottom: 0;
+      height: 5px;
+      background-size: 16px auto;
+      position: absolute;
+      width: 100%;
+      content: "";
+      background-repeat: space repeat;
+      background-image: url(./images/bg_dot03.png);
+      left: 0;
+    }
+    @include mq(lg) {
+      padding: 30px 0;
+    }
+  }
+  &__box-leftTitle {
+    @extend .font-lr;
+    text-align: center;
+  }
+  &__box-desc {
+    font-size: 14px;
+    & dl {
+      margin-bottom: 20px;
+    }
+    & dt {
+      padding-left: 15px;
+      position: relative;
+      font-weight: 700;
+      margin-bottom: 5px;
+      &::before {
+        position: absolute;
+        content: "";
+        top: 7px;
+
+        width: 8px;
+        height: 8px;
+        background: $cOrange;
+        border-radius: 50%;
+        left: 0;
+      }
+    }
+    & dd {
+      & ul {
+        padding: 15px;
+        & li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
