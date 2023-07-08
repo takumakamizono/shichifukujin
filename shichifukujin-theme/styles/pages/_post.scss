@@ -700,3 +700,50 @@
     letter-spacing: 0.06em;
   }
 }
+.banner {
+  background: $BgColor;
+  min-height: 300px;
+  @extend .mb-lg;
+  max-width: $contentMaxWidth1000;
+  margin: 0 auto;
+  width: 90%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 50px 5px;
+  &__inner {
+    flex-basis: 100%;
+  }
+  &__texts {
+    background-color: rgba(255, 255, 255, 0.9);
+    @extend .content-width;
+    border-radius: 10px;
+    padding: 50px 10px;
+    @include mq(md) {
+      padding: 50px 30px;
+    }
+    @include mq(lg) {
+      padding: 50px 60px;
+    }
+
+    & > p {
+      @extend .font-sm;
+    }
+  }
+  &__title {
+    text-align: center;
+    font-size: 14px;
+    @extend .mb-sm;
+    @include mq(lg) {
+      font-size: 26px;
+    }
+  }
+  &__btn {
+    margin-top: 20px;
+    text-align: center;
+    @include mq(md) {
+      margin-top: 50px;
+    }
+  }
+}
+
