@@ -5,8 +5,8 @@
 <?php get_template_part('service_inc/sec-cardinfo'); ?>
 <?php get_template_part('service_inc/sec-txtBocks'); ?>
 <?php get_template_part('service_inc/banner'); ?>
+<?php get_template_part('service_inc/sec-summary'); ?>
 <?php endif; ?>
- <?php get_template_part('service_inc/sec-summary'); ?>
  <?php if($post_slug === 'school'): ?>
     <?php get_template_part('service_inc/school'); ?>
 <?php endif; ?>
