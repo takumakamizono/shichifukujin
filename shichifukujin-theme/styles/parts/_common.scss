@@ -116,11 +116,7 @@ img {
 }
 
 .font-xl {
-  font-size: 28px;
-
-  @include mq(lg) {
-    font-size: 40px;
-  }
+  font-size: clamp(20px, 5vw, 40px);
 }
 .section-titles {
   text-align: center;
