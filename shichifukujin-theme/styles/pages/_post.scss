@@ -293,10 +293,10 @@
 }
 
 .list-interview {
-  @extend .content-width;
-  max-width: $contentMaxWidth1000;
   @extend .mb-lg;
   &__inner {
+    @extend .content-width;
+    max-width: $contentMaxWidth1000;
     @extend .flex;
     justify-content: space-between;
   }
