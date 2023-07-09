@@ -68,6 +68,7 @@
 }
 
 .service {
+  background: $BgColor;
   &__inner {
     max-width: $contentMaxWidth1000;
     width: 90%;
@@ -78,13 +79,14 @@
     justify-content: space-between;
   }
   &__item {
+    background: $BgSubColor;
     flex-basis: 48%;
     @extend .mb-lr;
     box-shadow: 1px 1px 10px rgba(176, 176, 176, 0.1);
     border-radius: 10px;
     padding: 5px;
     @include mq(md) {
-      padding: 10px;
+      padding: 15px 20px;
     }
   }
   &__img {
