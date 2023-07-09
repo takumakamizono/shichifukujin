@@ -8,11 +8,11 @@
                 <div class="about__inner">
                   <div class="about__overview">
                   <div class="about__img cover-slide">
-                    <img class="img-zoom" src="https://placehold.jp/670x400.png" />
+                    <img class="img-zoom" src="<?= get_template_directory_uri(); ?>/images/about.png" />
                   </div>
                   <div class="about__texts appear right">
                     <div class="about__texts-inner">
-                      <div class="about__title main-title item">
+                      <div class="about__title item">
                         会社紹介
                       </div>
                      
@@ -35,7 +35,7 @@
                   </div>
                   <div class="about__texts appear right">
                     <div class="about__texts-inner">
-                      <div class="about__title main-title item">
+                      <div class="about__title item">
                         施設・事業紹介
                       </div>
                       <div class="about__description item">
