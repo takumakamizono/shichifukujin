@@ -904,3 +904,57 @@
     }
   }
 }
+
+.school-programImg {
+  list-style: none;
+  padding: 0;
+  // @extend .flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__img {
+    flex-basis: 49%;
+    &:nth-child(1) {
+      flex-basis: 100%;
+      & > img {
+        width: 100%;
+      }
+    }
+    @extend .mb-sm;
+
+    & > img {
+      border-radius: 10px;
+      margin: 0 auto;
+    }
+    @include mq(md) {
+      flex-basis: 33%;
+    }
+  }
+}
+.school-point {
+  width: 100%;
+  padding: 20px 20px 20px 50px;
+  background: #f6f4ef;
+  border-radius: 10px;
+  position: relative;
+  & > p {
+    @extend .font-sm;
+    font-weight: 600;
+    margin: 0 !important;
+  }
+
+  &::before {
+    content: "\f0eb";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    font-size: 25px;
+    color: #eb9b71;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    left: 20px;
+  }
+}

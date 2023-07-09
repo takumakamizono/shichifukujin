@@ -1,3 +1,5 @@
+<?php get_template_part('service_inc/school-program'); ?>
+<?php get_template_part('service_inc/sec-summary'); ?>
 <div class="school-content">
     <div class="school-content__inner">
 
