@@ -442,6 +442,7 @@
     }
   }
   &__desc {
+    width: 100%;
     line-height: 2;
     letter-spacing: 0.06em;
     @extend .font-sm;
