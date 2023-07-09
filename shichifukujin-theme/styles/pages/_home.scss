@@ -213,11 +213,12 @@ main {
   }
 }
 .news {
-  @extend .content-width;
   @extend .mb-lg;
   &__inner {
     max-width: $contentMaxWidth1000;
+    width: 90%;
     margin: 0 auto;
+
     min-height: 200px;
   }
   &__list {
