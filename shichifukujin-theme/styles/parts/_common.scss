@@ -227,13 +227,15 @@ img {
 }
 
 .breadcrumb {
-  @extend .content-width;
   color: $main-txt;
   font-size: 10px;
+  background: $BgSubColor;
+  @extend .mb-md;
   &__inner {
-    padding: 10px 0 40px 0;
+    @extend .content-width;
+    padding: 20px 0 20px 0;
     @include mq(lg) {
-      padding: 10px 0 80px 0;
+      padding: 40px 0 40px 0;
     }
     & i {
       margin: 0 10px;
