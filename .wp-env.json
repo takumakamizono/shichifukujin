@@ -7,8 +7,9 @@
     "https://downloads.wordpress.org/plugin/breadcrumb-navxt.zip",
     "https://downloads.wordpress.org/plugin/wp-pagenavi.zip",
     "https://downloads.wordpress.org/plugin/contact-form-7.zip",
-    "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.13.6.zip",
-    "https://downloads.wordpress.org/plugin/advanced-custom-fields.zip"
+    "https://downloads.wordpress.org/plugin/custom-post-type-ui.zip",
+    "https://downloads.wordpress.org/plugin/advanced-custom-fields.zip",
+    "https://downloads.wordpress.org/plugin/zipaddr-jp.zip"
   ],
   "themes": ["./shichifukujin-theme"],
 
