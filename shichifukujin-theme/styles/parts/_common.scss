@@ -135,7 +135,9 @@ img {
   @extend .mb-lr;
 }
 .section-titles-left {
-  @extend .mb-lr;
+  @extend .content-width1000;
+
+  @extend .mb-md;
 }
 
 .main-title {
