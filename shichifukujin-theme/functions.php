@@ -122,7 +122,7 @@ add_filter( 'excerpt_more', 'twpp_change_excerpt_more' );
 
 add_filter('use_block_editor_for_post',function($use_block_editor,$post){
   if($post->post_type==='page'){
-      if(in_array($post->post_name,['top_slide','sub_topimg','sitemap'])){
+      if(in_array($post->post_name,['top_slide','sub_topimg','sitemap','procedure','about'])){
           remove_post_type_support('page','editor');
           return false;
       }
