@@ -130,6 +130,7 @@
 }
 
 .hero-sub {
+  padding-top: $navHeight-m;
   @include mq(lg) {
     padding-top: $navHeight;
   }
