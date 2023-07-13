@@ -1,5 +1,5 @@
 <li id="post-<?php the_ID(); ?>"<?php post_class('news__box item') ?> >
-<a href="<?php the_permalink(); ?>">
+<a href="<?=esc_url(get_permalink());?>">
                                  
                        <ul class="cat fontSerif">
                        <?php categories_label(); ?>
