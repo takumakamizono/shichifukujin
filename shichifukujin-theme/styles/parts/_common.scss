@@ -48,6 +48,13 @@ img {
 .pb-sm {
   padding-bottom: 16px !important;
 }
+.pb-md {
+  padding-bottom: 30px !important;
+
+  @include mq(lg) {
+    padding-bottom: 60px !important;
+  }
+}
 
 .pb-lg {
   padding-bottom: 80px !important;
