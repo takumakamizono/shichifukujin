@@ -3,46 +3,42 @@
 @use "../parts/button" as *;
 
 .page-content {
+  @extend .mb-lg;
   &__inner {
-    @extend .content-width;
+    @extend .content-width1000;
+  }
+}
+.contact-toptxt {
+  @extend .mb-lr;
+
+  display: flex;
+  min-height: 150px;
+  align-items: center;
+  @extend .font-sm;
+  & > div {
+    padding: 30px 0;
   }
 }
 .contact-info {
-  justify-content: space-around;
-  @extend .mb-lg;
-  &__tel,
-  &__fax {
-    flex-basis: 48%;
-    background: $cBgGray;
-    padding: 20px 15px;
-    @include mq(md) {
-      padding: 20px 45px;
-    }
-    & > h3 {
-      color: $mainColor;
-      margin-bottom: 10px;
-      text-align: center;
-      font-family: "Noto Sans JP", sans-serif;
-    }
-    & p {
-      &:nth-of-type(1) {
-        @extend .font-lg;
-        font-weight: 800;
-        margin-bottom: 10px;
-        & > a {
-          color: $main-txt;
-          text-decoration: none;
-        }
-      }
-      &:nth-of-type(2) {
-        font-size: 10px;
-        @include mq(md) {
-          font-size: 12px;
-        }
-      }
-    }
+  @extend .mb-md;
+  min-height: 100px;
+  padding: 30px 20px;
+  background: $BgColor;
+  border-radius: 10px;
+  @include mq(lg) {
+    padding: 50px 60px;
+  }
+  & h3 {
+    @extend .font-md;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 2px dotted $mainColor;
+  }
+  & p {
+    margin-bottom: 30px;
   }
 }
+
 .contact-form {
   & h3 {
     font-family: "Noto Sans JP", sans-serif;
