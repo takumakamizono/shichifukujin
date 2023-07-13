@@ -308,42 +308,50 @@ img {
 /* Contact Form7 */
 
 .contact7 {
-  max-width: 100%;
+  width: 100%;
   box-sizing: border-box;
   font-size: 12px;
   & input,
   & textarea {
     width: 100%;
     border: none;
-    background: $cBgGray;
+    background: $BgColor;
     padding: 15px 20px;
+    border-radius: 5px;
   }
-  & dt {
-    font-weight: normal;
-    margin-bottom: 20px;
+  & tr {
+    @extend .flex;
+    border-bottom: 2px dotted $lightGray;
+
+    padding: 20px 0;
+    @include mq(md) {
+      justify-content: space-between;
+      align-items: center;
+    }
+    @include mq(lg) {
+      padding: 40px 0;
+    }
+  }
+  & th {
+    font-weight: bold;
+    flex-basis: 28%;
+    margin-bottom: 10px;
     & > p {
       display: flex;
       align-items: center;
     }
     @include mq(lg) {
       margin-bottom: 0;
-      float: left;
-      clear: left;
-      width: 35%;
-      padding: 5px 10px 5px 0;
     }
   }
-  & dd {
-    margin: 0 0 30px 0;
-    @include mq(lg) {
-      margin-left: 35%;
-    }
+  & td {
+    flex-basis: 70%;
   }
   & .must {
-    background: #ff1a00;
+    background: $cOrange;
   }
   & .optional {
-    background: #999;
+    background: $lightGray;
   }
   & .optional,
   & .must {
@@ -367,37 +375,31 @@ img {
     height: 50px;
     width: 100%;
     max-width: 400px;
-    background-color: $cBgGray;
+    background-color: $BgColor;
     color: $main-txt;
     font-size: 1.1em;
     font-weight: bold;
     letter-spacing: 0.2em;
-    border: 1px solid $cBgGray;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
-    -ms-transition: 0.3s;
+    border: 1px solid $BgColor;
+
     transition: 0.3s;
     @include mq(lg) {
       width: 70%;
-      background-color: $cBgGray;
+      background-color: $BgColor;
 
       font-size: 1.1em;
       font-weight: bold;
       letter-spacing: 0.2em;
-      border: 1px solid $cBgGray;
-      -webkit-transition: 0.3s;
-      -moz-transition: 0.3s;
-      -o-transition: 0.3s;
-      -ms-transition: 0.3s;
+      border: 1px solid $BgColor;
+
       transition: 0.3s;
     }
     &:hover {
       background-color: $cWhite;
-      color: $cBgGray;
+      color: $BgColor;
       @include mq(lg) {
         background-color: $cWhite;
-        color: $cBgGray;
+        color: $BgColor;
       }
     }
   }
