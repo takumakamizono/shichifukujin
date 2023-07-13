@@ -733,10 +733,12 @@
   @extend .mb-lr;
 
   &__box {
-    @extend .flex960;
-    justify-content: space-between;
-    display: flex;
     @extend .mb-md;
+    @extend .flex;
+  }
+  &__box-inner {
+    @extend .flex;
+    justify-content: space-between;
   }
   &__title {
     @extend .font-md;
@@ -771,6 +773,27 @@
       border-radius: 10px;
       object-fit: cover;
       width: 100%;
+    }
+  }
+  &__box-inner {
+    @extend .mb-md;
+  }
+  &__bottom-tit {
+    text-align: center;
+    @extend .font-md;
+    color: $cOrange;
+    font-weight: 800;
+  }
+  &__bottom-desc {
+    padding: 20px 0;
+    @extend .font-sm;
+    & ul {
+      list-style: none;
+      & li {
+        border-bottom: 2px dotted $cOrange;
+        margin-bottom: 20px;
+        padding-bottom: 5px;
+      }
     }
   }
 }
