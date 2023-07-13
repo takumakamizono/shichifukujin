@@ -69,6 +69,11 @@ img {
   margin: 0 auto;
   max-width: $contentMaxWidth;
 }
+.content-width1000 {
+  width: 90%;
+  margin: 0 auto;
+  max-width: $contentMaxWidth1000;
+}
 
 .flex {
   display: flex;
