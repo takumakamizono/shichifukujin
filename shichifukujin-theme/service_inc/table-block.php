@@ -17,7 +17,6 @@
     <?php if(get_field('program08')): ?>
     <td><?php the_field('program08');?></td>
     <?php endif; ?>
-    
   </tr> 
-</table >
+</table>
 </div>
