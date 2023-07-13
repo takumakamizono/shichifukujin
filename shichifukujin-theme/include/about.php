@@ -31,7 +31,7 @@
                   </div>
                   <div class="about__institution">
                   <div class="about__img cover-slide">
-                    <img class="img-zoom" src="https://placehold.jp/670x400.png" />
+                    <img class="img-zoom" src="<?= get_template_directory_uri(); ?>/images/institution.png" />
                   </div>
                   <div class="about__texts appear right">
                     <div class="about__texts-inner">
@@ -46,7 +46,7 @@
                        
                       </div>
                       <div class="about__btn item">
-                        <a class="btn02" href="http://localhost:4014/service">施設・事業紹介へ</a>
+                        <a class="btn02" href="<?= esc_url(home_url('service')); ?>">施設・事業紹介へ</a>
                       
                       </div>
                     </div>
