@@ -61,8 +61,8 @@
     }
   }
   &__box {
-    background: #fcfdff;
-    border: 0.5px solid #e9ecf2;
+    border-radius: 10px;
+    background: $BgColor;
     @extend .mb-sm;
     padding: 10px 10px;
     @include mq(sm) {
@@ -85,7 +85,7 @@
       @extend .mb-sm;
       & li {
         & > a {
-          color: $mainColor;
+          color: $main-txt;
         }
       }
     }
