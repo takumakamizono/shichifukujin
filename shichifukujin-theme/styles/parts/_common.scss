@@ -527,9 +527,12 @@ img {
   & tr {
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid #9f9f9f;
+    border-bottom: 2px dotted #9f9f9f;
+    padding: 10px 20px;
+
     @include mq(lg) {
       flex-direction: row;
+      align-items: center;
     }
   }
   & th,
@@ -558,14 +561,15 @@ img {
     }
     & span {
       background: $cOrange;
-      padding: 2px 3px;
+      padding: 1px 2px;
       color: $cWhite;
       border-radius: 3px;
       display: block;
       text-align: center;
       @include mq(md) {
         display: inline-block;
-        padding: 6px 10px;
+        padding: 3px 10px;
+        margin-left: 10px;
       }
     }
     & ul {
