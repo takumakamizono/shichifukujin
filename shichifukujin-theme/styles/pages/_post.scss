@@ -42,10 +42,11 @@
       }
     }
     &-text {
-      background: #fcfdff;
-      border: 0.5px solid $cBgGray;
+      background: $BgColor;
+
       padding: 12px;
-      border-radius: 3px;
+      border-radius: 10px;
+      min-height: 150px;
       @include mq(lg) {
         padding: 30px;
       }
