@@ -483,20 +483,29 @@ main {
       flex-basis: 32%;
     }
   }
+  &__img {
+    & > img {
+      border-radius: 10px 0 0 0;
+    }
+  }
 
   &__text {
-    min-height: 150px;
+    border-radius: 0 0 10px 10px;
+
     background: $cWhite;
     padding: 15px 20px;
-
+  }
+  &__desc {
+    margin-bottom: 20px;
+    font-size: 14px;
+    min-height: 50px;
+  }
+  &__btn {
+    text-align: center;
     & > a {
       background: $mainColor;
       color: $cWhite;
     }
-  }
-  &__desc {
-    margin-bottom: 10px;
-    font-size: 14px;
   }
   &__tit {
     z-index: 100;
