@@ -417,15 +417,19 @@ img {
   }
   & > a {
     color: $mainColor;
+    border-radius: 20px;
   }
   & .pages {
     /* 左の表記 */
     margin-right: 20px;
+
     display: none;
   }
   & span.current {
-    background: $lightGray;
-    color: $cBlack;
+    background: $mainColor;
+    color: $cWhite;
+    border-radius: 20px;
+    border: none;
   }
   & .previouspostslink,
   & .nextpostslink {
@@ -460,7 +464,7 @@ img {
 .news-cate {
   @extend .mb-md;
   padding: 20px;
-  background: $cBgGray;
+  background: $BgColor;
   @include mq(lg) {
     padding: 30px 50px;
   }
