@@ -24,13 +24,13 @@ Template Post Type: page
         <?php get_template_part('include/hero'); ?>
           <div id="main-content">
            
-            <?php get_template_part('include/side-left'); ?>
+            <!-- <?php get_template_part('include/side-left'); ?> -->
             <main>
             <?php if(have_posts()): ?>
             <?php while(have_posts()):the_post(); ?>
             <div class="page-content">
+              <?php get_template_part('include/breadcrumb'); ?> 
               <div class="page-content__inner">
-                  <?php get_template_part('include/breadcrumb'); ?> 
                   <div class="site-map">
                   <div class="site-map__box">   
 <div class="site-map__top">               
@@ -93,11 +93,9 @@ wp_list_pages(
             <?php endwhile; ?>
             <?php endif; ?>
             
-             
-         
-             
+                   
             </main>
-            <?php get_template_part('include/side-right'); ?>
+            <!-- <?php get_template_part('include/side-right'); ?> -->
           
           </div>
         </div>
@@ -109,3 +107,4 @@ wp_list_pages(
     <?php wp_footer(); ?>
   </body>
 </html>
+

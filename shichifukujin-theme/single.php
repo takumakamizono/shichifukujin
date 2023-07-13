@@ -15,7 +15,7 @@
         <?php get_template_part('include/hero'); ?>
           <div id="main-content">
            
-            <?php get_template_part('include/side-left'); ?>
+            <!-- <?php get_template_part('include/side-left'); ?> -->
             <main>
             <section class="single">
             <?php get_template_part('include/breadcrumb'); ?> 
@@ -45,7 +45,7 @@ $link = get_category_link($cat_id);
               </div>
               </section>     
             </main>
-            <?php get_template_part('include/side-right'); ?>
+            <!-- <?php get_template_part('include/side-right'); ?> -->
           
           </div>
         </div>

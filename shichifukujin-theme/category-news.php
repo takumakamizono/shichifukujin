@@ -15,7 +15,7 @@
         <?php get_template_part('include/hero'); ?>
           <div id="main-content">
            
-            <?php get_template_part('include/side-left'); ?>
+            <!-- <?php get_template_part('include/side-left'); ?> -->
             <main>
                <section class="news">
                 <?php get_template_part('include/breadcrumb'); ?> 
@@ -44,7 +44,7 @@
          
              
             </main>
-            <?php get_template_part('include/side-right'); ?>
+            <!-- <?php get_template_part('include/side-right'); ?> -->
           
           </div>
         </div>

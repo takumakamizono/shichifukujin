@@ -15,12 +15,12 @@
         <?php get_template_part('include/hero'); ?>
           <div id="main-content">
            
-            <?php get_template_part('include/side-left'); ?>
+            <!-- <?php get_template_part('include/side-left'); ?> -->
             <main>
        
             <div class="page-content">
+              <?php get_template_part('include/breadcrumb'); ?> 
               <div class="page-content__inner">
-                  <?php get_template_part('include/breadcrumb'); ?> 
              <div class="page-404">
                 <p>お探しのページは見つかりませんでした。</p>
                 <p>恐れ入りますが、下のリンクからトップページへお戻りください。</p>
@@ -28,14 +28,11 @@
                 <div class="page-404__btn">
                     <a class="btn" href="">トップページへ戻る</a>
                 </div>
-             </div>
-                
+             </div>         
         </div>
-          </div>
-           
-               
+          </div>      
             </main>
-            <?php get_template_part('include/side-right'); ?>
+            <!-- <?php get_template_part('include/side-right'); ?> -->
           
           </div>
         </div>

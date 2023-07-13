@@ -21,13 +21,13 @@
         <?php get_template_part('include/hero'); ?>
           <div id="main-content">
            
-            <?php get_template_part('include/side-left'); ?>
+            <!-- <?php get_template_part('include/side-left'); ?> -->
             <main>
             <?php if(have_posts()): ?>
             <?php while(have_posts()):the_post(); ?>
             <div class="page-content">
               <?php get_template_part('include/breadcrumb'); ?> 
-              <div class="page-content__inner">
+             
                   <div class="about-page">
                
                         <section class="sentence">
@@ -239,7 +239,7 @@
             <?php get_template_part('include/contact'); ?>
             
             </main>
-            <?php get_template_part('include/side-right'); ?>
+            <!-- <?php get_template_part('include/side-right'); ?> -->
           
           </div>
         </div>
