@@ -3,7 +3,7 @@
                         <span><?php the_field('text-title01');?></span>
                      </h4>
                      <div class="text-box__desc">
-                      <div><?php the_field('text-desc01');?></div>
+                      <?php the_field('text-desc01');?>
                      </div>
                 </div>
                 <?php if(get_field('text-title02')):?>       
@@ -12,7 +12,7 @@
                         <span><?php the_field('text-title02');?></span>
                      </h4>
                      <div class="text-box__desc">
-                      <div><?php the_field('text-desc02');?></div>
+                      <?php the_field('text-desc02');?>
                      </div>    
                 </div>
                 <?php endif; ?>
