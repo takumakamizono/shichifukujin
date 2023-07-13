@@ -146,6 +146,7 @@
   @extend .mb-lg;
 }
 .sentence {
+  @extend .content-width1000;
   @extend .flex960;
   @extend .mb-lg;
   &__img {
@@ -162,10 +163,12 @@
     letter-spacing: 0.06em;
     & p {
       @extend .mb-sm;
+      @extend .font-sm;
     }
   }
 }
 .overview {
+  @extend .content-width1000;
   @extend .mb-lg;
 }
 .overview-table {
@@ -221,6 +224,7 @@
 }
 
 .aboutpage-access {
+  @extend .content-width1000;
   @extend .mb-lg;
   max-width: 1100px;
   margin: 0 auto;
@@ -241,6 +245,13 @@
     flex-basis: 53%;
     display: flex;
     align-items: flex-end;
+  }
+  &__text-inner {
+    @include mq(lg) {
+      padding: 20px 40px 20px 20px;
+      background: $cWhite;
+      border-radius: 10px;
+    }
   }
 
   &__title {
@@ -265,15 +276,21 @@
 }
 
 .philosophy {
-  max-width: 1100px;
-  margin: 0 auto;
-  @extend .mb-lg;
+  // background: $BgColor;
+  @extend .pb-lg;
+
+  &__inner {
+    @extend .content-width1000;
+  }
 
   &__block {
     @extend .mb-md;
-    border: 4px solid $mainColor;
     padding: 15px 20px;
     border-radius: 10px;
+    background: $cWhite;
+    @include mq(lg) {
+      padding: 30px 25px;
+    }
   }
   &__main {
     @extend .mb-sm;
@@ -290,6 +307,44 @@
       }
     }
   }
+  &__bg {
+    height: 100%;
+    background: $BgColor;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    &::before {
+      content: "";
+      background: url(./images/detailed-bg-top-sp.png) no-repeat center/cover;
+      top: -90px;
+      height: 90px;
+      position: absolute;
+      width: 100%;
+      @include mq(lg) {
+        top: -295px;
+        height: 296px;
+        background: url(./images/detailed-bg-t.png) no-repeat center/cover;
+      }
+    }
+    &::after {
+      content: "";
+      bottom: -90px;
+      width: 100%;
+      height: 90px;
+      position: absolute;
+      background: url(./images/detailed-bg-sp.png) no-repeat center/cover;
+      @include mq(lg) {
+        bottom: -296px;
+        height: 296px;
+        background: url(./images/detailed-bg.png) no-repeat center/cover;
+      }
+    }
+  }
+}
+.philosophys {
+  position: relative;
 }
 
 .accordion-table {
