@@ -59,6 +59,7 @@
                 <?php
                 $menu_name = $post_type_object->labels->menu_name;
                 $name = $post_type_object->labels->name;
+                
                  ?> 
               <h2 class="hero-sub__maintitle "><?=  esc_html($menu_name); ?></h2>
               <p class="hero-sub__subtitle"><?=  esc_html($name); ?></p>
@@ -66,7 +67,11 @@
               </div>
               <div class="hero-sub__img"> 
                 <?php if(is_category('news') || in_category('news')):  ?>      
-                  <img src="<?php the_field('news_img',210);?>" alt="お知らせのヘッダー画像">                    
+                  <img src="<?php the_field('news_img',312);?>" alt="お知らせのヘッダー画像">   
+            
+                <?php elseif($post_type):  ?>      
+                  <img src="<?php the_field('service_img',312);?>" alt="施設紹介のヘッダー画像">   
+            
              <?php endif; ?>
             </div>     
         </div>
@@ -106,7 +111,11 @@
               </div>
               <div class="hero-sub__img"> 
                 <?php if(is_category('news') || in_category('news')):  ?>  
-                 <img src="<?php the_field('news_img',210);?>" alt="お知らせのヘッダー画像">
+                 <img src="<?php the_field('news_img',312);?>" alt="お知らせのヘッダー画像">
+                 <?php elseif($post_type):  ?>      
+                  <img src="<?php the_field('service_img',312);?>" alt="施設紹介のヘッダー画像">   
+            
+        
              <?php endif; ?>
             </div>     
         </div>
@@ -138,8 +147,8 @@ $slug = $page->post_name;
               <h2 class="hero-sub__maintitle ">404 NOT FOUND</h2>
               </div>
               <div class="hero-sub__img">  
-                <?php if(get_field('404_img',210)): ?>      
-              <img src="<?php the_field('404_img',210);?>" alt="404ページのヘッダー画像">
+                <?php if(get_field('404_img',312)): ?>      
+              <img src="<?php the_field('404_img',312);?>" alt="404ページのヘッダー画像">
               <?php else: ?>
                 <img src="https://placehold.jp/1400x700.png" alt="noimage画像" />
                <?php endif; ?>
