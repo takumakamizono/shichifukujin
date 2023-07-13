@@ -95,8 +95,9 @@
 .sm-list-page {
   list-style: none;
   & li {
+    @extend .font-sm;
     position: relative;
-    margin-bottom: 3px;
+    padding: 5px 0;
     &::after {
       content: "\f3bf";
       font-family: "Font Awesome 5 free";
@@ -113,8 +114,9 @@
 .sm-list-post {
   list-style: none;
   & li {
+    @extend .font-sm;
     position: relative;
-    margin-bottom: 3px;
+    padding: 5px 0;
     &::after {
       content: "\f054";
       font-family: "Font Awesome 5 free";
