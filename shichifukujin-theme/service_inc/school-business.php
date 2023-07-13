@@ -13,17 +13,17 @@
 
                      <div class="school-content__box-desc">
                       <dl>
-                        <dt>費用</dt>
+                        <dt>費用<span class="remarks">テキスト代別・税別</span></dt>
                         <dd>
                      <div class="table-wrap">
                       
   <table class="table05 ">
   <?php
 $levels = [
-  'pro1sup2',
-  'pro1nursing1',
-  'pro1nursing2',
-  'pro1nursing3',
+  '3rd-grade',
+  '2rd-grade',
+  '1rd-grade',
+  'basic',
   
 ]; // フィールド名の配列
 $formatted_values = [];
@@ -58,7 +58,6 @@ foreach ($levels as $level) {
   <th>介護職員基礎研修修了者</th>
     <td><?= esc_html_e($formatted_values[3] . '円'); ?></td>
   </tr>
-  
 </table>
 </div>
 </dd>
@@ -86,3 +85,4 @@ foreach ($levels as $level) {
    
 </div>
          
+
