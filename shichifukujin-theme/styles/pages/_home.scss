@@ -662,7 +662,7 @@ main {
     margin-bottom: 0;
   }
   &__inner {
-    background-image: url(images/bg_contact_sp.jpg);
+    background-image: url(images/bg_contact_sp.png);
     height: 200px;
     background-repeat: no-repeat;
     background-position: center;
@@ -672,7 +672,7 @@ main {
       height: 300px;
     }
     @include mq(lg) {
-      background-image: url(images/bg_contact_pc.jpg);
+      background-image: url(images/bg_contact_pc.png);
       padding: 100px 0 100px;
       height: 500px;
     }
