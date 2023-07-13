@@ -81,13 +81,67 @@ wp_list_pages(
       ?>
       <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
       <?php endforeach; ?>
+      <?php wp_reset_postdata(); ?>
     </ul>
   <?php }; ?>
   </div> 
+
+  <div class="site-map__box">
+  <?php
+  $args = array(
+    'post_type' => 'service',
+    'posts_per_page' => -1,
+    'orderby' => 'name',
+    'order' => 'ASC'
+  );
+  $post_type = 'service';
+  $post_type_object = get_post_type_object($post_type);
+  
+  $services = get_posts($args);
+  if ($services) {
+    if ($post_type_object) {
+  $post_type_name = $post_type_object->labels->menu_name;
+  $post_type_link = get_post_type_archive_link($post_type);
+  echo '<h2><a href="' . esc_url($post_type_link) . '">'. $post_type_name .'</a></h2>';
+} else {
+  echo '<h2><a href=""></a>Custom Post Type</h2>';
+}
+echo '<ul class="sm-list sm-list-post">';
+    foreach ($services as $post) {
+      setup_postdata($post);
+      echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
+    }
+    echo '</ul>';
+    wp_reset_postdata();
+  } else {
+    echo '<p>No services found.</p>';
+  }
+  ?>
+</div>
+<div class="site-map__box">
+  <?php
+  $category_slug = 'interview'; // 取得するカテゴリのスラッグ
+  $category = get_category_by_slug($category_slug);
+  if ($category) {
+    echo '<h2><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></h2>';
+    $myposts = get_posts(array(
+      'numberposts' => -1,
+      'category' => $category->term_id
+    ));
+    if ($myposts) {
+      echo '<ul class="sm-list sm-list-post">';
+      foreach ($myposts as $post) {
+        setup_postdata($post);
+        echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
+      }
+      echo '</ul>';
+      wp_reset_postdata();
+    }
+  }
+  ?>
+</div>
  
 </div>
-
-
                 </div>
           </div>
             <?php endwhile; ?>
