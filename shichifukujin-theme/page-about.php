@@ -111,6 +111,7 @@
                         </div>
                     </div>
                   </section>
+                  <div class="philosophys">
                   <section class="philosophy">
                   <div class="section-titles-left">
                   <h2 class="content-title">
@@ -172,6 +173,7 @@
                     </div>
                   </section>
                   <section class="philosophy">
+                    
                   <div class="section-titles-left">
                   <h2 class="content-title">
                   七福神の７２９
@@ -227,12 +229,174 @@
                     
                     </div>
                   </section>
-
+                  <div class="philosophy__bg"></div>
+                  </div>
                 </div>
                 </div>
-          </div>
+          
             <?php endwhile; ?>
             <?php endif; ?>
+
+
+      
+
+
+            <!-- <?php
+$categories = array('improvement', 'reward', 'settlement', 'teikan');
+$thisyear = date_i18n('Y'); // 現在の西暦年を取得
+
+foreach ($categories as $category) {
+    $category_object = get_category_by_slug($category);
+    $category_name = $category_object->name;
+    echo '<h2>' . ucfirst($category_name) . '</h2>'; // カテゴリ名を取得して表示（先頭文字を大文字に変換）
+
+    for ($year = $thisyear; $year >= 2000; $year--) {
+        $args = array(
+            'category_name' => $category,
+            'posts_per_page' => -1, // 全ての記事を表示
+            'year' => $year,
+            'order' => 'ASC'
+        );
+        $query = new WP_Query($args);
+
+        if ($query->have_posts()) {
+            echo '<dl>';
+            echo '<dt>' . $year . '年</dt>';
+
+            while ($query->have_posts()) {
+                $query->the_post();
+                echo '<dd><div class="content"><a href="' . esc_url(get_permalink()) . '">' . get_the_title() . '</a></div></dd>';
+            }
+
+            echo '</dl>';
+        }
+
+        wp_reset_postdata(); // クエリのリセット
+    }
+}
+?> -->
+<!-- <?php
+$categories = array('improvement', 'reward', 'settlement', 'teikan');
+$thisyear = date('Y'); // 現在の西暦年を取得
+
+// 年号変換用の辞書配列
+$era_dictionary = array(
+    array('start' => 2019, 'era' => '令和'),
+    array('start' => 1989, 'era' => '平成'),
+    // 必要に応じて他の年号を追加してください
+);
+
+foreach ($categories as $category) {
+    $category_object = get_category_by_slug($category);
+    $category_name = $category_object->name;
+    echo '<h2>' . ucfirst($category_name) . '</h2>';
+
+    for ($year = $thisyear; $year >= 2000; $year--) {
+        $era = ''; // 年号を格納する変数
+
+        foreach ($era_dictionary as $era_value) {
+            if ($year >= $era_value['start']) {
+                $era = $era_value['era'];
+                break;
+            }
+        }
+
+        // クエリの作成
+        $args = array(
+            'category_name' => $category,
+            'posts_per_page' => -1,
+            'year' => $year,
+            'order' => 'ASC'
+        );
+        $query = new WP_Query($args);
+
+        if ($era != '' && $query->have_posts()) {
+            echo '<dl>';
+            echo '<dt>' . $era . ($year - $era_dictionary[0]['start'] + 1) . '年</dt>';
+
+            while ($query->have_posts()) {
+                $query->the_post();
+                echo '<dd><div class="content"><a href="' . esc_url(get_permalink()) . '">' . get_the_title() . '</a></div></dd>';
+            }
+
+            echo '</dl>';
+        }
+
+        wp_reset_postdata();
+    }
+}
+?> -->
+
+<?php
+$categories = array('improvement', 'reward', 'settlement', 'teikan');
+$thisyear = date('Y'); // 現在の西暦年を取得
+
+// 元号変換用の辞書配列
+$era_dictionary = array(
+    'reiwa' => array('start' => 2019, 'era' => '令和'),
+    'heisei' => array('start' => 1989, 'era' => '平成'),
+    // 必要に応じて他の元号を追加してください
+);
+
+foreach ($categories as $category) {
+    $category_object = get_category_by_slug($category);
+    $category_name = $category_object->name;
+    echo '<h2>' . ucfirst($category_name) . '</h2>';
+
+    for ($year = $thisyear; $year >= 2000; $year--) {
+        $era = ''; // 元号を格納する変数
+
+        foreach ($era_dictionary as $era_key => $era_value) {
+            if ($year >= $era_value['start']) {
+                $era = $era_key;
+                break;
+            }
+        }
+
+        if ($era != '') {
+            $era_year = $year - $era_dictionary[$era]['start'] + 1;
+
+            // 年度の開始日と終了日を取得
+            $start_date = date('Y-m-d', strtotime($year . '-04-01'));
+            $end_date = date('Y-m-d', strtotime(($year + 1) . '-03-31'));
+
+            $args = array(
+                'category_name' => $category,
+                'posts_per_page' => -1,
+                'date_query' => array(
+                    'after' => $start_date,
+                    'before' => $end_date,
+                    'inclusive' => true,
+                ),
+                'order' => 'ASC'
+            );
+            $query = new WP_Query($args);
+
+            if ($query->have_posts()) {
+                echo '<dl>';
+                echo '<dt>' . $era_dictionary[$era]['era'] . $era_year . '年度</dt>';
+
+                while ($query->have_posts()) {
+                    $query->the_post();
+                    echo '<dd><div class="content"><a href="' . esc_url(get_permalink()) . '">' . get_the_title() . '</a></div></dd>';
+                }
+
+                echo '</dl>';
+            }
+
+            wp_reset_postdata();
+        }
+    }
+}
+?>
+
+
+
+
+
+          
+
+
             
              
          
