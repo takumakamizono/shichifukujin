@@ -193,14 +193,14 @@ main {
     }
     &__tit {
       & span {
-        font-size: 25px;
+        @extend .font-lr;
         &:nth-child(1) {
           font-size: 12px;
         }
       }
     }
     &__img {
-      padding: 4px;
+      padding: 6px;
     }
   }
 }
