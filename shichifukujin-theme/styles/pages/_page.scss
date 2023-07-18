@@ -164,9 +164,36 @@
   @extend .mb-lg;
 }
 .sentence {
-  @extend .content-width1000;
-  @extend .flex960;
   @extend .mb-lg;
+  position: relative;
+  padding-bottom: 50px;
+  @include mq(lg) {
+    padding-bottom: 100px 0;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background-image: url(./images/about-bg.jpg);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    z-index: -1;
+  }
+  &__inner {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    @extend .content-width1000;
+    @extend .flex960;
+    align-items: center;
+    @include mq(lg) {
+      padding: 40px 20px;
+    }
+  }
   &__img {
     flex-basis: 30%;
     margin-bottom: 30px;
