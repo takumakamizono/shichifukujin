@@ -206,10 +206,35 @@ main {
 }
 
 .family-page {
-  position: relative;
   height: 200px;
-  @include mq(lg) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @include mq(md) {
     height: 300px;
+  }
+  @include mq(lg) {
+    height: 400px;
+  }
+  &__inner {
+    width: 100%;
+  }
+  &::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+
+    right: 0;
+    background-image: url(images/about_idea_bg1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    z-index: 1;
+    height: 80%;
+    width: 100%;
   }
 }
 .news {
