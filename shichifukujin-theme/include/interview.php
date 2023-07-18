@@ -12,7 +12,7 @@
         <?php if( get_field('img01')): ?>
             <img src="<?php the_field('img01'); ?>" alt="">
             <?php else: ?>
-            <img src="<?= get_template_directory_uri(); ?>/images/recruit.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/cover_image.png" alt="">
             <?php endif; ?>
 
         </div>
@@ -39,7 +39,7 @@
         <?php if( get_field('img02')): ?>
             <img src="<?php the_field('img02'); ?>" alt="">
             <?php else: ?>
-            <img src="<?= get_template_directory_uri(); ?>/images/recruit.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/cover_image.png" alt="">
             <?php endif; ?>
         </div>
         <div class="interview__texts">          
@@ -65,7 +65,7 @@
         <?php if( get_field('img03')): ?>
             <img src="<?php the_field('img03'); ?>" alt="">
             <?php else: ?>
-            <img src="<?= get_template_directory_uri(); ?>/images/recruit.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/cover_image.png" alt="">
             <?php endif; ?>
         </div>
         <div class="interview__texts">          
@@ -94,6 +94,27 @@
 
                 <h3 class="interview__textsTit"><?php the_field('question08'); ?></h3>
        <p><?php the_field('answer08'); ?></p>
+       </div>
+       <?php endif; ?>
+       <?php if( get_field('question09')): ?>
+                <div class="interview__texts-desc">
+
+                <h3 class="interview__textsTit"><?php the_field('question09'); ?></h3>
+       <p><?php the_field('answer09'); ?></p>
+       </div>
+       <?php endif; ?>
+       <?php if( get_field('question10')): ?>
+                <div class="interview__texts-desc">
+
+                <h3 class="interview__textsTit"><?php the_field('question10'); ?></h3>
+       <p><?php the_field('answer10'); ?></p>
+       </div>
+       <?php endif; ?>
+       <?php if( get_field('question11')): ?>
+                <div class="interview__texts-desc">
+
+                <h3 class="interview__textsTit"><?php the_field('question11'); ?></h3>
+       <p><?php the_field('answer11'); ?></p>
        </div>
        <?php endif; ?>
           </div>
