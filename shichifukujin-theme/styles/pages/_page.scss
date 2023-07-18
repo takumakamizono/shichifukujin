@@ -217,9 +217,7 @@
   @extend .mb-lg;
 }
 .overview-table {
-  max-width: 1100px;
-  margin: 0 auto;
-  width: 100%;
+  @extend .content-width1000;
   border-collapse: collapse;
   & tr {
     border-bottom: solid 2px white;
@@ -271,8 +269,6 @@
 .aboutpage-access {
   @extend .content-width1000;
   @extend .mb-lg;
-  max-width: 1100px;
-  margin: 0 auto;
   &__inner {
     @extend .flex;
     justify-content: space-between;
@@ -321,18 +317,56 @@
 }
 
 .philosophy {
-  // background: $BgColor;
-  @extend .pb-lg;
+  &:nth-child(1) {
+    @extend .pb-lg;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      background-image: url(./images/about_idea_bg1.png);
+
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom;
+      z-index: 1;
+      height: 300px;
+      width: 300px;
+      @include mq(lg) {
+        height: 500px;
+        width: 500px;
+      }
+    }
+  }
+  &:nth-child(2) {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      background-image: url(./images/about_idea_bg2.png);
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom;
+      z-index: 10;
+    }
+  }
 
   &__inner {
     @extend .content-width1000;
   }
 
   &__block {
+    position: relative;
+    z-index: 50;
     @extend .mb-md;
     padding: 15px 20px;
     border-radius: 10px;
-    background: $cWhite;
+    background: rgba(255, 255, 255, 0.5);
     @include mq(lg) {
       padding: 30px 25px;
     }
@@ -349,6 +383,7 @@
       & li {
         margin-bottom: 14px;
         border-bottom: 1px dotted #eee;
+        letter-spacing: 0.08em;
       }
     }
   }
