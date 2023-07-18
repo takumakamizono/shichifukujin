@@ -17,19 +17,20 @@
               <li>〒890-0082 鹿児島県鹿児島市紫原５-13-18</li>
               <li>TEL : 099-256-2729</li>
               <li>FAX : 099-256-3729</li>
-              <li><span class="footer__address-icon"><i class="fab fa-instagram-square"></i></span> <span class="footer__address-icon"> <i class="fab fa-facebook-square"></i></span></li>
+              <li>
+                <a href="<?php the_field('insta01',1241); ?>" class="footer__address-icon"><i class="fab fa-instagram-square"></i></a> <a href="<?php the_field('facebook',1241); ?>" class="footer__address-icon"> <i class="fab fa-facebook-square"></i></a></li>
               <li></li>
             </ul>    
             </div>
             <div class="footer__right">
               <div class="footer__right-imgs">
             <div class="footer__img">
-              <a href="#"target="_blank" rel="noopener">
+              <a href="<?php the_field('sdgs',1241); ?>"target="_blank" rel="noopener">
               <img src="<?= get_template_directory_uri(); ?>/images/sdgs.png" alt="">
               </a>
             </div>
             <div class="footer__img">
-              <a href="#"target="_blank" rel="noopener">
+              <a href="<?php the_field('kurumin',1241); ?>"target="_blank" rel="noopener">
               <img src="<?= get_template_directory_uri(); ?>/images/kurumin.png" alt="">
               </a>
             </div>
