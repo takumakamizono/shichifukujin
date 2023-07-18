@@ -130,15 +130,6 @@ $cMenuOpen: $cWhite;
       text-decoration: none !important;
       font-size: 14px;
     }
-    &:last-child {
-      &::after {
-        display: none;
-      }
-
-      & > a {
-        margin-left: 0;
-      }
-    }
   }
 }
 
