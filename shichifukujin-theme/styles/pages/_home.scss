@@ -135,11 +135,7 @@ main {
         box-shadow: none;
       }
     }
-    // &:last-child {
-    //   & i {
-    //     font-size: 25px;
-    //   }
-    // }
+
     & .sub-menu {
       position: absolute;
       left: 0;
@@ -786,6 +782,7 @@ main {
   &__li {
     @include mq(md) {
       margin-left: 0;
+      margin-bottom: 20px;
     }
 
     & > a {
@@ -841,6 +838,7 @@ main {
     @extend .mb-sm;
     &-icon {
       font-size: 30px;
+      color: $cSubTitle;
     }
   }
   &__copyright {
