@@ -54,7 +54,7 @@
 
 .hero {
   overflow: hidden;
-  @extend .mb-lg;
+
   @include mq(lg) {
     padding-top: $navHeight;
   }
