@@ -12,7 +12,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $BgColor;
+    background-color: #1c3450;
+    background-image: url(./images/cover_image.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     opacity: 0;
   }
   &.inview {
@@ -32,19 +36,19 @@
 @keyframes kf-cover-slide {
   0% {
     transform-origin: left;
-    transform: scaleX(0);
+    transform: translateX(-100%);
   }
   50% {
     transform-origin: left;
-    transform: scaleX(1);
+    transform: translateX(0%);
   }
   50.1% {
     transform-origin: right;
-    transform: scaleX(1);
+    transform: translateX(0%);
   }
   100% {
     transform-origin: right;
-    transform: scaleX(0);
+    transform: translateX(100%);
   }
 }
 
@@ -105,15 +109,6 @@
   &:hover::before {
     background-color: rgba(0, 0, 0, 0.4);
   }
-}
-
-.bg-img-zoom {
-  background-image: url(images/image-1.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  @extend .img-zoom;
 }
 
 .img-bg50 {
