@@ -1056,3 +1056,68 @@
     left: 20px;
   }
 }
+
+.news-report {
+  @extend .mb-md;
+  &__title {
+    text-align: center;
+    letter-spacing: 0.16em;
+    line-height: 1.5;
+    @extend .font-md;
+    @extend .mb-md;
+    & > span {
+      position: relative;
+      display: inline-block;
+      &::after {
+        bottom: -26px;
+        height: 16px;
+        background-size: 16px auto;
+        position: absolute;
+        width: 100%;
+        content: "";
+        background-repeat: space repeat;
+        background-image: url(images/bg_dot01.png);
+        left: 0;
+      }
+    }
+  }
+  &__year {
+    & > span {
+      border-bottom: dotted 2px $cOrange;
+    }
+  }
+  &__pdf {
+    position: relative;
+    @extend .font-sm;
+    padding-left: 8px !important;
+    @include mq(md) {
+      padding-left: 20px !important;
+    }
+    @include mq(lg) {
+      padding-left: 30px !important;
+    }
+
+    &::before {
+      content: "\f1c1";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 600;
+      font-size: 17px;
+      color: $cRedColor;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -14px;
+      @include mq(lg) {
+        left: -10px;
+      }
+    }
+  }
+  &__list {
+    background: $BgColor;
+    padding: 15px 20px !important;
+    border-radius: 10px;
+    @include mq(lg) {
+      padding: 25px 30px !important;
+    }
+  }
+}
