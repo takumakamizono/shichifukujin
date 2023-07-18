@@ -13,7 +13,9 @@
                         </div>  
                       </div>
                       <div class="txtimg-block__img">
+                      <div class="txtimg-block__img-inner">
                     <img src="<?php the_field('philosophy-img01');  ?>" alt="">  
+                      </div>          
                       </div>          
                     </div>
                     <div class="txtimg-block__box">
@@ -26,7 +28,9 @@
                         </div>  
                       </div>
                       <div class="txtimg-block__img">
+                      <div class="txtimg-block__img-inner">
                     <img src="<?php the_field('philosophy-img02');  ?>" alt="">  
+                      </div>          
                       </div>          
                     </div> <div class="txtimg-block__box">
                       <div class="txtimg-block__texts">
@@ -38,7 +42,9 @@
                         </div>  
                       </div>
                       <div class="txtimg-block__img">
+                      <div class="txtimg-block__img-inner">
                     <img src="<?php the_field('philosophy-img03');  ?>" alt="">  
+                      </div>          
                       </div>          
                     </div>
               </div>
