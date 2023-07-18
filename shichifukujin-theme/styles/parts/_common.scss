@@ -96,7 +96,10 @@ img {
 
 // font
 .font-sm {
-  font-size: 14px;
+  font-size: 12px;
+  @include mq(sm) {
+    font-size: 14px;
+  }
 
   @include mq(lg) {
     font-size: 16px;
@@ -124,7 +127,7 @@ img {
 }
 
 .font-lg {
-  font-size: clamp(17px, 4vw, 36px);
+  font-size: clamp(15px, 4vw, 36px);
 }
 
 .font-xl {
@@ -172,7 +175,7 @@ img {
   color: $cSubTitle;
 }
 .content-title {
-  @extend .font-lg;
+  @extend .font-lr;
   margin-bottom: 0;
   display: block;
   font-weight: 900;
@@ -513,7 +516,7 @@ img {
   color: $cWhite;
   font-weight: 600;
   &__img {
-    width: 30px;
+    width: 45px;
   }
 }
 
@@ -574,7 +577,7 @@ img {
     }
     & ul {
       list-style: none;
-      padding-left: 15px;
+      padding-left: 5px;
       margin: 10px 0;
 
       & li {
@@ -583,14 +586,15 @@ img {
           font-family: "Font Awesome 5 Free";
           font-weight: 600;
           content: "\f00c";
-          font-size: 17px;
+          font-size: 8px;
           color: $cOrange;
           position: absolute;
           width: 25px;
           height: 25px;
           top: 0;
-
           left: -23px;
+          display: flex;
+          align-items: center;
         }
       }
     }
