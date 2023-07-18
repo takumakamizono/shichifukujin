@@ -34,8 +34,26 @@
     margin-bottom: 10px;
     border-bottom: 2px dotted $mainColor;
   }
-  & p {
-    margin-bottom: 30px;
+
+  &__tel,
+  &__fax {
+    background: $cWhite;
+    padding: 30px 10px;
+    border-radius: 10px;
+    & h4 {
+      border-bottom: 1px solid $mainColor;
+      margin-bottom: 10px;
+    }
+    & p {
+      font-weight: bold;
+      @extend .font-lr;
+    }
+    @include mq(lg) {
+      padding: 30px 40px;
+    }
+  }
+  &__tel {
+    margin-bottom: 10px;
   }
 }
 
