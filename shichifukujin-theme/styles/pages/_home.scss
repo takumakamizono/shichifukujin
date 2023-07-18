@@ -733,7 +733,7 @@ main {
   }
   &__btn {
     margin-top: 20px;
-    text-align: center;
+
     @include mq(md) {
       margin-top: 50px;
     }
