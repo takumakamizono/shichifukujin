@@ -18,5 +18,7 @@
     
  <?php endif; ?>
  <?php get_template_part('service_inc/sec-summary'); ?>
- <?php get_template_part('service_inc/service_access'); ?>
+ <?php get_template_part('service_inc/googlemap-api'); ?>
+ <?php get_template_part('service_inc/service-access'); ?>
+ <!-- <?php echo do_shortcode('[custom_map id="map1" lat="31.590504" lng="130.542486" zoom="18" title="マップ1"]'); ?> -->
  
