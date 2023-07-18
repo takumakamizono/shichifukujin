@@ -7,6 +7,21 @@
   &__inner {
     @extend .content-width1000;
   }
+  &__block {
+    @extend .mb-md;
+    & h3 {
+      border-bottom: 1px solid $mainColor;
+      color: $mainColor;
+      font-weight: 400;
+    }
+    &-inner-contents {
+      @extend .mb-md;
+      & h4 {
+        border-left: 4px solid $mainColor;
+        padding-left: 5px;
+      }
+    }
+  }
 }
 .contact-toptxt {
   @extend .mb-lr;
