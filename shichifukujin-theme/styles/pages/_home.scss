@@ -104,6 +104,7 @@ main {
       }
       & > a {
         &:hover {
+          color: $cOrange;
           font-weight: 800;
           &::after {
             bottom: -1px;
@@ -120,12 +121,12 @@ main {
       }
     }
 
-    &:nth-child(5) {
-      @extend .btn;
+    &:last-child {
       background: $cBtnColor;
-      padding: 10px 15px;
-      box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+      box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.3);
+      transition: 0.3s;
       & > a {
+        padding: 10px 15px;
         color: $cWhite;
         font-weight: 800;
       }
@@ -134,11 +135,11 @@ main {
         box-shadow: none;
       }
     }
-    &:last-child {
-      & i {
-        font-size: 25px;
-      }
-    }
+    // &:last-child {
+    //   & i {
+    //     font-size: 25px;
+    //   }
+    // }
     & .sub-menu {
       position: absolute;
       left: 0;
@@ -201,6 +202,9 @@ main {
     }
     &__img {
       padding: 6px;
+      @include mq(lg) {
+        width: 45px;
+      }
     }
   }
 }
