@@ -17,6 +17,7 @@ function add_async_defer_script($url) {
     wp_enqueue_style('fonts-googleapis','https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:wght@400;800|family=Noto+Sans+JP:wght@400;600|family=Noto+Serif+JP:wght@900&display=swap', false);
     wp_enqueue_style('swiper-bundle.min.css',DIRE.'/styles/vendors/swiper-bundle.min.css',array(), $version);
     wp_enqueue_style('style.css',DIRE.'/style.css',array(), $version);
+    wp_enqueue_script('google-maps-api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAg5LKfmVKJjTlwupDtGGFGRPuxtbj2YdE');
     wp_enqueue_script('fontawesome','https://kit.fontawesome.com/2bf622374b.js', false);
     wp_enqueue_script('jquery-min', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js', false);
     wp_enqueue_script('jquery.js', DIRE.  '/scripts/libs/jquery.min.js#defer', array(), $version);
@@ -164,3 +165,62 @@ add_action( 'admin_init', function() {
       }
   }
 } );
+
+
+add_action( 'admin_init', function() {
+  $taxonomy = 'category'; 
+  $term_slugs = ['interview', 'improvement', 'reward', 'settlement', 'teikan'];
+  $post_type = 'post'; 
+
+  global $pagenow;
+
+  if ( $pagenow === 'post.php' && isset( $_GET['post'] ) ) {
+      $post_id = $_GET['post'];  
+      $post_terms = wp_get_post_terms( $post_id, $taxonomy, array( 'fields' => 'slugs' ) );
+      
+      if ( ! empty( $post_terms ) && array_intersect( $term_slugs, $post_terms ) ) {
+          $post = get_post( $post_id );     
+          if ( $post && $post->post_type === $post_type ) {
+              remove_post_type_support( $post_type, 'editor' );
+          }
+      }
+  }
+} );
+
+
+
+function initialize_custom_map() {
+  ob_start();
+  ?>
+  <div id="map_canvas" style="width: 100%; height: 400px;"></div>
+  <script>
+      function initialize() {
+          var latlng = new google.maps.LatLng(31.590504, 130.542486);
+          var myOptions = {
+              zoom: 18,
+              center: latlng,
+              center: {lat: 31.590504, lng: 130.542486 },
+              mapTypeControlOptions: { mapTypeIds: ['sample', google.maps.MapTypeId.ROADMAP] }
+          };
+          var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+          var icon = new google.maps.MarkerImage('<?= get_template_directory_uri(); ?>/images/map-pin.png',
+              new google.maps.Size(84, 104),
+              new google.maps.Point(0, 0)
+          );
+          var markerOptions = {
+              position: latlng,
+              map: map,
+              icon: icon,
+              title: '七福神グループ'
+          };
+          var marker = new google.maps.Marker(markerOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+  <?php
+  return ob_get_clean();
+}
+add_shortcode( 'custom_map', 'initialize_custom_map' );
+ 
+
+ 
