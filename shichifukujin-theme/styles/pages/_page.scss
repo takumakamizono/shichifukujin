@@ -511,5 +511,53 @@
   }
   &__desc-tit {
     margin-bottom: 10px;
+.facility-list {
+  @extend .mb-lg;
+  &__inner {
+    @extend .content-width1000;
+  }
+  &__ul {
+    list-style: none;
+    padding: 0;
+    @extend .flex960;
+    justify-content: space-between;
+  }
+  &__block {
+    @extend .mb-md;
+    background: $BgColor;
+    box-shadow: 1px 1px 4px rgba(48, 70, 95, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    flex-basis: 49%;
+    letter-spacing: 0.08em;
+  }
+  &__dl {
+    & > div {
+      background: $cWhite;
+      border-radius: 10px;
+      padding: 20px 10px;
+    }
+    & dt {
+      border-bottom: 2px dotted $mainColor;
+      padding: 10px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: $mainColor;
+    }
+    & dd {
+      @extend .font-sm;
+      margin-bottom: 3px;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+      & > span {
+        font-weight: 600;
+        color: $cOrange;
+        padding: 5px 6px;
+      }
+    }
+  }
+  &__address {
+    padding: 10px 0;
+    border-bottom: 1px solid $cOrange;
   }
 }

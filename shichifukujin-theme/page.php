@@ -15,7 +15,7 @@
         <?php get_template_part('include/hero'); ?>
           <div id="main-content">
            
-            <?php get_template_part('include/side-left'); ?>
+            <!-- <?php get_template_part('include/side-left'); ?> -->
             <main>
             <?php if(have_posts()): ?>
             <?php while(have_posts()):the_post(); ?>
@@ -25,6 +25,7 @@
                <?php the_content(); ?>
                 </div>
           </div>
+          <?php get_template_part('include/facility-list'); ?>
             <?php endwhile; ?>
             <?php endif; ?>
             
@@ -32,7 +33,7 @@
          
              
             </main>
-            <?php get_template_part('include/side-right'); ?>
+            <!-- <?php get_template_part('include/side-right'); ?> -->
           
           </div>
         </div>
