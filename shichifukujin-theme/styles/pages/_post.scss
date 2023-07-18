@@ -508,6 +508,14 @@
     flex-direction: column;
     align-items: center;
   }
+  & ul {
+    padding-left: 10px;
+    & li {
+      &::marker {
+        color: $cOrange;
+      }
+    }
+  }
 }
 
 .image-box {
@@ -549,7 +557,7 @@
       @extend .font-sm;
 
       &::before {
-        content: "\f46c";
+        content: "\f058";
         font-family: "Font Awesome 5 free";
         font-weight: 600;
         position: absolute;
@@ -580,7 +588,21 @@
       border-bottom: 3px solid $cOrange;
     }
     & > ul {
+      list-style: none;
       padding: 20px 10px;
+      & li {
+        position: relative;
+        &::before {
+          content: "\f058";
+          font-family: "Font Awesome 5 free";
+          font-weight: 600;
+          position: absolute;
+          left: -20px;
+          top: 0px;
+
+          color: $cOrange;
+        }
+      }
     }
     & > p {
       margin-top: 8px;
@@ -754,6 +776,23 @@
     @extend .font-sm;
     line-height: 2;
     letter-spacing: 0.06em;
+    & ul {
+      list-style: none;
+      & li {
+        position: relative;
+        margin-bottom: 10px;
+        &::before {
+          content: "\f111";
+          font-family: "Font Awesome 5 free";
+          font-weight: 600;
+          position: absolute;
+          left: -25px;
+          top: 10px;
+          color: $cOrange;
+          font-size: 7px;
+        }
+      }
+    }
   }
 }
 
@@ -799,7 +838,9 @@
     flex-basis: 42%;
     margin-left: 10px;
     display: flex;
-
+    align-items: center;
+  }
+  &__img-inner {
     & img {
       border-radius: 10px;
       object-fit: cover;
@@ -898,7 +939,7 @@
   &__box {
     @extend .mb-md;
     flex-basis: 49%;
-    padding: 20px 20px;
+    padding: 20px 10px;
     background: $BgColor;
     border-radius: 10px;
     @include mq(md) {
