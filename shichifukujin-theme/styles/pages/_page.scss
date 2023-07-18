@@ -482,15 +482,13 @@
           margin-left: 20px;
           &::before {
             position: absolute;
-            content: "";
-            background-image: url(images/a-mark.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-            width: 15px;
-            height: 15px;
+            content: "\51";
+            font-family: "Font Awesome 5 free";
+            font-weight: 600;
+            width: 20px;
+            height: 20px;
             top: 50%;
-            left: -15px;
+            left: -10px;
             transform: translateY(-50%);
           }
         }
@@ -506,22 +504,23 @@
           @include mq(md) {
             margin-top: 0;
           }
-
           &::before {
+            color: $mainColor;
             position: absolute;
-            content: "";
-            background-image: url(images/q-mark.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-            width: 15px;
-            height: 15px;
+            content: "\41";
+            font-family: "Font Awesome 5 free";
+            font-weight: 600;
+            width: 20px;
+            height: 20px;
             top: -11px;
             left: 5px;
             @include mq(md) {
-              top: 11px;
+              top: 10px;
               left: -15px;
             }
+          }
+          & > a {
+            margin-top: 30px;
           }
         }
       }
