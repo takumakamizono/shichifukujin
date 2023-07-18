@@ -200,14 +200,20 @@
     max-width: $contentMaxWidth1000;
     @extend .flex;
     justify-content: space-between;
+    background: $BgColor;
+    padding: 50px 5px;
+    border-radius: 10px;
+    @include mq(lg) {
+      padding: 50px 30px;
+    }
   }
   &__access-map {
     width: 100%;
-    height: 300px;
+
     @extend .mb-sm;
     @include mq(lg) {
       flex-basis: 49%;
-      height: 400px;
+      margin-bottom: 0 !important;
     }
     & iframe {
       width: 100%;
@@ -219,11 +225,18 @@
 
   &__access-texts {
     display: flex;
+    background: $cWhite;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
     @include mq(lg) {
       flex-basis: 49%;
       align-items: center;
       justify-content: space-around;
     }
+  }
+  & &__access-texts-inner {
+    width: 100%;
   }
 
   &__access-title {
