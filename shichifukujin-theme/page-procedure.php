@@ -32,7 +32,7 @@
                 <div class="page-procedure__inner">
                    <div class="page-procedure__box">
                     <div class="page-procedure__img">
-                          <img src="https://placehold.jp/670x400.png" alt="">
+                    <img src="<?php the_field('step_img01',480);?>" alt="">
                     </div>
                     <div class="page-procedure__texts">
                       <div class="page-procedure__texts-inner">
@@ -43,16 +43,16 @@
                         <ul>
                           <li>
                             <h5 class="page-procedure__desc-tit">お電話でのお問合せ</h5>
-                            <p>099-256-2729までお問い合わせください。</p>
+                            <p><?php the_field('step_tel',480);?>までお問い合わせください。</p>
                           </li>
                           <li>
                             <h5 class="page-procedure__desc-tit">メールでのお問合せ</h5>
                             <p>メールフォームよりお問い合わせできます。</p>
-                            <a href="">メールフォームはコチラから</a>
+                            <div class="page-procedure__btn">
+                            <a class="btn" href="<?= home_url('/contact/') ?>">メールフォームはコチラから</a>
+                            </div>
                           </li>
-                          <li>
-
-                          </li>
+                        
                         </ul>
 
                       </div>
@@ -62,7 +62,7 @@
                    </div>
                    <div class="page-procedure__box">
                     <div class="page-procedure__img">
-                    <img src="https://placehold.jp/670x400.png" alt="">
+                    <img src="<?php the_field('step_img02',480);?>" alt="">
                     </div>
                     <div class="page-procedure__texts">
                       <div class="page-procedure__texts-inner">
@@ -70,7 +70,7 @@
                         見学・入居前顔合わせ
                      </h4>
                       <div class="page-procedure__desc">
-                       <p>こちらから、入居前にご自宅や入院先へお伺いしスタッフと顔合わせを行ないます。</p>
+                      <?php the_field('step_txt02',480);?>
                       </div>
 
                     </div>
@@ -78,7 +78,7 @@
                    </div>
                    <div class="page-procedure__box">
                     <div class="page-procedure__img">
-                    <img src="https://placehold.jp/670x400.png" alt="">
+                    <img src="<?php the_field('step_img03',480);?>" alt="">
                     </div>
                     <div class="page-procedure__texts">
                       <div class="page-procedure__texts-inner">
@@ -86,14 +86,14 @@
                         入居調整会議
                      </h4>
                       <div class="page-procedure__desc">
-                       <p>ご入居頂くに際して、専門スタッフ同士でミーティングを行い十分な支援が可能かどうが検討</p>
+                      <?php the_field('step_txt03',480);?>
                       </div>
                     </div>
                     </div>
                    </div>
                    <div class="page-procedure__box">
                     <div class="page-procedure__img">
-                    <img src="https://placehold.jp/670x400.png" alt="">
+                    <img src="<?php the_field('step_img04',480);?>" alt="">
                     </div>
                     <div class="page-procedure__texts">
                       <div class="page-procedure__texts-inner">
@@ -101,8 +101,7 @@
                         入居決定
                      </h4>
                       <div class="page-procedure__desc">
-                       <p>検討の結果をご連絡させていただいたのち、具体的な入居日を、ご相談しながら調整いたします。</p>
-
+                      <?php the_field('step_txt04',480);?>
                       </div>
 
                     </div>
@@ -110,7 +109,7 @@
                    </div>
                    <div class="page-procedure__box">
                     <div class="page-procedure__img">
-                    <img src="https://placehold.jp/670x400.png" alt="">
+                    <img src="<?php the_field('step_img05',480);?>" alt="">
                     </div>
                     <div class="page-procedure__texts">
                       <div class="page-procedure__texts-inner">
@@ -118,9 +117,8 @@
                         契約・入居
                      </h4>
                       <div class="page-procedure__desc">
-                       <p>契約を行い、入居がスタートします。</p>
+                      <?php the_field('step_txt05',480);?>                   
                       </div>
-
                     </div>
                     </div>
                    </div>
