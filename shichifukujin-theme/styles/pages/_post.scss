@@ -15,15 +15,30 @@
         color: $lightGray;
       }
       & h2 {
-        border-left: 4px solid $mainColor;
-        margin-top: 40px;
+        margin-top: 20px;
         margin-bottom: 20px;
-        padding-left: 12px;
-        font-size: 16px;
         font-weight: 900;
-        @include mq(md) {
-          font-size: 20px;
+        @extend .font-lg;
+        position: relative;
+        &::before {
+          bottom: -16px;
+          height: 16px;
+          background-size: 16px auto;
+          position: absolute;
+          width: 100%;
+          content: "";
+          background-repeat: space repeat;
+          background-image: url(images/bg_dot01.png);
+          left: 0;
         }
+      }
+    }
+    &-meta {
+      display: flex;
+      & .post-categories {
+        list-style: none;
+        margin-right: 20px;
+        padding: 0;
       }
     }
     &-des {

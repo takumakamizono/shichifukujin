@@ -1,5 +1,10 @@
 <div class="single__content-header">
+  <div class="single__content-meta news__box">
+                    <ul class="cat">
+                       <?php categories_label(); ?>
+                       </ul>
                     <time><?php the_time( get_option( 'date_format' ) ); ?></time>  
+                    </div>
                     
                      <h2><?php the_title(); ?></h2>         
                     </div>
