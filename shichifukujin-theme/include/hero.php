@@ -110,12 +110,11 @@
               <?php endif; ?>       
               </div>
               <div class="hero-sub__img"> 
-                <?php if(is_category('news') || in_category('news')):  ?>  
+                <?php if(is_single()&& get_post_type() === 'post'):  ?>  
                  <img src="<?php the_field('news_img',312);?>" alt="お知らせのヘッダー画像">
                  <?php elseif($post_type):  ?>      
-                  <img src="<?php the_field('service_img',312);?>" alt="施設紹介のヘッダー画像">   
+                  <img src="<?php the_field('service_headimage');?>" alt="施設紹介のヘッダー画像">   
             
-        
              <?php endif; ?>
             </div>     
         </div>
