@@ -1,3 +1,7 @@
+<?php
+$count_posts = wp_count_posts('service');
+$total_posts = $count_posts->publish;
+?>
 <section class="about">
 <div class="section-titles">
                   <h2 class="main-title">
@@ -41,7 +45,7 @@
                       <div class="about__description item">
                       <p>
                       特別養護老人ホームから就労支援センターまで<br />
-                        鹿児島市内5つのエリアに11の事業所を展開。<br />
+                        鹿児島市内5つのエリアに<?= esc_html($total_posts);?>の事業所を展開。<br />
                         </p>
                        
                       </div>
