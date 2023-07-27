@@ -10,7 +10,7 @@
             </div>
         </a>
         <div class="list-interview__contents">   
-        <p class="list-interview__occu"><span>社会福祉士</span><span>平成１９年入社</span></p>
+        <p class="list-interview__occu"><span><?php the_field('occu'); ?></span><span><?php the_field('joined-year'); ?>入社</span></p>
         <p class="list-interview__name"><?php the_title(); ?></p>
         </div>
 </div>
