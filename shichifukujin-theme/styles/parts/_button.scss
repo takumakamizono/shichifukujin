@@ -4,12 +4,13 @@
   position: relative;
   display: inline-block;
   background-color: $cRedColor;
-  padding: 10px 40px;
+  padding: 10px 20px;
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.3s;
   color: $cWhite;
   text-decoration: none !important;
-  font-size: 12px;
+  font-size: 15px;
   min-width: 200px;
   &.float {
     padding: 20px 22px;
@@ -19,7 +20,7 @@
     color: $cOrange;
     font-weight: 900;
     min-width: 100%;
-    font-size: 12px;
+
     &::before {
       content: "\f0da";
       font-family: "Font Awesome 5 free";
@@ -33,7 +34,7 @@
     &:hover {
       background-color: $cOrange;
       color: $cWhite;
-      box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+      box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.1);
       &::before {
         color: $cWhite;
       }
