@@ -16,7 +16,7 @@ function add_async_defer_script($url) {
     wp_enqueue_style('css-reset',DIRE.'/styles/vendors/css-reset.css',array(), $version);
     wp_enqueue_style('fonts-googleapis','https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:wght@400;800|family=Noto+Sans+JP:wght@400;600|family=Noto+Serif+JP:wght@900&display=swap', false);
     wp_enqueue_style('swiper-bundle.min.css',DIRE.'/styles/vendors/swiper-bundle.min.css',array(), $version);
-    wp_enqueue_style('style.css',DIRE.'/style.css',array(), $version);
+    wp_enqueue_style('style.css',DIRE.'/style.css?v4',array(), $version);
     wp_enqueue_script('google-maps-api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAg5LKfmVKJjTlwupDtGGFGRPuxtbj2YdE');
     wp_enqueue_script('fontawesome','https://kit.fontawesome.com/2bf622374b.js', false);
     wp_enqueue_script('jquery-min', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js', false);
@@ -44,7 +44,7 @@ add_filter('document_title_parts','my_document_title_parts');
 function my_document_title_parts($title){
  if(is_home()){
   unset($title['tagline']);
-  $title['title']= '社会福祉法人天佑会七福神';
+  $title['title']= '社会福祉法人天祐会七福神';
  }
  return $title;
 }
@@ -169,7 +169,7 @@ add_action( 'admin_init', function() {
 
 add_action( 'admin_init', function() {
   $taxonomy = 'category'; 
-  $term_slugs = ['interview', 'improvement', 'reward', 'settlement', 'teikan'];
+  $term_slugs = ['improvement', 'reward', 'settlement', 'teikan'];
   $post_type = 'post'; 
 
   global $pagenow;
@@ -189,38 +189,49 @@ add_action( 'admin_init', function() {
 
 
 
-function initialize_custom_map() {
+
+
+function initialize_custom_map($atts) {
+  // ショートコードの属性をデフォルト値とマージ
+  $a = shortcode_atts(
+    array(
+      'lat' => 31.590504,
+      'lng' => 130.542486,
+      'zoom' => 18,
+      'title' => '七福神グループ',
+    ),
+    $atts
+  );
+
   ob_start();
   ?>
-  <div id="map_canvas" style="width: 100%; height: 400px;"></div>
+  <div class="map-canvas" style="width: 100%; height: 100%;"></div>
   <script>
-      function initialize() {
-          var latlng = new google.maps.LatLng(31.590504, 130.542486);
-          var myOptions = {
-              zoom: 18,
-              center: latlng,
-              center: {lat: 31.590504, lng: 130.542486 },
-              mapTypeControlOptions: { mapTypeIds: ['sample', google.maps.MapTypeId.ROADMAP] }
-          };
-          var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
-          var icon = new google.maps.MarkerImage('<?= get_template_directory_uri(); ?>/images/map-pin.png',
-              new google.maps.Size(84, 104),
-              new google.maps.Point(0, 0)
-          );
-          var markerOptions = {
-              position: latlng,
-              map: map,
-              icon: icon,
-              title: '七福神グループ'
-          };
-          var marker = new google.maps.Marker(markerOptions);
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
+    function initialize() {
+      var latlng = new google.maps.LatLng(<?= $a['lat'] ?>, <?= $a['lng'] ?>);
+      var myOptions = {
+        zoom: <?= $a['zoom'] ?>,
+        center: latlng,
+        mapTypeControlOptions: { mapTypeIds: ['sample', google.maps.MapTypeId.ROADMAP] },
+      };
+      var map = new google.maps.Map(document.querySelector('.map-canvas'), myOptions);
+      var icon = new google.maps.MarkerImage('<?= get_template_directory_uri(); ?>/images/map-pin.png',
+        new google.maps.Size(84, 104),
+        new google.maps.Point(0, 0)
+      );
+      var markerOptions = {
+        position: latlng,
+        map: map,
+        icon: icon,
+        title: '<?= $a['title'] ?>',
+      };
+      var marker = new google.maps.Marker(markerOptions);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
   </script>
   <?php
   return ob_get_clean();
 }
-add_shortcode( 'custom_map', 'initialize_custom_map' );
- 
+add_shortcode('custom_map', 'initialize_custom_map');
 
- 
+
