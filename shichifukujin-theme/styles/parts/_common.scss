@@ -517,9 +517,10 @@ img {
     display: flex;
     flex-direction: column;
     border-bottom: 2px dotted #9f9f9f;
-    padding: 10px 20px;
+    padding: 10px 0;
 
     @include mq(lg) {
+      padding: 10px 20px;
       flex-direction: row;
       align-items: center;
     }
@@ -557,7 +558,7 @@ img {
       text-align: center;
       @include mq(md) {
         display: inline-block;
-        padding: 3px 10px;
+        padding: 1px 10px;
         margin-left: 10px;
       }
     }
@@ -567,21 +568,34 @@ img {
       margin: 10px 0;
 
       & li {
-        position: relative;
         &::before {
           font-family: "Font Awesome 5 Free";
           font-weight: 600;
           content: "\f00c";
           font-size: 8px;
           color: $cOrange;
-          position: absolute;
-          width: 25px;
-          height: 25px;
-          top: 0;
-          left: -23px;
-          display: flex;
-          align-items: center;
+          margin-right: 5px;
         }
+      }
+    }
+  }
+  & dl {
+    border: 1px solid $cOrange;
+    border-radius: 3px;
+    padding: 3px 4px 3px 30px;
+    & dt {
+      color: $cOrange;
+      font-weight: 700;
+    }
+    & dd {
+      &::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        content: "\f00c";
+        font-size: 8px;
+        color: $cOrange;
+
+        margin-right: 5px;
       }
     }
   }
