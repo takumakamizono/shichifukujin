@@ -133,14 +133,15 @@ img {
 .main-title {
   @extend .font-lg;
   margin-bottom: 0;
-  display: block;
+  display: flex;
+  justify-content: center;
   font-weight: 900;
   color: $cOrange;
   & span {
     position: relative;
     display: inline-block;
     &::after {
-      bottom: -26px;
+      bottom: -16px;
       height: 16px;
       background-size: 16px auto;
       position: absolute;
@@ -153,6 +154,7 @@ img {
   }
   @include mq(md) {
     letter-spacing: 0.16em;
+    text-align: center;
   }
 }
 
