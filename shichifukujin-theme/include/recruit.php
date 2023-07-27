@@ -13,8 +13,10 @@
         </div>
         <div class="recruit__texts">
             <div class="recruit__texts-inner">
-       <p>私達は、ご利用者様にとっての理想的な住まいをつくり上げ、日々アップデートしていくために、新しい仲間を求めています。スタッフ間はとても仲が良く、
-        入社後の周りのサポートも優しく手厚い、あたたかい職場というのが自慢です。あなたも、私達と一緒にご利用者様の日常をつくり上げていきませんか？</p>
+       <p>
+       天佑会は利用者様はもちろんのこと、共に働くスタッフも大切にしています。<br>スタッフの全員が輝くことのできる環境で、自分の親や大切な人に利用してもらいたいと思える事業所を目指しています。
+
+       </p>
         <div class="recruit__texts-btn">
         <a class="btn solid" href="https://recruit729729.com/" target="_blank" rel="noopener noreferrer">採用について</a>
         </div> 

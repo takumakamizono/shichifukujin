@@ -623,22 +623,19 @@ main {
       background: $BgColor;
       border-radius: 10px;
       position: absolute;
-
       padding: 250px 10px 30px;
       top: -230px;
-      height: 550px;
+      min-height: 360px;
       @include mq(sm) {
         top: -180px;
       }
       @include mq(md) {
         padding: 250px 10% 30px;
-        height: 500px;
       }
       @include mq(lg) {
         padding: 30px 80px;
         left: -50px;
         top: 110px;
-        height: 340px;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -648,6 +645,15 @@ main {
   &__texts-btn {
     margin-top: 30px;
     text-align: center;
+    & > a {
+      &::after {
+        content: "\f35d";
+        font-family: "Font Awesome 5 free";
+        font-weight: 600;
+        position: absolute;
+        right: 20px;
+      }
+    }
   }
   &__img,
   &__texts {
