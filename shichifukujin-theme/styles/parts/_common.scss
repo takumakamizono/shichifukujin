@@ -23,8 +23,10 @@ img {
   }
 }
 .mb-lr {
-  margin-bottom: 60px !important;
-
+  margin-bottom: 40px !important;
+  @include mq(md) {
+    margin-bottom: 60px !important;
+  }
   @include mq(lg) {
     margin-bottom: 100px !important;
   }
@@ -63,6 +65,13 @@ img {
     padding-bottom: 150px !important;
   }
 }
+.pt-md {
+  padding-top: 30px !important;
+
+  @include mq(lg) {
+    padding-top: 60px !important;
+  }
+}
 
 .content-width {
   width: 90%;
@@ -96,45 +105,23 @@ img {
 
 // font
 .font-sm {
-  font-size: 12px;
-  @include mq(sm) {
-    font-size: 14px;
-  }
-
-  @include mq(lg) {
-    font-size: 16px;
-  }
+  font-size: clamp(13px, 3vw, 16px);
 }
 .font-md {
-  font-size: 15px;
-
-  @include mq(lg) {
-    font-size: 17px;
-  }
-  @include mq(lg) {
-    font-size: 19px;
-  }
+  font-size: clamp(15px, 3vw, 19px);
 }
 .font-lr {
-  font-size: 15px;
-
-  @include mq(md) {
-    font-size: 20px;
-  }
-  @include mq(lg) {
-    font-size: 23px;
-  }
+  font-size: clamp(16px, 4vw, 23px);
 }
 
 .font-lg {
-  font-size: clamp(15px, 4vw, 36px);
+  font-size: clamp(17px, 4vw, 36px);
 }
 
 .font-xl {
   font-size: clamp(20px, 5vw, 40px);
 }
 .section-titles {
-  text-align: center;
   @extend .mb-lr;
 }
 .section-titles-left {
