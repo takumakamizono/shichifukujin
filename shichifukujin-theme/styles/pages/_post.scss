@@ -506,12 +506,12 @@
     @extend .font-md;
     @extend .mb-md;
     letter-spacing: 0.16em;
-    line-height: 1.5;
+    line-height: 1.6em;
     & span {
       position: relative;
       display: inline-block;
       &::after {
-        bottom: -26px;
+        bottom: -13px;
         height: 16px;
         background-size: 16px auto;
         position: absolute;
@@ -525,7 +525,7 @@
   }
   &__desc {
     width: 100%;
-    line-height: 2;
+    line-height: 1.6em;
     letter-spacing: 0.06em;
     @extend .font-sm;
     & h5 {
@@ -598,11 +598,10 @@
   }
   &__ul {
     padding: 0;
-    padding-left: 20px;
+
     list-style: none;
 
     & li {
-      position: relative;
       line-height: 2;
       letter-spacing: 0.06em;
       @extend .font-sm;
@@ -611,10 +610,7 @@
         content: "\f058";
         font-family: "Font Awesome 5 free";
         font-weight: 600;
-        position: absolute;
-        left: -20px;
-        top: 0px;
-
+        margin-right: 5px;
         color: $cOrange;
       }
     }
@@ -642,15 +638,11 @@
       list-style: none;
       padding: 20px 10px;
       & li {
-        position: relative;
         &::before {
           content: "\f058";
           font-family: "Font Awesome 5 free";
           font-weight: 600;
-          position: absolute;
-          left: -20px;
-          top: 0px;
-
+          margin-right: 5px;
           color: $cOrange;
         }
       }
@@ -664,7 +656,7 @@
 .try {
   padding-top: 40px;
   background: $BgColor;
-  @extend .mb-lg;
+  @extend .pb-lg;
   @include mq(lg) {
     padding-top: 80px;
   }
@@ -672,7 +664,7 @@
     max-width: $contentMaxWidth1000;
     margin: 0 auto;
     width: 90%;
-    @extend .mb-lg;
+
     @extend .flex;
     justify-content: space-around;
   }
@@ -743,9 +735,10 @@
 
 .info-with-imgs {
   &__desc {
-    line-height: 2;
+    line-height: 1.6em;
     letter-spacing: 0.06em;
     margin: 20px 0;
+    @extend .font-sm;
   }
   &__img {
     &:nth-child(1) {
@@ -765,12 +758,76 @@
 
 .surround-contents {
   @extend .mb-lg;
+  position: relative;
+  @extend .pb-md;
   &__inner {
     @extend .content-width;
     max-width: $contentMaxWidth1000;
   }
   &__box {
     @extend .mb-lr;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    @include mq(lg) {
+      padding: 20px 30px;
+    }
+  }
+  &__bg {
+    height: 77.5%;
+    background: $BgColor;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    &::before {
+      content: "";
+      background: url(./images/detailed-bg-top-sp.png) no-repeat center/cover;
+      top: -90px;
+      height: 90px;
+      position: absolute;
+      width: 100%;
+      @include mq(lg) {
+        top: -295px;
+        height: 296px;
+        background: url(./images/detailed-bg-t.png) no-repeat center/cover;
+      }
+    }
+    &::after {
+      content: "";
+      bottom: -90px;
+      width: 100%;
+      height: 90px;
+      position: absolute;
+      background: url(./images/detailed-bg-sp.png) no-repeat center/cover;
+      @include mq(lg) {
+        bottom: -296px;
+        height: 296px;
+        background: url(./images/detailed-bg.png) no-repeat center/cover;
+      }
+    }
+  }
+}
+
+.summary-content {
+  background: $BgColor;
+  @extend .pb-sm;
+  @extend .pt-md;
+  @extend .mb-lg;
+
+  &__inner {
+    @extend .content-width;
+    max-width: $contentMaxWidth1000;
+  }
+  &__box {
+    @extend .mb-lr;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    @include mq(lg) {
+      padding: 20px 30px;
+    }
   }
 }
 
@@ -814,9 +871,11 @@
     & > h5 {
       @extend .font-sm;
       margin-bottom: 10px;
+      color: $cOrange;
       & > span {
         display: block;
         font-size: 12px;
+        color: $main-txt;
       }
     }
     & > p {
@@ -828,65 +887,60 @@
     line-height: 2;
     letter-spacing: 0.06em;
     & ul {
-      list-style: none;
+      padding-left: 10px;
       & li {
-        position: relative;
         margin-bottom: 10px;
-        &::before {
-          content: "\f111";
-          font-family: "Font Awesome 5 free";
-          font-weight: 600;
-          position: absolute;
-          left: -25px;
-          top: 10px;
-          color: $cOrange;
-          font-size: 7px;
-        }
       }
     }
   }
 }
 
 .txtimg-block {
-  max-width: $contentMaxWidth1000;
-  margin: 0 auto;
-  width: 90%;
-  @extend .mb-lr;
-
+  background: $BgColor;
+  @extend .pb-md;
+  @extend .pt-md;
+  &__inner {
+    @extend .content-width1000;
+  }
   &__box {
     @extend .mb-md;
     @extend .flex;
-  }
-  &__box-inner {
-    @extend .flex;
     justify-content: space-between;
+    background: $cWhite;
+    padding: 20px 10px;
+    border-radius: 10px;
+
+    @include mq(lg) {
+      padding: 20px 30px;
+    }
   }
+
   &__title {
     @extend .font-md;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     color: $cOrange;
   }
 
   &__texts {
     flex-basis: 55%;
-    padding: 5%;
     display: flex;
     align-items: center;
   }
 
   &__desc {
-    line-height: 2;
+    line-height: 1.6em;
     letter-spacing: 0.06em;
     @extend .font-sm;
+    margin-bottom: 20px;
     & ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 10px;
-      font-size: 14px;
+      line-height: 1.3em;
+      padding-left: 10px;
+      margin: 20px 0;
+      font-size: 13px;
     }
   }
   &__img {
-    flex-basis: 42%;
+    flex-basis: 40%;
     margin-left: 10px;
     display: flex;
     align-items: center;
@@ -901,6 +955,15 @@
   &__box-inner {
     @extend .mb-md;
   }
+  &__bottom {
+    background: white;
+    width: 100%;
+    padding: 30px 10px;
+    border-radius: 10px;
+    @include mq(lg) {
+      padding: 30px 40px;
+    }
+  }
   &__bottom-tit {
     text-align: center;
     @extend .font-md;
@@ -912,10 +975,18 @@
     @extend .font-sm;
     & ul {
       list-style: none;
+      padding: 0;
       & li {
-        border-bottom: 2px dotted $cOrange;
         margin-bottom: 20px;
         padding-bottom: 5px;
+        &::before {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 600;
+          content: "\f00c";
+          font-size: 8px;
+          color: $cOrange;
+          margin-right: 5px;
+        }
       }
     }
   }
@@ -1035,7 +1106,6 @@
         position: absolute;
         content: "";
         top: 7px;
-
         width: 8px;
         height: 8px;
         background: $cOrange;
@@ -1087,7 +1157,7 @@
   padding: 20px 20px 20px 50px;
   background: #f6f4ef;
   border-radius: 10px;
-  position: relative;
+
   & > p {
     @extend .font-sm;
     font-weight: 600;
@@ -1100,11 +1170,7 @@
     font-weight: 600;
     font-size: 25px;
     color: #eb9b71;
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 10px;
-    left: 20px;
+    margin-right: 5px;
   }
 }
 
@@ -1157,10 +1223,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      left: -14px;
-      @include mq(lg) {
-        left: -10px;
-      }
+      left: -10px;
     }
   }
   &__list {
