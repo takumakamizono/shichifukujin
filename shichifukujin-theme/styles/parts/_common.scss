@@ -786,3 +786,15 @@ img {
   margin: 0 5px;
   font-size: 12px;
 }
+
+.point {
+  color: $cRedColor;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+li {
+  &::marker {
+    color: $cOrange;
+  }
+}
