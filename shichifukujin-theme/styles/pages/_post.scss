@@ -308,16 +308,23 @@
 }
 
 .number-of-facilities {
-  margin: 0 auto;
-  margin-top: 50px;
-  @extend .font-lr;
-  font-weight: 900;
-  max-width: 800px;
-  text-align: center;
+  @extend .content-width;
+  @extend .mb-lr;
+  display: flex;
+  justify-content: center;
+  & p {
+    margin: 0 auto;
+    @extend .font-lr;
+    font-weight: 900;
+    max-width: 800px;
 
-  & > span {
-    color: $cOrange;
-    padding: 0 10px;
+    & > span {
+      color: $cOrange;
+      padding: 0 10px;
+    }
+    @include mq(lg) {
+      text-align: center;
+    }
   }
 }
 

@@ -29,9 +29,10 @@ $total_posts = $count_posts->publish;
                   施設一覧
                   </span>
                   </h2>  
-                  <p class="number-of-facilities">鹿児島市内で５つのエリアを中心に老人ホーム・グループホーム・デイサービス・就労支援・スクールなど<span><?= esc_html($total_posts);?>事業所</span>を展開しています。</p>
-
                 </div>
+                <div class="number-of-facilities">
+                  <p>鹿児島市内で５つのエリアを中心に老人ホーム・グループホーム・デイサービス・就労支援・スクールなど<span><?= esc_html($total_posts);?>事業所</span>を展開しています。</p>
+                  </div>
                 <div class="service__inner">
                 <?php
                 $facilitys = get_terms([
