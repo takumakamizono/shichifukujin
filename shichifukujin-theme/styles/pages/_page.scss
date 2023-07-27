@@ -240,8 +240,8 @@
   @extend .mb-lg;
 }
 .overview-table {
-  @extend .content-width1000;
   border-collapse: collapse;
+  width: 100%;
   & tr {
     border-bottom: solid 2px white;
     @extend .flex;
@@ -270,8 +270,8 @@
       border-bottom: 10px solid transparent;
     }
     @include mq(lg) {
-      width: 30%;
-      padding: 20px 0;
+      width: 35%;
+      padding: 20px 10px;
       &::after {
         display: block;
       }
@@ -284,7 +284,7 @@
     padding: 20px;
     @extend .font-sm;
     @include mq(lg) {
-      width: 70%;
+      width: 65%;
     }
   }
 }
@@ -293,12 +293,27 @@
   @extend .content-width1000;
   @extend .mb-lg;
   &__inner {
-    @extend .flex;
+    @extend .flex960;
     justify-content: space-between;
+    padding: 20px 10px;
+    background: $BgColor;
+    border-radius: 10px;
+    @include mq(lg) {
+      padding: 50px 30px;
+    }
   }
   &__map {
     margin-bottom: 20px;
-    flex-basis: 43%;
+    flex-basis: 49%;
+    & .map-canvas {
+      height: 300px !important;
+      @include mq(lg) {
+        height: 100% !important;
+      }
+    }
+    @include mq(lg) {
+      margin-bottom: 0;
+    }
     & > iframe {
       width: 100%;
       height: 300px;
@@ -306,9 +321,12 @@
     }
   }
   &__text {
-    flex-basis: 53%;
+    flex-basis: 49%;
     display: flex;
     align-items: flex-end;
+    background: $cWhite;
+    border-radius: 10px;
+    padding: 10px;
   }
   &__text-inner {
     @include mq(lg) {
@@ -318,16 +336,27 @@
     }
   }
 
-  &__title {
-    margin-bottom: 17px;
-    font-weight: 900;
-    @extend .font-lr;
-    letter-spacing: 0.16em;
-    line-height: 1.5;
-  }
   &__dl {
     & dt {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+
+      font-weight: 900;
+      &::before {
+        font-family: "Font Awesome 5 free";
+        font-weight: 600;
+        color: #eb9b71;
+        margin-right: 5px;
+      }
+      &:nth-of-type(1) {
+        &::before {
+          content: "\f3c5";
+        }
+      }
+      &:nth-of-type(2) {
+        &::before {
+          content: "\f207";
+        }
+      }
     }
     & dd {
       @extend .font-sm;
@@ -401,6 +430,7 @@
     @extend .font-sm;
     & ul {
       list-style: none;
+      margin: 20px 0;
       padding: 0;
       line-height: 1.3em;
       & li {

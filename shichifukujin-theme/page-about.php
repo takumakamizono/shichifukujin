@@ -63,11 +63,9 @@
 <section class="overview">
                   <div class="section-titles">
                   <h2 class="main-title">
-                  会社概要
+                 <span>会社概要</span> 
                   </h2>
-                  <p class="sub-title tween-animate-title">
-                  about
-                  </p>
+                  
                 </div>
  <div class="overview__inner">
  <table class="overview-table">
@@ -91,22 +89,40 @@
     <th>FAX番号</th>
     <td>099-256-3729</td>
   </tr> 
+  <tr>
+    <th>WEBSITE</th>
+    <td>https://729729.jp/</td>
+  </tr> 
+  <tr>
+    <th>特別養護老人ホーム七福神</th>
+    <td>登録5739077(商願2014-073845)</td>
+  </tr> 
+  <tr>
+    <th>特別養護老人ホームシルクロード七福神</th>
+    <td>登録6218989(商願2019-015829)</td>
+  </tr> 
 </table>
   </div>
  </section> 
                   <section class="aboutpage-access">
                     <div class="aboutpage-access__inner">
                         <div class="aboutpage-access__map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3399.605209873307!2d130.52531497605608!3d31.5624475450612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353e67a86e544787%3A0x33f7f3b20c88956a!2z54m55Yil6aSK6K236ICB5Lq644Ob44O844OgIOOCt-ODq-OCr-ODreODvOODieS4g-emj-elng!5e0!3m2!1sja!2sjp!4v1687245784190!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <?php
+    $lat_value = get_field('lat');
+    $lng_value = get_field('lng'); ?>
+    <?= do_shortcode("[custom_map id='map1' lat='{$lat_value}' lng='{$lng_value}']"); ?>
                         </div>
                         <div class="aboutpage-access__text">
                             <div class="aboutpage-access__text-inner">
-                            <h3 class="aboutpage-access__title">アクセス</h3>
+                            <div class="section-titles-left">
+      <h3 class=" main-title"><span>アクセス</span></h3>
+      </div>
+                           
                             <dl class="aboutpage-access__dl">
                                 <dt>所在地</dt>
-                                <dd>〒890-0082 鹿児島県鹿児島市紫原５-13-18</dd>
-                                <dt>お車でお越しの方</dt>
-                                <dd>住宅地の中にあり、外観もマンションのような佇まいです。「KTS」「焼き鳥信玄」「お寿司のまどか」が目印です。</dd>
+                                <dd><?php the_field('location');?></dd>
+                                <dt><?php the_field('type');?>でお越しの方</dt>
+                                <dd><?php the_field('transportation');?></dd>
                             </dl>
                         </div>
                         </div>
@@ -129,7 +145,20 @@
                     <div class="philosophy__sub">
                     <p>利用者様の症状は、声にならない身体と心からの叫び。それは、意味あるメッセージ。私たちは、利用者様からのメッセージと共に運命共同体の一員として歩み続けます。</p>
                     </div>
-                    </div>  
+                    </div>
+                    <div class="philosophy__block">
+                    <div class="philosophy__main">
+                        <p class="content-subtitle">私たちの存在目的</p>
+                    </div>
+                    <div class="philosophy__sub">
+                      <p>私たちは、その人がたとえ病気になったり、後遺症が残ったり、今がわからなくなったとしても、いつでも利用者様に寄り添い、その人らしい生活実現の支援をするために存在し地域にお役立ちします。</p>
+                        <ul>
+                            <li>&#9312; 心身機能の維持・予防・改善</li>
+                            <li>&#9313; 介護・福祉・医療の支援</li>
+                            <li>&#9314; 心のパートナー</li>
+                        </ul>
+                    </div>
+                    </div>    
                       <div class="philosophy__block">
                     <div class="philosophy__main">
                         <p class="content-subtitle">ビジョン</p>
