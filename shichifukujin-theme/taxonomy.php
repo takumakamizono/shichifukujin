@@ -35,8 +35,11 @@ $count = get_term($term_id, $taxonomy)->count;
                      }  ?>
                   </span>
                   </h2>
-                  <p class="number-of-facilities"><?= esc_html($facility->name);?><span><?= esc_html($count);?>施設</span>をご紹介します</p>
                 </div>
+                <div class="number-of-facilities">
+                  <p ><?= esc_html($facility->name);?><span><?= esc_html($count);?>施設</span>をご紹介します</p>
+                </div>
+
               
             
                 <div class="service__inner">
