@@ -22,11 +22,12 @@
               <?php get_template_part('include/breadcrumb'); ?> 
               <div class="page-content__inner">
              <div class="page-404">
+              <div class="page-404__content">
                 <p>お探しのページは見つかりませんでした。</p>
                 <p>恐れ入りますが、下のリンクからトップページへお戻りください。</p>
-
+              </div>
                 <div class="page-404__btn">
-                    <a class="btn" href="">トップページへ戻る</a>
+                    <a class="btn" href="<?= esc_url(home_url('/')); ?>">トップページへ戻る</a>
                 </div>
              </div>         
         </div>
