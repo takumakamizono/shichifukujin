@@ -612,6 +612,10 @@
       & .page-procedure__texts {
         flex-basis: 50%;
         align-items: center;
+        margin-top: 40px;
+        @include mq(lg) {
+          margin-top: 0;
+        }
       }
       & .page-procedure__inner {
         width: 100%;
@@ -644,7 +648,24 @@
   }
   &__title {
     text-align: center;
-    color: $mainColor;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+
+    & > span {
+      position: relative;
+      &::after {
+        bottom: -16px;
+        height: 16px;
+        background-size: 16px auto;
+        position: absolute;
+        width: 100%;
+        content: "";
+        background-repeat: space repeat;
+        background-image: url(images/bg_dot01.png);
+        left: 0;
+      }
+    }
   }
   &__desc {
     padding: 15px 10px;

@@ -37,7 +37,7 @@
                     <div class="page-procedure__texts">
                       <div class="page-procedure__texts-inner">
                       <h4 class="page-procedure__title">
-                        まずはご連絡ください。
+                       <span>まずはご連絡ください。</span>
                      </h4>
                       <div class="page-procedure__desc">
                         <ul>
@@ -67,7 +67,7 @@
                     <div class="page-procedure__texts">
                       <div class="page-procedure__texts-inner">
                       <h4 class="page-procedure__title">
-                        見学・入居前顔合わせ
+                      <span>見学・入居前顔合わせ</span>
                      </h4>
                       <div class="page-procedure__desc">
                       <?php the_field('step_txt02',480);?>
@@ -83,7 +83,7 @@
                     <div class="page-procedure__texts">
                       <div class="page-procedure__texts-inner">
                       <h4 class="page-procedure__title">
-                        入居調整会議
+                      <span>入居調整会議</span>
                      </h4>
                       <div class="page-procedure__desc">
                       <?php the_field('step_txt03',480);?>
@@ -98,7 +98,7 @@
                     <div class="page-procedure__texts">
                       <div class="page-procedure__texts-inner">
                       <h4 class="page-procedure__title">
-                        入居決定
+                      <span>入居決定</span>
                      </h4>
                       <div class="page-procedure__desc">
                       <?php the_field('step_txt04',480);?>
@@ -114,7 +114,7 @@
                     <div class="page-procedure__texts">
                       <div class="page-procedure__texts-inner">
                       <h4 class="page-procedure__title">
-                        契約・入居
+                      <span>契約・入居</span>
                      </h4>
                       <div class="page-procedure__desc">
                       <?php the_field('step_txt05',480);?>                   
