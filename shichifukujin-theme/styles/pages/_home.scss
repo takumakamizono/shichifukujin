@@ -748,7 +748,7 @@ main {
   &__inner {
     padding: 60px 0 30px 0;
     @extend .content-width;
-    @extend .flex;
+    @extend .flex960;
     justify-content: space-between;
   }
   &__left {
@@ -757,23 +757,60 @@ main {
   &__right {
     flex-basis: 30%;
   }
-  &__right-imgs {
+  &__right-links {
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    width: 50%;
+    flex-direction: column;
+    justify-content: space-between;
     @include mq(md) {
-      width: 100%;
+      flex-direction: row;
+    }
+    @include mq(lg) {
+      flex-direction: column;
     }
   }
-  &__img {
+  &__sdgs {
     flex-basis: 49%;
+  }
+  &__kurumin {
+    flex-basis: 49%;
+  }
+  &__sdgs,
+  &__kurumin {
+    @extend .mb-sm;
+    background: $cWhite;
+    padding: 10px;
+    border-radius: 10px;
+    @include mq(lg) {
+      padding: 10px 30px;
+    }
+    & > a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+    }
+  }
+  &__link-txts {
+    flex-basis: 67%;
+  }
+  &__link-tit {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: $main-txt;
+  }
+  &__link-desc {
+    font-size: 12px;
+    color: $cSubTitle;
+  }
+  &__link-img {
+    flex-basis: 30%;
   }
   &__nav {
     @extend .content-width;
     display: none;
     @include mq(lg) {
-      margin-bottom: 20px;
+      margin: 20px auto;
       display: block;
     }
   }
