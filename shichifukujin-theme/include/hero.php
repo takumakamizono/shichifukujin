@@ -54,7 +54,7 @@
                   $cat_name = $category->cat_name;
                   ?>               
               <h2 class="hero-sub__maintitle "><?=  esc_html($cat_name); ?></h2>
-              <p class="hero-sub__subtitle"><?=  esc_html($cat_slug); ?></p>
+              <p class="hero-sub__subtitle">お知らせ情報</p>
               <?php  elseif($post_type_object):?> 
                 <?php
                 $menu_name = $post_type_object->labels->menu_name;
@@ -89,13 +89,14 @@
               <?php if(is_singular('post')): ?>
     <?php
     $categories = get_the_category();
+   
     if (!empty($categories)) {
       $cat_slug = $categories[0]->slug;
       $cat_name = $categories[0]->name;
     }
     ?>
     <h2 class="hero-sub__maintitle"><?= esc_html($cat_name); ?></h2>
-    <p class="hero-sub__subtitle"><?= esc_html($cat_slug); ?></p>
+    <p class="hero-sub__subtitle">お知らせ情報</p>
 
             
               <?php elseif($post_type_object):  ?> 

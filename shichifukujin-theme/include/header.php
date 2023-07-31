@@ -3,7 +3,7 @@
             
               <a href="<?= esc_url(home_url('/')); ?>">
               <div class="logo__img">
-              <img  src="<?= get_template_directory_uri(); ?>/images/logo.png" alt="logo画像">
+              <img  src="<?= get_template_directory_uri(); ?>/images/logo.png?v2" alt="logo画像">
               </div>
               <div class="logo__tit">
                 <span>社会福祉法人</span>
