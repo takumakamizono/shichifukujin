@@ -396,7 +396,8 @@ img {
 /*ページナビ-----------------------------------------------------------*/
 
 .wp-pagenavi {
-  /* 全体 */
+  @extend .mt-md;
+  @extend .mb-sm;
   padding: 20px 0;
   font-size: 12px;
   text-align: center;
