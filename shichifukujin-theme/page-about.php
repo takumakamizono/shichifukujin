@@ -127,9 +127,8 @@
                         </div>
                         </div>
                     </div>
-                  </section>
-            <?php get_template_part('include/facility-list'); ?>
-
+                  </section>    
+        <?php get_template_part('include/facility-list'); ?> 
                   <div class="philosophys">
                   <section class="philosophy">
                   <div class="section-titles-left">

@@ -696,10 +696,10 @@
     @extend .content-width1000;
   }
   &__ul {
-    list-style: none;
-    padding: 0;
-    @extend .flex960;
-    justify-content: space-between;
+    & > div {
+      @extend .flex960;
+      justify-content: space-between;
+    }
   }
   &__block {
     @extend .mb-md;
@@ -709,6 +709,10 @@
     border-radius: 10px;
     flex-basis: 49%;
     letter-spacing: 0.08em;
+    & > a {
+      text-decoration: none;
+      color: $main-txt;
+    }
   }
   &__dl {
     & > div {

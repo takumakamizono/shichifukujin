@@ -25,7 +25,9 @@
                <?php the_content(); ?>
                 </div>
           </div>
+          <?php if (is_page('contact')): ?>
           <?php get_template_part('include/facility-list'); ?>
+          <?php endif; ?>
             <?php endwhile; ?>
             <?php endif; ?>
             
