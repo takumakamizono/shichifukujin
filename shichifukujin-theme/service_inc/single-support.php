@@ -7,8 +7,14 @@
 <?php get_template_part('service_inc/banner'); ?>
 <?php get_template_part('service_inc/sec-summary'); ?>
 <?php endif; ?>
+<?php if($post_slug === 'orange'): ?>
+<?php get_template_part('service_inc/sec-txtBocks'); ?>
+<?php get_template_part('service_inc/sec-summary'); ?>
+    <?php endif; ?>    
+
  <?php if($post_slug === 'school'): ?>
     <?php get_template_part('service_inc/school'); ?>
 <?php endif; ?>
  <?php get_template_part('service_inc/service-access'); ?>
+
  

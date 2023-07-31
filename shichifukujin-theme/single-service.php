@@ -39,7 +39,7 @@
                   <?php get_template_part('service_inc/single-group'); ?>
                   <?php elseif($term->slug === 'day'): ?>
                   <?php get_template_part('service_inc/single-day'); ?>
-                  <?php elseif($term->slug === 'support'): ?>
+                  <?php elseif($term->slug === 'support'|| $term->slug === 'others'): ?>
                   <?php get_template_part('service_inc/single-support'); ?>
                  <?php endif; ?> 
                  <?php endforeach; ?> 
