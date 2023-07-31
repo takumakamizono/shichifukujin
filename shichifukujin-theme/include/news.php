@@ -8,24 +8,40 @@
                 <?php
                      $args=[
                        'post_type'=> 'post',
-                       'category_name' => 'news',
+                       'category_name' => 'news,event ,recruitment-info,others',
                        'posts_per_page' => 5,        
                      ];
                      $the_query = new WP_Query($args);
                     ?>
-                  <?php if($the_query->have_posts()): ?>                    
+                  <?php if($the_query->have_posts()): ?>  
+               
                   <ul class="news__list appear right"> 
               <?php while($the_query->have_posts()):$the_query->the_post(); ?>
             <?php get_template_part('include/news-inside'); ?>
             <?php endwhile; ?>
                   </ul>
                   <div class="news__btn appear up">
-                <?php
-                      $news = get_term_by('slug','news','category');
-                      $news_link = get_term_link($news,'category')
-                      ?>
-                    <a href="<?= esc_url($news_link); ?>"  class="btn slide-bg item">お知らせ一覧へ</a>
-                  </div>
+    <?php
+    
+    $categories = get_terms([
+        'taxonomy' => 'category',
+        'slug' => ['news', 'event','recruitment-info','others'],
+        'orderby' => 'include',
+        'include' => array(2, 15, 16, 1),
+    ]);
+    ?>
+    <ul class="btn-list">
+        <?php foreach ($categories as $category) {
+            $category_link = get_term_link($category, 'category');
+            ?>
+            <li class="btn-item">
+                <a class="btn slide-bg item" href="<?= esc_url($category_link); ?>"><?= $category->name; ?>一覧へ</a>
+            </li>
+        <?php } ?>
+    </ul>
+</div>    
+           
+          
                   <?php else: ?>
                     <div class="notice__notinfo">
                       <p>新しい情報はありません</p>

@@ -153,9 +153,6 @@ main {
       & li {
         border-bottom: solid 1px rgba(102, 102, 102, 0.2);
         display: flex;
-        &:nth-child(2) {
-          border-bottom: none;
-        }
         & > a {
           width: 100%;
           height: 100%;
@@ -240,19 +237,17 @@ main {
   }
 }
 .news {
-  @extend .mb-lg;
+  @extend .mb-lr;
   &__inner {
     max-width: $contentMaxWidth1000;
     width: 90%;
     margin: 0 auto;
-    @extend .mb-lr;
 
     min-height: 200px;
   }
   &__list {
     list-style: none;
     padding: 0;
-    @extend .mb-md;
   }
   &__box {
     border-bottom: 2px dotted ghostwhite;
@@ -321,6 +316,7 @@ main {
       }
     }
   }
+
   &__des {
     display: block;
     font-size: 14px;
@@ -346,10 +342,29 @@ main {
     }
   }
   &__btn {
-    text-align: center;
-    @include mq(lg) {
+    display: flex;
+    justify-content: center;
+    @extend .mt-md;
+    @extend .mb-md;
+
+    & .btn-list {
+      list-style: none;
+      padding: 0;
       display: flex;
-      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+    & .btn-item {
+      display: flex;
+      justify-content: center;
+      margin-right: 5px;
+      flex-basis: 47%;
+      margin-bottom: 10px;
+      @include mq(lr) {
+        flex-basis: 33%;
+      }
+      @include mq(lg) {
+        flex-basis: 24%;
+      }
     }
     & .btn {
       max-width: 300px;
