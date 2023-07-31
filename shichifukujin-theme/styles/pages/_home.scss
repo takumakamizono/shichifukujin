@@ -366,6 +366,54 @@ main {
       }
     }
   }
+  &__grid {
+    @extend .flex960;
+    justify-content: space-between;
+    @extend .content-width;
+    min-height: 300px;
+  }
+  &__main {
+    flex-basis: 70%;
+    min-height: 300px;
+    @extend .mb-md;
+  }
+}
+.archive-list {
+  flex-basis: 28%;
+  &__block {
+    border-radius: 10px;
+    background: $BgColor;
+    padding: 23px 18px 23px;
+    position: relative;
+    @extend .mb-md;
+
+    & > ul {
+      list-style: none;
+      padding: 0;
+      & li {
+        border-bottom: 2px dotted $lightGray;
+        & > a {
+          display: block;
+          text-decoration: none;
+          color: $main-txt;
+          padding: 12px 15px;
+          @extend .font-sm;
+        }
+      }
+    }
+  }
+  &__tltle {
+    position: absolute;
+    top: -10px;
+    font-size: 1.2em;
+    font-weight: 700;
+  }
+  &__dropdown {
+    width: 100%;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+  }
 }
 
 .about {

@@ -57,3 +57,13 @@ $(window).on("load", function () {
     $(Box).slideUp(500);
   });
 });
+
+$(document).ready(function () {
+  $(".archive-list__dropdown").change(function () {
+    var selectedOption = $(this).find("option:selected");
+    var archiveLink = selectedOption.val();
+    if (archiveLink) {
+      window.location.href = archiveLink;
+    }
+  });
+});
