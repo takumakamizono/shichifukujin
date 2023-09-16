@@ -21,8 +21,8 @@
                       <p>その人らしい暮らしをつくっていくことが私たちの目指すユニットケアです。</p>
                      </div>
                       </div>
-                      <?php $post_slug = get_post_field('post_name', get_post());?>
-                   <?php if($post_slug === 'service_silkroad'): ?>
+                      <?php $post_slug = get_post_field('post_name', get_post()); ?>
+                   <?php if($post_slug === 'silkroad'): ?>
                       <div class="text-box">
                       <h4 class="text-box__title">
                         <span>シルクロード七福神から心を込めた７つのケア</span>    
@@ -75,13 +75,7 @@
 睡眠の状態だけでなく心拍数や呼吸数などを訪室しなくても確認できるので利用者様の眠りを妨げることなく、快適な夜を提供することができ、かつ利用者様の急変にもいち早く対応することができるシステムを導入しています。</p>
                         </div>
                         </div>
-                      <div class="text-box__innerBox">
-                        <h5 class="text-box__innerTitle">生活リハビリ</h5>
-                        <div class="text-box__innerDesc">
-                          <p>お部屋にいる入所者様の睡眠状態を把握することで、安心した介護ができています。 <br>
-睡眠の状態だけでなく心拍数や呼吸数などを訪室しなくても確認できるので利用者様の眠りを妨げることなく、快適な夜を提供することができ、かつ利用者様の急変にもいち早く対応することができるシステムを導入しています。</p>
-                        </div>
-                        </div>
+                   
                       <div class="text-box__innerBox">
                         <h5 class="text-box__innerTitle">活発な地域交流</h5>
                         <div class="text-box__innerDesc">
