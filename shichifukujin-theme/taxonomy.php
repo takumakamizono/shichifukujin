@@ -24,6 +24,7 @@ $count = get_term($term_id, $taxonomy)->count;
            
             <!-- <?php get_template_part('include/side-left'); ?> -->
             <main>
+            <?php  get_template_part('include/warning');?>
             <section class="service">
             <?php get_template_part('include/breadcrumb'); ?> 
              <?php $facility =  get_queried_object(); ?>

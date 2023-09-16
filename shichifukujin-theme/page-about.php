@@ -23,6 +23,7 @@
            
             <!-- <?php get_template_part('include/side-left'); ?> -->
             <main>
+            <?php  get_template_part('include/warning');?>
             <?php if(have_posts()): ?>
             <?php while(have_posts()):the_post(); ?>
             <div class="page-content">

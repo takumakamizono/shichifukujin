@@ -17,6 +17,7 @@
            
             <!-- <?php get_template_part('include/side-left'); ?> -->
             <main>
+            <?php  get_template_part('include/warning');?>
             <section class="sl-custom">
             <?php get_template_part('include/breadcrumb'); ?> 
               <div class="sl-custom__inner">

@@ -17,6 +17,7 @@
            
             <!-- <?php get_template_part('include/side-left'); ?> -->
             <main>
+              <?php  get_template_part('include/warning');?>
               <?php get_template_part('include/family-page'); ?>
               <?php get_template_part('include/about'); ?>
               <?php get_template_part('include/detailed-info'); ?>

@@ -1043,3 +1043,38 @@ main {
     background-image: url(../images/facebook.svg);
   }
 }
+
+.warning {
+  padding: 30px 0;
+  background: $BgColor;
+  &__inner {
+    @extend .content-width;
+    display: flex;
+    justify-content: center;
+  }
+  &__desc {
+    background: $cWhite;
+    border-radius: 10px;
+    padding: 20px 9px;
+    @include mq(md) {
+      padding: 25px 20px;
+    }
+    & h5 {
+      margin-bottom: 20px;
+      @extend .font-md;
+      color: $cRedColor-s;
+      text-align: center;
+      & > span {
+        border-bottom: 2px dotted $cRedColor-s;
+      }
+    }
+    & p {
+      @extend .font-sm;
+    }
+  }
+  &__btn {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+  }
+}

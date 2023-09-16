@@ -20,6 +20,7 @@ $total_posts = $count_posts->publish;
           <div id="main-content">   
             <!-- <?php get_template_part('include/side-left'); ?> -->
             <main>
+            <?php  get_template_part('include/warning');?>
             <section class="service">
             <?php get_template_part('include/breadcrumb'); ?> 
 
