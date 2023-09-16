@@ -187,6 +187,13 @@ img {
   border-left: 4px solid $cOrange;
   padding-left: 10px;
 }
+.bottom_boader-title {
+  @extend .font-md;
+  @extend .mb-sm;
+  display: block;
+  font-weight: 900;
+  border-bottom: 4px solid $mainColor;
+}
 
 @keyframes kf-arrow-anime {
   0%,
