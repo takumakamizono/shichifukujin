@@ -532,6 +532,7 @@
       @extend .font-md;
       margin-bottom: 5px;
       color: $cOrange;
+
       & > span {
         margin-right: 3px;
         @extend .font-lr;
@@ -543,11 +544,21 @@
     }
   }
   &__innerBox {
-    @extend .mb-sm;
+    position: relative;
+    @extend .mb-md;
+    background: $BgColor;
+    border-radius: 10px;
+    padding: 20px 10px;
+    position: relative;
+    @include mq(md) {
+      padding: 20px 20px;
+    }
   }
   &__innerTitle {
     @extend .font-md;
     font-weight: 700;
+    position: absolute;
+    top: -10px;
   }
   &__innerDesc {
     @extend .font-sm;
@@ -560,7 +571,9 @@
     align-items: center;
   }
   & ul {
-    padding-left: 10px;
+    padding-left: 17px;
+    @extend .mb-sm;
+
     & li {
       &::marker {
         color: $cOrange;
