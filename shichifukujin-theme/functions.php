@@ -153,7 +153,7 @@ add_filter( 'get_terms_orderby', 'taxonomy_orderby_description', 10, 2 );
 
 add_action( 'admin_init', function() {
   $taxonomy = 'facility'; 
-  $term_slug = ['nursing','group','day','support'
+  $term_slug = ['nursing','group','day','support','others'
   ];
   $post_type = 'service'; 
 
