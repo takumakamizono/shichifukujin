@@ -187,26 +187,10 @@
   @extend .mb-lg;
 }
 .sentence {
-  @extend .mb-lg;
-  position: relative;
-  padding-bottom: 50px;
-  @include mq(lg) {
-    padding-bottom: 100px 0;
-  }
-  &::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    background-image: url(./images/about-bg.jpg);
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    z-index: -1;
-  }
+  @extend .mb-md;
+
   &__inner {
+    position: relative;
     background: rgba(255, 255, 255, 0.5);
     padding: 20px;
     border-radius: 10px;
@@ -215,6 +199,25 @@
     align-items: center;
     @include mq(lg) {
       padding: 40px 20px;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      background-image: url(./images/about_idea_bg1.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom;
+      z-index: 1;
+      height: 300px;
+      width: 300px;
+      @include mq(lg) {
+        height: 350px;
+        width: 350px;
+        left: 140px;
+      }
     }
   }
   &__img {
@@ -369,27 +372,37 @@
 }
 
 .philosophy {
-  &:nth-child(1) {
-    @extend .pb-lg;
-    position: relative;
-    &::after {
-      position: absolute;
-      content: "";
-      top: 0;
-      right: 0;
-      background-image: url(./images/about_idea_bg1.png);
-
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: bottom;
-      z-index: 1;
-      height: 300px;
-      width: 300px;
-      @include mq(lg) {
-        height: 500px;
-        width: 500px;
+  &__wrap {
+    @extend .mb-md;
+    &:nth-child(even) {
+      .philosophy__wrap-inner {
+        @include mq(lg) {
+          flex-direction: row-reverse;
+        }
       }
     }
+  }
+  &__wrap-inner {
+    @extend .flex960;
+    justify-content: space-between;
+  }
+  &__wrap-texts {
+    flex-basis: 49%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & h3 {
+      @extend .mb-sm;
+      @extend .font-lr;
+    }
+  }
+  &__wrap-img {
+    flex-basis: 48%;
+    @extend .mb-md;
+    margin: 0 auto;
+  }
+  &:nth-child(1) {
+    @extend .pb-lg;
   }
   &:nth-child(2) {
     position: relative;
@@ -472,6 +485,16 @@
         bottom: -296px;
         height: 296px;
         background: url(./images/detailed-bg.png) no-repeat center/cover;
+      }
+    }
+  }
+  &__promise-block {
+    @extend .mb-md;
+    & > h4 {
+      @extend .font-lr;
+      @extend .mb-sm;
+      @include mq(md) {
+        text-align: center;
       }
     }
   }
