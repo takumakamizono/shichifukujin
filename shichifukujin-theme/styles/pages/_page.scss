@@ -617,106 +617,96 @@
 }
 
 .page-procedure {
-  &__inner {
-    @extend .page-wrap;
-    @extend .flex;
-    justify-content: space-between;
-  }
-  &__box {
-    flex-basis: 48%;
+  &__mainTit {
+    font-size: clamp(18px, 4vw, 36px);
     @extend .mb-md;
-    &:nth-child(1) {
-      flex-basis: 100%;
+    line-height: 1.8;
+    @include mq(lg) {
+      text-align: center;
+    }
+    & > span {
+      color: $mainColor;
+    }
+  }
+  &__block {
+    @extend .mb-md;
+    &-inner {
       @extend .flex960;
-      & .page-procedure__img {
-        flex-basis: 48%;
-        margin: 0 auto;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-desc {
+      flex-basis: 60%;
+      @extend .mb-sm;
+      & p {
+        @extend .font-sm;
+        line-height: 1.8;
       }
-      & .page-procedure__texts {
-        flex-basis: 50%;
-        align-items: center;
-        margin-top: 40px;
-        @include mq(lg) {
-          margin-top: 0;
+    }
+    &-img {
+      flex-basis: 38%;
+    }
+    &-flowStep {
+      @extend .mb-md;
+      &:last-of-type {
+        .page-procedure__block-flowNumber {
+          &::before {
+            border-left: none;
+          }
         }
       }
-      & .page-procedure__inner {
-        width: 100%;
-      }
+    }
+    &-descFlow {
+      @extend .mb-md;
+    }
+    &-flowOrder {
+      @extend .flex960;
+      justify-content: space-between;
       @include mq(lg) {
-        flex-direction: row-reverse;
-        justify-content: space-between;
+        align-items: center;
+      }
+      & > p {
+        flex-basis: 78%;
       }
     }
-    &:not(:nth-child(1)) {
-      & .page-procedure__texts {
-        margin-top: 40px;
-      }
-    }
-  }
-  &__img {
-    @extend .mb-sm;
-    & > img {
-      border-radius: 0 10px 10px 10px;
-      box-shadow: 1px 1px 10px rgba(48, 70, 95, 0.3);
-    }
-  }
-  &__texts {
-    display: flex;
-    min-height: 150px;
-    justify-content: center;
-  }
-  &__texts-inner {
-    width: 100%;
-  }
-  &__title {
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 15px;
-
-    & > span {
+    &-flowNumber {
       position: relative;
-      &::after {
-        bottom: -16px;
-        height: 16px;
-        background-size: 16px auto;
-        position: absolute;
-        width: 100%;
-        content: "";
-        background-repeat: space repeat;
-        background-image: url(images/bg_dot01.png);
-        left: 0;
+      background: $SubColor;
+      border-radius: 5px;
+      color: $cWhite;
+      font-size: 14px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+
+      @include mq(lg) {
+        flex-basis: 180px;
+        height: 50px;
+        margin-bottom: 0;
+        &::before {
+          content: "";
+          border-left: 4px solid $mainColor;
+          height: 150px;
+          position: absolute;
+          top: 0;
+          z-index: -1;
+        }
       }
     }
-  }
-  &__desc {
-    padding: 15px 10px;
-    @extend .font-sm;
-    & > ul {
-      padding: 0;
-      list-style: none;
-      & li {
-        margin-bottom: 20px;
-        border-bottom: $mainColor;
-      }
-    }
-  }
-  &__desc-tit {
-    margin-bottom: 10px;
-    font-size: 16px;
-    background: $BgColor;
-    padding: 5px;
-  }
-  &__btn {
-    margin-top: 20px;
   }
 }
 
 .facility-list {
+  overflow: hidden;
   @extend .mb-lg;
   &__inner {
     @extend .content-width1000;
+    overflow: hidden;
   }
   &__ul {
     & > div {
