@@ -3,14 +3,14 @@
                <div class="detailed-info__inner">
                     <div class="detailed-info__block">
                     <div class="detailed-info__tit">
-                        ご入居までの流れ
+                        ご利用までの流れ
                       </div>
                         <div class="detailed-info__img">
-                            <img src="<?= get_template_directory_uri(); ?>/images/670×400_01.png" alt="">
+                            <img src="<?= get_template_directory_uri(); ?>/images/flow.jpg" alt="">
                         </div>
                         <div class="detailed-info__text">
                             <div class="detailed-info__desc">
-                        <p>ご入居をお考えの方へご利用までの流れをご説明します。</p>
+                        <p>ご利用をお考えの方へご利用までの流れをご説明します。</p>
                         </div>
                         <div class="detailed-info__btn">
                         <a class="btn slide-bg" href="<?= home_url('/procedure/') ?>">
@@ -25,7 +25,7 @@
                         スタッフインタビュー
                       </div>
                         <div class="detailed-info__img">
-                            <img src="<?= get_template_directory_uri(); ?>/images/670×400_02.png" alt="">
+                            <img src="<?= get_template_directory_uri(); ?>/images/interview.jpg" alt="">
                         </div>
                         <div class="detailed-info__text">
                             <div class="detailed-info__desc">
@@ -49,7 +49,7 @@
                         よくある質問
                       </div>
                         <div class="detailed-info__img">
-                            <img src="<?= get_template_directory_uri(); ?>/images/670×400_03.png" alt="">
+                            <img src="<?= get_template_directory_uri(); ?>/images/qa.jpg" alt="">
                         </div>
                         <div class="detailed-info__text">
                             <div class="detailed-info__desc">
