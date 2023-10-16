@@ -13,7 +13,18 @@
                     <p class="service__title"><?php the_title(); ?></p>              
                 </div>
                 <div class="service__location">
-                  <?php the_field('location');?>
+                  <p><?php the_field('location');?></p>
+
+                  <?php if (get_field('access-tel') ): ?>
+                  <p class="service__location-tels"> 
+                  <span>TEL:<?php the_field('access-tel');?></span>
+                  <?php if (get_field('access-fax') ): ?>
+                  <sapn>FAX:<?php the_field('access-fax');?></span>      
+                  <?php endif;?>
+                  </p>  
+                  <?php endif;?>
+                  
+                  
                 </div>
                
                 <div class="service__btn">

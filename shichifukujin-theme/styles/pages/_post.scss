@@ -134,6 +134,16 @@
   &__location {
     @extend .font-sm;
     @extend .mb-sm;
+    line-height: 1.8em;
+    min-height: 58px;
+    &-tels {
+      @extend .flex;
+      & > span {
+        &:nth-child(1) {
+          margin-right: 10px;
+        }
+      }
+    }
   }
   &__desc {
     @extend .font-sm;
@@ -338,8 +348,8 @@
   & p {
     margin: 0 auto;
     @extend .font-lr;
-    font-weight: 900;
-    max-width: 800px;
+    font-weight: 600;
+    max-width: 900px;
 
     & > span {
       color: $cOrange;
@@ -507,6 +517,7 @@
     @extend .mb-md;
     letter-spacing: 0.16em;
     line-height: 1.6em;
+    text-align: center;
     & span {
       position: relative;
       display: inline-block;
