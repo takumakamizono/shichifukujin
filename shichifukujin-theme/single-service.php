@@ -40,7 +40,7 @@
                   <?php get_template_part('service_inc/single-group'); ?>
                   <?php elseif($term->slug === 'day'): ?>
                   <?php get_template_part('service_inc/single-day'); ?>
-                  <?php elseif($term->slug === 'support'|| $term->slug === 'others'): ?>
+                  <?php elseif($term->slug === 'support'|| $term->slug === 'school'|| $term->slug === 'interact'): ?>
                   <?php get_template_part('service_inc/single-support'); ?>
                  <?php endif; ?> 
                  <?php endforeach; ?> 
