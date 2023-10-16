@@ -46,11 +46,11 @@
                         <?php $query = new WP_Query($args); ?>
 
                         <?php if ($query->have_posts()): ?>
-                            <ul class="news__list news-report__list">
+                            <ul class="news-report__list">
                                 <h4 class="news-report__year"><span><?= $era_dictionary[$era]['era'] . $era_year_label ?>年度</span></h4>
                                 <?php while ($query->have_posts()): ?>
                                     <?php $query->the_post(); ?>
-                                    <li class="news__box news-report__pdf"><a href="<?= esc_url(get_permalink()) ?>"><?= get_the_title() ?></a></li>
+                                    <li class="news-report__pdf"><a href="<?= esc_url(get_permalink()) ?>"><?= get_the_title() ?></a></li>
                                 <?php endwhile; ?>
                             </ul>
                         <?php endif; ?>
@@ -68,10 +68,10 @@
                 $query = new WP_Query($args);
 
                 if ($query->have_posts()): ?>
-                    <ul class="news__list news-report__list">
+                    <ul class=" news-report__list">
                         <?php while ($query->have_posts()): ?>
                             <?php $query->the_post(); ?>
-                            <li class="news__box news-report__pdf"><a href="<?= esc_url(get_permalink()) ?>"><?= get_the_title() ?></a></li>
+                            <li class="news-report__pdf"><a href="<?= esc_url(get_permalink()) ?>"><?= get_the_title() ?></a></li>
                         <?php endwhile; ?>
                     </ul>
                 <?php endif;

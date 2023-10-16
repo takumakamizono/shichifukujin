@@ -1217,6 +1217,7 @@
     }
   }
   &__pdf {
+    list-style: none;
     position: relative;
     @extend .font-sm;
     padding-left: 8px !important;
@@ -1238,13 +1239,23 @@
       transform: translateY(-50%);
       left: -10px;
     }
+    & > a {
+      padding: 20px 0;
+      color: $main-txt;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+    }
   }
   &__list {
+    @extend .mb-sm;
     background: $BgColor;
-    padding: 15px 20px !important;
+
+    padding: 15px 20px;
     border-radius: 10px;
     @include mq(lg) {
-      padding: 25px 30px !important;
+      padding: 25px 30px;
     }
   }
 }
