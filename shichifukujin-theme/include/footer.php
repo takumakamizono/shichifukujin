@@ -15,8 +15,8 @@
             </div>
             <ul class="footer__address">
               <li>〒890-0082 鹿児島県鹿児島市紫原５-13-18</li>
-              <li>TEL : 099-256-2729</li>
-              <li>FAX : 099-256-3729</li>
+              <li>TEL :<?php the_field('access-tel',884);?></li>
+              <li>FAX :<?php the_field('access-fax',884);?></li>
               <li>
                 <a href="<?php the_field('insta01',1241); ?>"target="_blank" rel="noopener" class="footer__address-icon"><i class="fab fa-instagram-square"></i></a> 
                 <a href="<?php the_field('facebook',1241); ?>"target="_blank" rel="noopener" class="footer__address-icon"> <i class="fab fa-facebook-square"></i></a>
