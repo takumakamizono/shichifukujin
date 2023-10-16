@@ -10,7 +10,7 @@ const server = browserSync.create();
 
 function imageChange() {
   let count = 1;
-  return src("./images-src/*.png")
+  return src("./images-src/*.{jpg,png}")
     .pipe($.imagemin())
     .pipe(
       $.rename((path) => {
