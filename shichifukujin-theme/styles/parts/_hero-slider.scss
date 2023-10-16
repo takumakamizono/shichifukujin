@@ -194,3 +194,19 @@
     }
   }
 }
+
+/* モバイル用画像 */
+.mobile-image {
+  display: block; /* モバイル画像を表示 */
+  @include mq(lg) {
+    display: none;
+  }
+}
+
+/* PC用画像 */
+.pc-image {
+  display: none; /* PC画像を非表示 */
+  @include mq(lg) {
+    display: block;
+  }
+}
