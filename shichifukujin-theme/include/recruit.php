@@ -9,7 +9,7 @@
 
     <div class="recruit__inner">
         <div class="recruit__img">
-            <img src="<?= get_template_directory_uri(); ?>/images/recruit.png" alt="">
+            <img src="<?= get_template_directory_uri(); ?>/images/recruit.png?v2" alt="採用情報の画像">
         </div>
         <div class="recruit__texts">
             <div class="recruit__texts-inner">
