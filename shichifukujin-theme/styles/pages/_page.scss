@@ -767,3 +767,52 @@
     border-bottom: 1px solid $cOrange;
   }
 }
+
+.greeting {
+  @extend .mb-lg;
+  &__inner {
+    @extend .content-width1000;
+  }
+  &__top-inner {
+    @extend .flex960;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__top-desc {
+    flex-basis: 68%;
+
+    & > h3 {
+      @extend .font-lr;
+      @extend .mb-sm;
+    }
+    & p {
+      @extend .font-sm;
+      line-height: 1.8;
+    }
+  }
+  &__top-img {
+    flex-basis: 30%;
+    max-width: 400px;
+    @extend .mb-sm;
+    & > img {
+      margin-bottom: 10px;
+    }
+    & > p {
+      @extend .font-sm;
+      text-align: center;
+      & > span {
+        margin-right: 5px;
+      }
+    }
+  }
+  &__under-desc {
+    & > h3 {
+      @extend .font-lr;
+      @extend .mb-sm;
+    }
+    & p {
+      @extend .font-sm;
+      line-height: 1.8;
+    }
+  }
+}
