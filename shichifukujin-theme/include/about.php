@@ -35,12 +35,12 @@ $total_posts = $count_posts->publish;
                   </div>
                   <div class="about__institution">
                   <div class="about__img cover-slide">
-                    <img class="img-zoom" src="<?= get_template_directory_uri(); ?>/images/institution.png" />
+                    <img class="img-zoom" src="<?= get_template_directory_uri(); ?>/images/institution.jpg" />
                   </div>
                   <div class="about__texts appear right">
                     <div class="about__texts-inner">
                       <div class="about__title item">
-                        施設・事業紹介
+                        サービス・事業紹介
                       </div>
                       <div class="about__description item">
                       <p>
@@ -50,7 +50,7 @@ $total_posts = $count_posts->publish;
                        
                       </div>
                       <div class="about__btn item">
-                        <a class="btn02" href="<?= esc_url(home_url('service')); ?>">施設・事業紹介へ</a>
+                        <a class="btn02" href="<?= esc_url(home_url('service')); ?>">サービス・事業紹介へ</a>
                       
                       </div>
                     </div>
