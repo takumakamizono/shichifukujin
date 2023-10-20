@@ -4,6 +4,7 @@
 
 .page-content {
   @extend .mb-lg;
+  @extend .pt-md;
   &__inner {
     @extend .content-width1000;
   }
@@ -516,6 +517,9 @@
 }
 
 .accordion-table {
+  & table {
+    margin-bottom: 10px;
+  }
   & tbody {
     & tr {
       display: block;
