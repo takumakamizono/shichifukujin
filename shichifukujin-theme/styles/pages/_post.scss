@@ -502,15 +502,108 @@
   }
 }
 
-.texts-blocks {
+.text-box {
+  background: $BgColor;
+  padding: 50px 0;
+  @extend .mb-md;
+  &__wrap {
+    @extend .mb-md;
+  }
   &__inner {
+    background: $cWhite;
+    border-radius: 10px;
+    padding: 30px 10px;
     max-width: $contentMaxWidth1000;
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
+    @include mq(lg) {
+      padding: 50px;
+    }
+  }
+  &__title {
+    @extend .font-md;
+    @extend .mb-md;
+    letter-spacing: 0.16em;
+    line-height: 1.6em;
+    text-align: center;
+    & span {
+      position: relative;
+      display: inline-block;
+      &::after {
+        bottom: -13px;
+        height: 16px;
+        background-size: 16px auto;
+        position: absolute;
+        width: 100%;
+        content: "";
+        background-repeat: space repeat;
+        background-image: url(./images/bg_dot01.png);
+        left: 0;
+      }
+    }
+  }
+  &__desc {
+    width: 100%;
+    line-height: 1.6em;
+    letter-spacing: 0.06em;
+    @extend .font-sm;
+    padding: 10px;
+    @include mq(lg) {
+      padding: 20px 30px;
+    }
+    & h5 {
+      @extend .font-md;
+      margin-bottom: 5px;
+      color: $cOrange;
+
+      & > span {
+        margin-right: 3px;
+        @extend .font-lr;
+      }
+    }
+    & p {
+      @extend .font-sm;
+    }
+  }
+  &__innerBox {
+    position: relative;
+    @extend .mb-md;
+    background: $BgColor;
+    border-radius: 10px;
+    padding: 20px 10px;
+    position: relative;
+    @include mq(md) {
+      padding: 20px 20px;
+    }
+  }
+  &__innerTitle {
+    @extend .font-md;
+    font-weight: 700;
+    position: absolute;
+    top: -10px;
+  }
+  &__innerDesc {
+    @extend .font-sm;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+  @include mq(lg) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  & ul {
+    padding-left: 17px;
+    @extend .mb-sm;
+
+    & li {
+      &::marker {
+        color: $cOrange;
+      }
+    }
   }
 }
 
-.text-box {
   @extend .mb-lr;
   &__title {
     @extend .font-md;
