@@ -3,12 +3,14 @@
 <?php if($post_slug === 'support'): ?>
 <?php get_template_part('service_inc/philosophy'); ?>
 <?php get_template_part('service_inc/sec-cardinfo'); ?>
-<?php get_template_part('service_inc/sec-txtBocks'); ?>
+<?php get_template_part('service_inc/text-box'); ?>
+<?php get_template_part('service_inc/image-box'); ?>   
 <?php get_template_part('service_inc/banner'); ?>
 <?php get_template_part('service_inc/sec-summary'); ?>
 <?php endif; ?>
 <?php if($post_slug === 'orange'): ?>
-<?php get_template_part('service_inc/sec-txtBocks'); ?>
+<?php get_template_part('service_inc/text-box'); ?>
+<?php get_template_part('service_inc/image-box'); ?>     
 <?php get_template_part('service_inc/sec-summary'); ?>
     <?php endif; ?>    
 
