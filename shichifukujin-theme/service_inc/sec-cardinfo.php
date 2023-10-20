@@ -39,13 +39,9 @@
         </div>
         <?php if(get_field('cardinfo-title04')): ?>
         <div class="cardinfo__block">
-            <div class="cardinfo__img">
-             
-                <img src="<?php the_field('cardinfo-img04'); ?>" alt="">       
-           
-              
+            <div class="cardinfo__img"> 
+                <img src="<?php the_field('cardinfo-img04'); ?>" alt="">        
             </div>
-
             <div class="cardinfo__txt">
                 <h5><?php the_field('cardinfo-title04'); ?></h5>
             </div>
@@ -53,10 +49,8 @@
         <?php  endif;?>
         <?php if(get_field('cardinfo-title05')): ?>
         <div class="cardinfo__block">
-            <div class="cardinfo__img">
-               
-                    <img src="<?php the_field('cardinfo-img05'); ?>" alt="">               
-             
+            <div class="cardinfo__img">         
+                    <img src="<?php the_field('cardinfo-img05'); ?>" alt="">                       
             </div>
             <div class="cardinfo__txt">
                 <h5><?php the_field('cardinfo-title05'); ?></h5>
