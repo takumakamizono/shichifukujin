@@ -75,6 +75,14 @@
 <th>入居時期</th>
 <td><?php the_field('overview09');?></td>
 </tr>
+<tr>
+<th>TEL</th>
+<td><?php the_field('access-tel');?></td>
+</tr>
+<tr>
+<th>FAX</th>
+<td><?php the_field('access-fax');?></td>
+</tr>
 </table>
   </div>
   <div class="surround-contents__box">
