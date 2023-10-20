@@ -629,6 +629,8 @@
 }
 
 .page-procedure {
+  @extend .pt-md;
+  @extend .mb-lg;
   &__mainTit {
     font-size: clamp(18px, 4vw, 36px);
     @extend .mb-md;
@@ -640,12 +642,25 @@
       color: $mainColor;
     }
   }
+  &__wrap {
+    @extend .mb-lg;
+    background: $BgColor;
+    @extend .pb-md;
+    @extend .pt-md;
+  }
   &__block {
     @extend .mb-md;
     &-inner {
       @extend .flex960;
       justify-content: space-between;
       align-items: center;
+      @extend .content-width;
+      background: $cWhite;
+      padding: 20px 10px;
+      border-radius: 10px;
+      @include mq(lg) {
+        padding: 30px 20px;
+      }
     }
 
     &-desc {
@@ -709,6 +724,11 @@
           z-index: -1;
         }
       }
+    }
+  }
+  &__flow {
+    &-inner {
+      @extend .content-width1000;
     }
   }
 }
