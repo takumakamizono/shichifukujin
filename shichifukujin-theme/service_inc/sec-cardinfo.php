@@ -6,24 +6,18 @@
     <div class="cardinfo__blocks">
         <div class="cardinfo__block">
             <div class="cardinfo__img">
-         
                     <img src="<?php the_field('cardinfo-img01'); ?>" alt="">
-              
             </div>
             <div class="cardinfo__txt">
                 <h5><?php the_field('cardinfo-title01'); ?></h5>
-           
             </div>
         </div>
         <div class="cardinfo__block">
             <div class="cardinfo__img">
-              
                 <img src="<?php the_field('cardinfo-img02'); ?>" alt="">       
-              
             </div>
             <div class="cardinfo__txt">
                 <h5><?php the_field('cardinfo-title02'); ?></h5>
-        
             </div>
         </div>
         <div class="cardinfo__block">
