@@ -15,11 +15,10 @@
         <?php get_template_part('include/hero'); ?>
           <div id="main-content">
            
-            <!-- <?php get_template_part('include/side-left'); ?> -->
             <main>
             <?php  get_template_part('include/warning');?>
-            <section class="sl-custom">
             <?php get_template_part('include/breadcrumb'); ?> 
+            <section class="sl-custom">
               <div class="sl-custom__inner">
                 <?php if(have_posts()): ?>
                   <?php while(have_posts()):the_post(); ?> 
@@ -53,7 +52,6 @@
               </section>   
               <?php get_template_part('include/contact'); ?>
             </main>
-            <!-- <?php get_template_part('include/side-right'); ?> -->
           
           </div>
         </div>

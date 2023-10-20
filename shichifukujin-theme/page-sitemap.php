@@ -24,13 +24,12 @@ Template Post Type: page
         <?php get_template_part('include/hero'); ?>
           <div id="main-content">
            
-            <!-- <?php get_template_part('include/side-left'); ?> -->
             <main>
             <?php  get_template_part('include/warning');?>
             <?php if(have_posts()): ?>
             <?php while(have_posts()):the_post(); ?>
+            <?php get_template_part('include/breadcrumb'); ?> 
             <div class="page-content">
-              <?php get_template_part('include/breadcrumb'); ?> 
               <div class="page-content__inner">
                   <div class="site-map">
                   <div class="site-map__box">   
@@ -200,7 +199,6 @@ echo '<ul class="sm-list sm-list-post">';
             
                    
             </main>
-            <!-- <?php get_template_part('include/side-right'); ?> -->
           
           </div>
         </div>

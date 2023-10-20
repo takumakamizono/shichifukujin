@@ -18,8 +18,8 @@
             <!-- <?php get_template_part('include/side-left'); ?> -->
             <main>
             <?php  get_template_part('include/warning');?>
+            <?php get_template_part('include/breadcrumb'); ?> 
                <section class="news">
-                <?php get_template_part('include/breadcrumb'); ?> 
                 <?php
                 if( !$category_name ) {
                   $category_name = $_GET['cat_slug'];

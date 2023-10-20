@@ -22,11 +22,10 @@ $count = get_term($term_id, $taxonomy)->count;
         <?php get_template_part('include/hero'); ?>
           <div id="main-content">
            
-            <!-- <?php get_template_part('include/side-left'); ?> -->
             <main>
             <?php  get_template_part('include/warning');?>
-            <section class="service">
             <?php get_template_part('include/breadcrumb'); ?> 
+            <section class="service">
              <?php $facility =  get_queried_object(); ?>
                 <div class="section-titles">
                   <h2 class="main-title">
@@ -64,7 +63,6 @@ $count = get_term($term_id, $taxonomy)->count;
         
               <?php get_template_part('include/contact'); ?>
             </main>
-            <!-- <?php get_template_part('include/side-right'); ?> -->
           
           </div>
         </div>

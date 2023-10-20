@@ -15,10 +15,10 @@
         <?php get_template_part('include/hero'); ?>
           <div id="main-content">
            
-            <!-- <?php get_template_part('include/side-left'); ?> -->
+        
             <main>
+              <?php get_template_part('include/breadcrumb'); ?> 
             <section class="single">
-            <?php get_template_part('include/breadcrumb'); ?> 
               <div class="single__inner">
                 <?php if(have_posts()): ?>
                   <?php while(have_posts()):the_post(); ?> 
@@ -45,7 +45,6 @@ $link = get_category_link($cat_id);
               </div>
               </section>     
             </main>
-            <!-- <?php get_template_part('include/side-right'); ?> -->
           
           </div>
         </div>

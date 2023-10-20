@@ -15,11 +15,10 @@
         <?php get_template_part('include/hero'); ?>
           <div id="main-content">
            
-            <!-- <?php get_template_part('include/side-left'); ?> -->
             <main>
        
-            <div class="page-content">
               <?php get_template_part('include/breadcrumb'); ?> 
+            <div class="page-content">
               <div class="page-content__inner">
              <div class="page-404">
               <div class="page-404__content">
@@ -33,7 +32,6 @@
         </div>
           </div>      
             </main>
-            <!-- <?php get_template_part('include/side-right'); ?> -->
           
           </div>
         </div>

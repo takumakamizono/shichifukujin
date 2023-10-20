@@ -25,9 +25,7 @@
             <?php  get_template_part('include/warning');?>
             <?php if(have_posts()): ?>
             <?php while(have_posts()):the_post(); ?>
-            <div class="page-content">
-              <?php get_template_part('include/breadcrumb'); ?> 
-              <div class="page-content__inner">
+            <?php get_template_part('include/breadcrumb'); ?> 
                <div class="page-procedure">
                 
                 <h3 class="page-procedure__mainTit">施設とは<br><span>「家庭的な環境＋プロの介護力」</span>が備わった場所です</h3>
