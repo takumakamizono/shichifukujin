@@ -792,8 +792,13 @@
 
 .greeting {
   @extend .mb-lg;
+
   &__inner {
     @extend .content-width1000;
+
+    @include mq(lg) {
+      padding: 30px 20px;
+    }
   }
   &__top-inner {
     @extend .flex960;
@@ -804,8 +809,22 @@
     flex-basis: 68%;
 
     & > h3 {
-      @extend .font-lr;
-      @extend .mb-sm;
+      @extend .font-md;
+      margin-bottom: 20px;
+      & > span {
+        position: relative;
+        &::before {
+          bottom: -13px;
+          height: 16px;
+          background-size: 16px auto;
+          position: absolute;
+          width: 100%;
+          content: "";
+          background-repeat: space repeat;
+          background-image: url(images/bg_dot01.png);
+          left: 0;
+        }
+      }
     }
     & p {
       @extend .font-sm;
@@ -829,8 +848,22 @@
   }
   &__under-desc {
     & > h3 {
-      @extend .font-lr;
-      @extend .mb-sm;
+      @extend .font-md;
+      margin-bottom: 20px;
+      & > span {
+        position: relative;
+        &::before {
+          bottom: -13px;
+          height: 16px;
+          background-size: 16px auto;
+          position: absolute;
+          width: 100%;
+          content: "";
+          background-repeat: space repeat;
+          background-image: url(images/bg_dot01.png);
+          left: 0;
+        }
+      }
     }
     & p {
       @extend .font-sm;
