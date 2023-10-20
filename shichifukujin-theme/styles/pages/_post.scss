@@ -604,7 +604,18 @@
   }
 }
 
+.service-list {
   @extend .mb-lr;
+
+  &__inner {
+    @extend .content-width1000;
+    background: $cWhite;
+    padding: 30px 10px;
+    border-radius: 10px;
+    @include mq(lg) {
+      padding: 50px 0;
+    }
+  }
   &__title {
     @extend .font-md;
     @extend .mb-md;
@@ -644,7 +655,6 @@
     }
     & p {
       @extend .font-sm;
-      @extend .mb-sm;
     }
   }
   &__innerBox {
@@ -802,65 +812,6 @@
     }
     & > p {
       margin-top: 8px;
-    }
-  }
-}
-
-.try {
-  padding-top: 40px;
-  background: $BgColor;
-  @extend .pb-lg;
-  @include mq(lg) {
-    padding-top: 80px;
-  }
-  &__inner {
-    max-width: $contentMaxWidth1000;
-    margin: 0 auto;
-    width: 90%;
-
-    @extend .flex;
-    justify-content: space-around;
-  }
-
-  &__block {
-    flex-basis: 30%;
-    @extend .mb-md;
-  }
-  &__img {
-    width: 250px;
-    height: 250px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    &-inner {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      position: relative;
-
-      & > span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        @extend .font-md;
-        font-weight: bold;
-        color: $cWhite;
-      }
-    }
-  }
-  &__circle {
-    border-radius: 50%;
-    width: 100%;
-    border: 4px solid $cWhite;
-    height: 100%;
-  }
-  &__txt {
-    & > h5 {
-      @extend .font-sm;
-      margin-bottom: 10px;
-    }
-    & > p {
-      font-size: 14px;
     }
   }
 }
