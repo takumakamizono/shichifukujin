@@ -14,8 +14,7 @@
         <div class="recruit__texts">
             <div class="recruit__texts-inner">
        <p>
-       天佑会は利用者様はもちろんのこと、共に働くスタッフも大切にしています。<br>スタッフの全員が輝くことのできる環境で、自分の親や大切な人に利用してもらいたいと思える事業所を目指しています。
-
+       天祐会は利用者様はもちろんのこと、共に働くスタッフも大切にしています。<br>スタッフの全員が輝くことのできる環境で、自分の親や大切な人に利用してもらいたいと思える事業所を目指しています。
        </p>
         <div class="recruit__texts-btn">
         <a class="btn solid" href="https://recruit729729.com/" target="_blank" rel="noopener noreferrer">採用について</a>
