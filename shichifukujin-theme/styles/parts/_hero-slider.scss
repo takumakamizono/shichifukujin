@@ -182,7 +182,7 @@
     @extend .font-sm;
   }
   &__img {
-    height: 25vh;
+    height: 30vh;
     @include mq(lg) {
       height: 40vh;
     }
