@@ -20,8 +20,8 @@
             <?php  get_template_part('include/warning');?>
             <?php if(have_posts()): ?>
             <?php while(have_posts()):the_post(); ?>
+            <?php get_template_part('include/breadcrumb'); ?> 
             <div class="page-content">
-              <?php get_template_part('include/breadcrumb'); ?> 
               <div class="page-content__inner">
                <?php the_content(); ?>
                 </div>
