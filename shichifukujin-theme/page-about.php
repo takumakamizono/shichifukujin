@@ -52,7 +52,7 @@
  <div class="greeting__top">
  <div class="greeting__top-inner">
    <div class="greeting__top-desc">
-    <h3>「その人の語り尽くせない人生に寄り添う」と誓った仲間が集まった場所</h3>
+    <h3><span>「その人の語り尽くせない人生に寄り添う」</span>と誓った仲間が集まった場所</h3>
   <p>高齢になると、 若い頃にできたことができなくなり、情けなくてそんな自分に苛立ちを感じ、 多くの方が将来への不安や恐れを抱えて生活しています。</p>
 <p> 老若男女そして障がいを抱えている方等、 誰しもがその人が暮らしたい場所でその人らしく暮らせる街の実現が必要だと考えています。</p>
 <p> 私たちは、“地域ぐるみでお互い様”の関係性づくりを目指し、 まずはできることから活動の輪を広げ、地域社会から愛され親しまれる組織を目指してまいります。</p>
@@ -66,7 +66,7 @@
  <div class="greeting__under">
 
    <div class="greeting__under-desc">
-    <h3>ご家族さまへメッセージ</h3>
+    <h3><span>ご家族さまへメッセージ</span></h3>
   <p>わたしの夫は数年前から認知症を患っていますが、 「泣き笑いの暮らし」を楽しんでいます (笑)
     <br>
     最初は受け入れているつもりが、 どこかで “これくらいはできるはず"
@@ -168,11 +168,11 @@
                   </section>
                   <section class="philosophy">
                     
-                  <div class="section-titles-left">
-                  <h3 class="content-title">
-                  七福神の７２９
+                  <div class="section-titles">
+                  <h3 class="main-title">
+                   <span> 七福神の７つの心・２つの力・９つの行動</span>
                   </h3>
-                  <p class="content-subtitle">七福神の７つの心・２つの力・９つの行動</p>
+              
                 </div>
                     <div class="philosophy__inner">
                       <div class="philosophy__block">
@@ -220,7 +220,7 @@
                   <div class="philosophy__bg"></div>
                   </div>
                 </div>
-                </div>
+                
           
             <?php endwhile; ?>
             <?php endif; ?>
