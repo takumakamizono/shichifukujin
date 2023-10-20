@@ -4,6 +4,7 @@
 
 .single {
   min-height: 60vh;
+  @extend .pt-md;
   &__inner {
     @extend .content-width;
     max-width: $contentMaxWidth1000;
@@ -86,18 +87,18 @@
 .service {
   @extend .pb-lg;
   background: $BgColor;
+  @extend .pt-md;
   &__inner {
-    max-width: $contentMaxWidth1000;
-    width: 90%;
-    margin: 0 auto;
+    @extend .content-width;
   }
-  &__blocks {
-    @extend .flex960;
-    justify-content: space-between;
-  }
+  // &__blocks {
+  //   @extend .flex960;
+  //   justify-content: space-between;
+  // }
   &__item {
     background: $BgSubColor;
-    flex-basis: 48%;
+    justify-content: space-between;
+    @extend .flex960;
     @extend .mb-lr;
     box-shadow: 1px 1px 10px rgba(176, 176, 176, 0.1);
     border-radius: 10px;
@@ -107,13 +108,18 @@
     }
   }
   &__img {
+    flex-basis: 35%;
     @extend .mb-sm;
     & > img {
+      margin-bottom: 10px;
       width: 100%;
-      height: 100%;
+
       object-fit: cover;
       border-radius: 10px;
     }
+  }
+  &__contents {
+    flex-basis: 64%;
   }
 
   &__title {
@@ -162,6 +168,7 @@
 
 .sl-custom {
   @extend .mb-lg;
+  @extend .pt-md;
 }
 
 .sl-service {
@@ -170,10 +177,10 @@
     justify-content: space-between;
     display: flex;
 
-    @extend .mb-lg;
+    @extend .mb-lr;
   }
   &__sec01-texts {
-    flex-basis: 55%;
+    flex-basis: 49%;
     width: 90%;
     margin: 0 auto;
     @extend .mb-sm;
@@ -203,19 +210,18 @@
     @extend .font-sm;
   }
   &__sec01-img {
-    flex-basis: 42%;
+    flex-basis: 49%;
     margin-left: 10px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
   }
   &__sec01-img-inner {
-    max-height: 400px;
+    width: 100%;
     & img {
       border-radius: 10px 0 0 10px;
       object-fit: cover;
       width: 100%;
-      height: 100%;
     }
   }
   &__sec02 {
@@ -363,6 +369,7 @@
 
 .list-interview {
   @extend .mb-lg;
+  @extend .pt-md;
   &__inner {
     @extend .content-width;
     max-width: $contentMaxWidth1000;
@@ -1048,6 +1055,7 @@
     margin-left: 10px;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
   &__img-inner {
     & img {
@@ -1105,7 +1113,7 @@
 .banner {
   background: $BgColor;
   min-height: 300px;
-  @extend .mb-lg;
+  @extend .mb-lr;
   max-width: $contentMaxWidth1000;
   margin: 0 auto;
   width: 90%;
@@ -1258,9 +1266,14 @@
 }
 .school-point {
   width: 100%;
-  padding: 20px 20px 20px 50px;
+  padding: 10px;
   background: #f6f4ef;
   border-radius: 10px;
+
+  @include mq(lg) {
+    padding: 20px;
+    text-align: center;
+  }
 
   & > p {
     @extend .font-sm;
