@@ -4,7 +4,5 @@
  </div>
     <div class="texts-blocks__inner">
     <?php get_template_part('service_inc/table-block'); ?>
-    <?php get_template_part('service_inc/image-box'); ?>     
-
  </div>
 </div>
