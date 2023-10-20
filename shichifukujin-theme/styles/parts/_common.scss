@@ -2,7 +2,7 @@
 
 body {
   color: $main-txt;
-
+  font-weight: 600;
   font-family: "M PLUS Rounded 1c", "Noto Sans JP", sans-serif;
 }
 
@@ -239,7 +239,6 @@ img {
   color: $main-txt;
   font-size: 10px;
   background: $BgSubColor;
-  @extend .mb-md;
   &__inner {
     @extend .content-width;
     padding: 10px 0 10px 0;
@@ -768,25 +767,6 @@ img {
   & th {
     width: 30%;
   }
-}
-
-.bgBlue {
-  background-color: $cBlue;
-}
-.bgOrange {
-  background-color: $cOrange;
-}
-.bgGreen {
-  background-color: $cGreen;
-}
-.bgYellow {
-  background-color: $cYellow;
-}
-.bgPink {
-  background-color: $cPink;
-}
-.bgPurple {
-  background-color: $cPurple;
 }
 
 .remarks {
