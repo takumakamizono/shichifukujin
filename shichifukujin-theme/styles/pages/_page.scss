@@ -838,3 +838,128 @@
     }
   }
 }
+
+.page-guide {
+  background: $SubColor;
+  &__inner {
+    @extend .content-width;
+    @extend .pt-md;
+  }
+  &__topTxt {
+    @extend .mb-lr;
+    background: $cWhite;
+    padding: 20px 30px;
+    border-radius: 10px;
+    @extend .font-md;
+    @include mq(lg) {
+      padding: 50px 60px;
+    }
+  }
+  &__blocks {
+    @extend .pb-md;
+  }
+  &__blocks-inner {
+    @extend .flex960;
+    justify-content: space-between;
+  }
+  &__box {
+    @extend .mb-md;
+    flex-basis: 49%;
+
+    background: $BgColor;
+    border-radius: 10px;
+
+    &:nth-child(1) {
+      position: relative;
+      &::before {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 66px);
+        font-family: "Font Awesome 5 free";
+        font-weight: 600;
+        color: $mainColor;
+        content: "\f103";
+        font-size: 4em;
+      }
+      @include mq(lg) {
+        &::before {
+          bottom: 50%;
+          left: 100%;
+          transform: translate(-30%, 50%) rotate(-90deg);
+        }
+      }
+    }
+    &:nth-child(2) {
+      & .page-guide__box-head {
+        background: $mainColor;
+        color: $cWhite;
+        border-radius: 10px 10px 0 0;
+      }
+    }
+  }
+  &__box-head {
+    padding: 20px 10px;
+    position: relative;
+    margin-bottom: 20px;
+
+    &::after {
+      bottom: 0;
+      height: 5px;
+      background-size: 16px auto;
+      position: absolute;
+      width: 100%;
+      content: "";
+      background-repeat: space repeat;
+      background-image: url(./images/bg_dot03.png);
+      left: 0;
+    }
+    @include mq(md) {
+      padding: 30px 40px;
+    }
+  }
+  &__box-leftTitle {
+    @extend .font-lr;
+    text-align: center;
+    & span {
+      &:nth-child(2) {
+        @extend .font-md;
+      }
+    }
+  }
+  &__box-desc {
+    @extend .font-sm;
+    margin-bottom: 16px;
+    padding: 20px 10px;
+    @include mq(md) {
+      padding: 30px 40px;
+    }
+    & dl {
+      margin-bottom: 20px;
+    }
+    & dt {
+      padding-left: 15px;
+      position: relative;
+      font-weight: 700;
+      margin-bottom: 5px;
+      &::before {
+        position: absolute;
+        content: "";
+        top: 7px;
+        width: 8px;
+        height: 8px;
+        background: $cOrange;
+        border-radius: 50%;
+        left: 0;
+      }
+    }
+    & dd {
+      & ul {
+        padding: 15px;
+        & li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
