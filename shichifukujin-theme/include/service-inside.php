@@ -1,7 +1,7 @@
 <div id="post-<?php the_ID(); ?>" class="service__item">
 <div class="service__img">
                       <?php if(has_post_thumbnail()): ?>
-                     <?php the_post_thumbnail('full'); ?>    
+                     <?php the_post_thumbnail(); ?>    
                      <?php else: ?>       
                       <img src="<?php echo get_template_directory_uri(); ?>/images/cover_image.png" alt=""> 
                       <?php endif; ?>
@@ -23,8 +23,7 @@
                   <?php endif;?>
                   </p>  
                   <?php endif;?>
-                  
-                  
+          
                 </div>
                
                 <div class="service__btn">
@@ -37,7 +36,16 @@
                    
               
                     <div class="service__desc">
-                      <p><?php the_field('top_comment'); ?></p>
+                    <?php
+$top_comment = get_field('top_comment');
+
+// カスタムフィールドの値が存在する場合
+if ($top_comment) {
+    $excerpt = wp_strip_all_tags($top_comment); // HTMLタグを削除
+     // 20ワードに制限
+}
+?>
+                      <p><?= wp_trim_words($excerpt, 100);?></p>
                     </div>
                    
                     </div>
