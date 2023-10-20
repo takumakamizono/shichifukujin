@@ -1,5 +1,10 @@
 <?php if(get_field('img01')): ?>
 <div class="image-box">
+<?php if(get_field('sec-title')): ?>
+  <h4 class="image-box__title"><span><?php the_field('sec-title');?></span> </h4>
+  <?php endif; ?>
+  <div class="image-box__inner">
+  
 <?php if(get_field('img01')): ?>
                         <div class="image-box__img">
                           <img src="<?php the_field('img01');?>" alt="">
@@ -30,6 +35,14 @@
                           <p><?php the_field('image-title05');?></p>
                        </div>
                        <?php endif; ?>
+                        <?php if(get_field('img06')): ?>
+                        <div class="image-box__img">
+                          <img src="<?php the_field('img06');?>" alt="">
+                          <p><?php the_field('image-title06');?></p>
+                       </div>
+                       <?php endif; ?>
 
                       </div>
+                      </div>
+                    
                       <?php endif; ?>

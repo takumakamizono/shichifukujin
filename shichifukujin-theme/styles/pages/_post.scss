@@ -687,9 +687,41 @@
 }
 
 .image-box {
-  @extend .mb-lr;
-  @extend .flex;
-  justify-content: space-between;
+  margin: 0 auto;
+
+  @extend .mb-md;
+  @include mq(lg) {
+    border-radius: 10px;
+  }
+
+  &__inner {
+    @extend .flex;
+    justify-content: space-between;
+    @extend .content-width1000;
+  }
+  &__title {
+    @extend .font-md;
+    @extend .mb-md;
+    letter-spacing: 0.16em;
+    line-height: 1.6em;
+    text-align: center;
+    & span {
+      position: relative;
+      display: inline-block;
+      &::after {
+        bottom: -13px;
+        height: 16px;
+        background-size: 16px auto;
+        position: absolute;
+        width: 100%;
+        content: "";
+        background-repeat: space repeat;
+        background-image: url(./images/bg_dot01.png);
+        left: 0;
+      }
+    }
+  }
+
   &__img {
     @extend .mb-sm;
 
@@ -699,9 +731,13 @@
       border-radius: 10px;
       margin-bottom: 10px;
       font-size: 14px;
+      height: 200px;
     }
     @include mq(md) {
-      flex-basis: 32%;
+      flex-basis: 49%;
+    }
+    @include mq(lg) {
+      flex-basis: 33%;
     }
   }
 }
