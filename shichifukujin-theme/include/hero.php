@@ -48,7 +48,8 @@
               <?php  elseif($post_type_object):?> 
                 <?php
                 $menu_name = $post_type_object->labels->menu_name;
-                $name = $post_type_object->labels->name;
+                $name = $post_type_object->name;
+                
                 
                  ?> 
               <h2 class="hero-sub__maintitle "><?=  esc_html($menu_name); ?></h2>
@@ -60,7 +61,7 @@
                   <img src="<?php the_field('news_img',312);?>" alt="お知らせのヘッダー画像">   
             
                 <?php elseif($post_type):  ?>      
-                  <img src="<?php the_field('service_img',312);?>" alt="施設紹介のヘッダー画像">   
+                  <img src="<?php the_field('service_img',312);?>" alt="サービス紹介のヘッダー画像">   
             
              <?php endif; ?>
             </div>     
@@ -92,7 +93,7 @@
               <?php elseif($post_type_object):  ?> 
                 <?php
                 $menu_name = $post_type_object->labels->menu_name;
-                $name = $post_type_object->labels->name;
+                $name = $post_type_object->name;
                  ?> 
                 <h2 class="hero-sub__maintitle "><?=  esc_html($menu_name)?></h2>
               <p class="hero-sub__subtitle"><?=  esc_html($name); ?></p>  
@@ -104,7 +105,7 @@
                 <?php if(is_single()&& get_post_type() === 'post'):  ?>  
                  <img src="<?php the_field('news_img',312);?>" alt="お知らせのヘッダー画像">
                  <?php elseif($post_type):  ?>      
-                  <img src="<?php the_field('service_headimage');?>" alt="施設紹介のヘッダー画像">   
+                  <img src="<?php the_field('service_headimage');?>" alt="サービス紹介のヘッダー画像">   
             
              <?php endif; ?>
             </div>     
@@ -121,12 +122,8 @@ $slug = $page->post_name;
               <h2 class="hero-sub__maintitle "><?php the_title(); ?></h2>
               <p class="hero-sub__subtitle"><?= strtoupper($post->post_name); ?></p>
               </div>
-              <div class="hero-sub__img"> 
-              <?php if(has_post_thumbnail()): ?>        
+              <div class="hero-sub__img">                     
               <?php the_post_thumbnail(); ?> 
-              <?php else: ?>
-                <img src="https://placehold.jp/1400x700.png" alt="noimage画像" />
-               <?php endif; ?>
             </div>     
         </div>
       </div>
@@ -136,12 +133,8 @@ $slug = $page->post_name;
               <div class="hero-sub__titles">
               <h2 class="hero-sub__maintitle ">404 NOT FOUND</h2>
               </div>
-              <div class="hero-sub__img">  
-                <?php if(get_field('404_img',312)): ?>      
+              <div class="hero-sub__img">            
               <img src="<?php the_field('404_img',312);?>" alt="404ページのヘッダー画像">
-              <?php else: ?>
-                <img src="https://placehold.jp/1400x700.png" alt="noimage画像" />
-               <?php endif; ?>
             </div>     
         </div>
       </div>
