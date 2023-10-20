@@ -125,9 +125,13 @@ add_filter( 'excerpt_more', 'twpp_change_excerpt_more' );
 
 
 
+
+
+
+
 add_filter('use_block_editor_for_post',function($use_block_editor,$post){
   if($post->post_type==='page'){
-      if(in_array($post->post_name,['top_slide','sub_topimg','sitemap','procedure','about','each_url'])){
+      if(in_array($post->post_name,['top_slide','sub_topimg','sitemap','procedure','about','each_url','guide'])){
           remove_post_type_support('page','editor');
           return false;
       }
@@ -153,7 +157,7 @@ add_filter( 'get_terms_orderby', 'taxonomy_orderby_description', 10, 2 );
 
 add_action( 'admin_init', function() {
   $taxonomy = 'facility'; 
-  $term_slug = ['nursing','group','day','support','others'
+  $term_slug = ['nursing','group','day','support','interact','school'
   ];
   $post_type = 'service'; 
 
@@ -212,24 +216,24 @@ function initialize_custom_map($atts) {
   <div class="map-canvas" style="width: 100%; height: 100%;"></div>
   <script>
     function initialize() {
-      var latlng = new google.maps.LatLng(<?= $a['lat'] ?>, <?= $a['lng'] ?>);
-      var myOptions = {
+      let latlng = new google.maps.LatLng(<?= $a['lat'] ?>, <?= $a['lng'] ?>);
+      let myOptions = {
         zoom: <?= $a['zoom'] ?>,
         center: latlng,
         mapTypeControlOptions: { mapTypeIds: ['sample', google.maps.MapTypeId.ROADMAP] },
       };
-      var map = new google.maps.Map(document.querySelector('.map-canvas'), myOptions);
-      var icon = new google.maps.MarkerImage('<?= get_template_directory_uri(); ?>/images/map-pin.png',
+      let map = new google.maps.Map(document.querySelector('.map-canvas'), myOptions);
+      let icon = new google.maps.MarkerImage('<?= get_template_directory_uri(); ?>/images/map-pin.png',
         new google.maps.Size(84, 104),
         new google.maps.Point(0, 0)
       );
-      var markerOptions = {
+      let markerOptions = {
         position: latlng,
         map: map,
         icon: icon,
         title: '<?= $a['title'] ?>',
       };
-      var marker = new google.maps.Marker(markerOptions);
+      let marker = new google.maps.Marker(markerOptions);
     }
     google.maps.event.addDomListener(window, 'load', initialize);
   </script>
@@ -237,3 +241,9 @@ function initialize_custom_map($atts) {
   return ob_get_clean();
 }
 add_shortcode('custom_map', 'initialize_custom_map');
+
+function remove_thumbnail_dimensions($html) {
+  $html = preg_replace('/(width|height)="\d*"\s/', "", $html);
+  return $html;
+}
+add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions');
