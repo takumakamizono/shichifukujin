@@ -921,9 +921,10 @@
       }
       @include mq(lg) {
         &::before {
+          font-size: 5em;
           bottom: 50%;
           left: 100%;
-          transform: translate(-30%, 50%) rotate(-90deg);
+          transform: translate(-15%, 50%) rotate(-90deg);
         }
       }
     }
@@ -965,15 +966,12 @@
     }
   }
   &__box-desc {
-    @extend .font-sm;
     margin-bottom: 16px;
     padding: 20px 10px;
     @include mq(md) {
       padding: 30px 40px;
     }
-    & dl {
-      margin-bottom: 20px;
-    }
+
     & dt {
       padding-left: 15px;
       position: relative;
@@ -991,12 +989,29 @@
       }
     }
     & dd {
+      font-size: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px dotted $lightGray;
       & ul {
         padding: 15px;
         & li {
           margin-bottom: 10px;
         }
       }
+      & > a {
+        font-size: 14px;
+        width: 250px;
+      }
+    }
+    &-label {
+      background: $mainColor;
+      color: $cWhite;
+      padding: 2px 3px;
+      border-radius: 3px;
     }
   }
 }
