@@ -69,7 +69,7 @@
                         お困りごとガイドマップ
                       </div>
                         <div class="detailed-info__img">
-                            <img src="<?= get_template_directory_uri(); ?>/images/interview.jpg" alt="">
+                            <img src="<?= get_template_directory_uri(); ?>/images/problems.jpg" alt="">
                         </div>
                         <div class="detailed-info__text">
                             <div class="detailed-info__desc">
