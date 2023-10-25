@@ -3,10 +3,8 @@
 
 <?php get_template_part('service_inc/text-box'); ?>
 <?php get_template_part('service_inc/sec-try'); ?>
-
-<?php if($post_slug === 'lalachance'): ?>  
-<?php get_template_part('service_inc/sec-price'); ?>
-<?php endif; ?>  
+<?php get_template_part('service_inc/image-box'); ?>   
+  
 
  <?php get_template_part('service_inc/sec-summary'); ?>
  <?php get_template_part('service_inc/service-access'); ?>
