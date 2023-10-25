@@ -60,20 +60,15 @@
   }
   &__title {
     width: 100%;
-    text-align: center;
-    line-height: 2em;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, calc(-50% + 40px));
-    color: $cWhite;
-    font-size: 16px;
-    letter-spacing: 0.1em;
-    font-weight: 700;
+
     z-index: 2;
     opacity: 0;
     transition: opacity 2s ease 2s, transform 2s ease 2s;
-    padding: 0 10%;
+    padding: 0 1%;
   }
   &__logo {
     width: 100%;
