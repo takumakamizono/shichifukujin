@@ -658,18 +658,25 @@ main {
 }
 
 .recruit {
-  padding-bottom: 350px;
-  @include mq(md) {
-    padding-bottom: 400px;
-  }
-  @include mq(lg) {
-    padding-bottom: 200px;
+  position: relative;
+  @extend .pb-lg;
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 77.5%;
+    content: "";
+    background: $BgColor;
+    z-index: -1;
+    @include mq(lg) {
+      content: none;
+    }
   }
   &__inner {
-    max-width: 1100px;
-    margin: 0 auto;
     @extend .flex960;
     justify-content: space-between;
+    @extend .content-width1000;
   }
   &__img {
     position: relative;
@@ -678,10 +685,9 @@ main {
     & > img {
       margin: 0 auto;
     }
-    @include mq(md) {
-      margin-bottom: 0;
-      width: 90%;
-      margin: 0 auto;
+
+    @include mq(lg) {
+      left: 20px;
     }
   }
   &__texts {
@@ -689,31 +695,28 @@ main {
     @extend .font-sm;
     letter-spacing: 0.1em;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     position: relative;
-
-    &-inner {
-      position: absolute;
-      z-index: 10;
-      background: $BgColor;
-      border-radius: 10px;
-      position: absolute;
-      padding: 250px 10px 30px;
-      top: -230px;
-      min-height: 360px;
-      @include mq(sm) {
-        top: -180px;
-      }
-      @include mq(md) {
-        padding: 250px 10% 30px;
-      }
-      @include mq(lg) {
-        padding: 30px 80px;
-        left: -50px;
-        top: 110px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+    z-index: 10;
+    border-radius: 10px;
+    padding: 30px 20px;
+    @include mq(lg) {
+      padding: 30px 20px 30px 60px;
+      left: -20px;
+      top: 70px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      &::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background: $BgColor;
+        z-index: -1;
+        border-radius: 20px;
       }
     }
   }
