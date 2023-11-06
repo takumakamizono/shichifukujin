@@ -1,4 +1,16 @@
 <div class="footer appear up">
+<nav class="footer__nav">
+          <?php
+                $args=[
+                  'menu'=>'footer-nav',
+                  'menu_class'=>'footer__ul appear left',
+                  'container'=>false,
+                
+                ];
+                wp_nav_menu($args);
+                
+                ?>     
+           </nav>
           <div class="footer__inner">
             <div class="footer__left">
             <div class="logo item">
@@ -54,21 +66,7 @@
             </div>
             </div>
           </div> 
-        </div>
-        
-        <nav class="footer__nav">
-          <?php
-                $args=[
-                  'menu'=>'footer-nav',
-                  'menu_class'=>'footer__ul appear left',
-                  'container'=>false,
-                
-                ];
-                wp_nav_menu($args);
-                
-                ?>     
-           </nav>
-        
+        </div> 
         <div class="footer__copyright item">Copyright&copy; 社会福祉法人天祐会.<span> All Rights Reserved.</span> </div>
         <div id="page_top"><a href="#"></a></div>
         </div>
