@@ -67,3 +67,24 @@ $(document).ready(function () {
     }
   });
 });
+
+$(function () {
+  $(".slider").slick({
+    arrows: false,
+    autoplay: true,
+    adaptiveHeight: true,
+    centerMode: true,
+    centerPadding: "20%",
+    slidesToShow: 2,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 1, // ブレイクポイント960px以下での表示数
+          centerPadding: "10%",
+        },
+      },
+    ],
+  });
+});

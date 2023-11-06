@@ -1,38 +1,8 @@
 <div class="surround-contents ">
-    
-    <div class="section-titles">
-   <h3 class="main-title"><span>施設の紹介</span></h3>            
- </div>
    <div class="surround-contents__inner">
-   <div class="surround-contents__box">
-    <ul class="image-display">
-    <?php if(get_field('img01')): ?>
-      <li class="image-display__img">
-        <img src="<?php the_field('img01');?>" alt="">
-      </li>
-      <?php endif; ?>
-      <?php if(get_field('img02')): ?>
-      <li class="image-display__img">
-        <img src="<?php the_field('img02');?>" alt="">
-      </li>
-      <?php endif; ?>
-      <?php if(get_field('img03')): ?>
-      <li class="image-display__img">
-        <img src="<?php the_field('img03');?>" alt="">
-      </li>
-      <?php endif; ?>
-      <?php if(get_field('img04')): ?>
-      <li class="image-display__img">
-        <img src="<?php the_field('img04');?>" alt="">
-      </li>
-      <?php endif; ?>
-      <?php if(get_field('img05')): ?>
-      <li class="image-display__img">
-        <img src="<?php the_field('img05');?>" alt="">
-      </li>
-      <?php endif; ?>
-    </ul>
-    </div>
+   
+<?php get_template_part('service_inc/facility-slide'); ?>
+
     <div class="surround-contents__box">
     <div class="section-titles">
     <h4 class="main-title"><span>設備概要</span></h4>
