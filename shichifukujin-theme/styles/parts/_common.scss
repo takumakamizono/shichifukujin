@@ -2,8 +2,9 @@
 
 body {
   color: $main-txt;
-  font-weight: 600;
+  font-weight: 500;
   font-family: "M PLUS Rounded 1c", "Noto Sans JP", sans-serif;
+  letter-spacing: 0.1em;
 }
 
 img {
@@ -13,6 +14,9 @@ img {
 
 .mb-sm {
   margin-bottom: 16px !important;
+  @include mq(lg) {
+    margin-bottom: 25px !important;
+  }
 }
 
 .mb-md {
@@ -123,6 +127,7 @@ img {
 }
 .section-titles {
   @extend .mb-md;
+  @extend .content-width;
 }
 .section-titles-left {
   @extend .content-width1000;
@@ -131,7 +136,7 @@ img {
 }
 
 .main-title {
-  @extend .font-lg;
+  @extend .font-lr;
   margin-bottom: 0;
   display: flex;
   justify-content: center;
@@ -182,6 +187,7 @@ img {
   }
 }
 
+.cate-title {
   @extend .font-sm;
   @extend .mb-sm;
   color: $cSubTitle;
