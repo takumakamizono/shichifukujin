@@ -7,6 +7,7 @@
   z-index: 10;
   background: $cWhite;
   transition: transform 0.5s, box-shadow 0.5s;
+  overflow: hidden;
 }
 
 #main-content {
@@ -142,7 +143,7 @@ main {
       top: 80px;
       z-index: 4;
       background: rgba(255, 255, 255, 0.9);
-      width: 180px;
+      width: 200px;
       visibility: hidden;
       opacity: 0;
       transition: all 0.3s;
@@ -234,6 +235,9 @@ main {
     z-index: 1;
     height: 80%;
     width: 100%;
+  }
+  &__btn {
+    text-align: center;
   }
 }
 .news {
@@ -810,7 +814,7 @@ main {
   }
   &__btn {
     margin-top: 20px;
-
+    text-align: center;
     @include mq(md) {
       margin-top: 50px;
     }
