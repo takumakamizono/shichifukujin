@@ -1,10 +1,7 @@
 <?php if( get_field('try-title01')): ?>
-   
-                  
-               
                       <div class="service-list">
                         <div class="service-list__inner">
-                      <h4 class="service-list__title">
+                      <h4 class="sub-title ">
                         <span><?php the_field('try-sectit'); ?></span>    
                      </h4>
                      <div class="service-list__desc">

@@ -8,7 +8,7 @@
         $category_name = $category_object->name;
         ?>
         <div class="news-report">
-            <h3 class="news-report__title"><span><?= ucfirst($category_name) ?></span></h3>
+            <h3 class="sub-title "><span><?= ucfirst($category_name) ?></span></h3>
             <?php if ($category === 'settlement'): ?>
                 <?php
                 $thisyear = date('Y'); // 現在の西暦年を取得

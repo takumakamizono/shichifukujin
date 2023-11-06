@@ -159,6 +159,29 @@ img {
 }
 
 .sub-title {
+  letter-spacing: 0.16em;
+  line-height: 2.2;
+  @extend .font-md;
+  @extend .mb-sm;
+  text-align: center;
+
+  & > span {
+    position: relative;
+    display: inline-block;
+    &::after {
+      bottom: -4px;
+      height: 5px;
+      background-size: 16px auto;
+      position: absolute;
+      width: 100%;
+      content: "";
+      background-repeat: space repeat;
+      background-image: url(images/bg_dot03.png);
+      left: 0;
+    }
+  }
+}
+
   @extend .font-sm;
   @extend .mb-sm;
   color: $cSubTitle;

@@ -1,7 +1,7 @@
 <?php if(get_field('img01')): ?>
 <div class="image-box">
 <?php if(get_field('sec-title')): ?>
-  <h4 class="image-box__title"><span><?php the_field('sec-title');?></span> </h4>
+  <h4 class="sub-title "><span><?php the_field('sec-title');?></span> </h4>
   <?php endif; ?>
   <div class="image-box__inner">
   
