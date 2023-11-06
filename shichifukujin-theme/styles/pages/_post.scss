@@ -1365,3 +1365,33 @@
     }
   }
 }
+
+.slide-items__wrap {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+
+  @extend .mb-md;
+}
+.slider {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  &__li {
+    position: relative;
+    & img {
+      margin: 0 auto;
+    }
+    & > p {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 5px 10px;
+      font-size: 12px;
+      background: $cWhite;
+      min-width: 120px;
+      text-align: center;
+    }
+  }
+}
