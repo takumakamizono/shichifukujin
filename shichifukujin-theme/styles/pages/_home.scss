@@ -237,12 +237,10 @@ main {
   }
 }
 .news {
-  @extend .mb-lr;
+  @extend .mb-lg;
   @extend .pt-md;
   &__inner {
-    max-width: $contentMaxWidth1000;
-    width: 90%;
-    margin: 0 auto;
+    @extend .content-width;
 
     min-height: 200px;
   }
@@ -276,14 +274,19 @@ main {
       font-size: 12px;
       font-weight: 800;
       margin-right: 10px;
-      padding: 2px 20px;
-      border-radius: 5px;
       flex-basis: 18%;
       text-align: center;
-      border: 1px solid $mainColor;
       color: $mainColor;
+      padding: 0;
       & li {
+        margin-bottom: 5px;
+        padding: 2px 20px;
         list-style-type: none;
+        border: 1px solid $mainColor;
+        border-radius: 5px;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
 
@@ -301,7 +304,7 @@ main {
         position: relative;
         padding-right: 150px;
         margin-right: 20px;
-        width: 250px;
+        width: 270px;
         &::before {
           background-color: $cWhite;
           @include mq(lg) {
@@ -343,36 +346,24 @@ main {
     }
   }
   &__btn {
-    display: flex;
-    justify-content: center;
     @extend .mt-md;
     @extend .mb-md;
 
     & .btn-list {
       list-style: none;
       padding: 0;
-      display: flex;
-      flex-wrap: wrap;
+      max-width: 300px;
+      margin: 0 auto;
     }
     & .btn-item {
-      display: flex;
-      justify-content: center;
-      margin-right: 5px;
-      flex-basis: 47%;
       margin-bottom: 10px;
-      @include mq(lr) {
-        flex-basis: 33%;
-      }
-      @include mq(lg) {
-        flex-basis: 24%;
-      }
     }
     & .btn {
-      max-width: 300px;
       width: 100%;
-      border: none;
-      background: $mainColor;
-      color: $cWhite;
+      border: 1px solid $mainColor;
+      color: $mainColor;
+      background: $cWhite;
+      border-radius: 50px;
       &::after {
         content: "\f061";
         font-family: "Font Awesome 5 free";
@@ -392,6 +383,25 @@ main {
     flex-basis: 70%;
     min-height: 300px;
     @extend .mb-md;
+  }
+  &__flex {
+    @include mq(lg) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+  &__flex-list {
+    @include mq(lg) {
+      flex-basis: 75%;
+    }
+  }
+  &__flex-btn {
+    @include mq(lg) {
+      flex-basis: 20%;
+    }
   }
 }
 .archive-list {

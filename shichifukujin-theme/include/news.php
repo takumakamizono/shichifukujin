@@ -4,7 +4,7 @@
                     <span>お知らせ</span>           
                   </h2>            
                 </div>
-                <div  class="news__inner">
+                <div  class="news__inner news__flex">
                 <?php
                      $args=[
                        'post_type'=> 'post',
@@ -15,12 +15,12 @@
                     ?>
                   <?php if($the_query->have_posts()): ?>  
                
-                  <ul class="news__list appear right"> 
+                  <ul class="news__list news__flex-list appear right"> 
               <?php while($the_query->have_posts()):$the_query->the_post(); ?>
             <?php get_template_part('include/news-inside'); ?>
             <?php endwhile; ?>
                   </ul>
-                  <div class="news__btn appear up">
+                  <div class="news__btn news__flex-btn appear up">
     <?php
     
     $categories = get_terms([
@@ -40,8 +40,7 @@
         <?php } ?>
     </ul>
 </div>    
-           
-          
+  
                   <?php else: ?>
                     <div class="notice__notinfo">
                       <p>新しい情報はありません</p>
