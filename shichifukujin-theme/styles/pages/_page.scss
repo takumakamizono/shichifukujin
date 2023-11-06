@@ -372,7 +372,7 @@
 
 .philosophy {
   &__wrap {
-    @extend .mb-md;
+    @extend .mb-lr;
     &:nth-child(even) {
       .philosophy__wrap-inner {
         @include mq(lg) {
@@ -400,6 +400,7 @@
     flex-basis: 48%;
 
     margin: 0 auto;
+    @extend .mb-sm;
   }
   &:nth-child(1) {
     @extend .pb-lg;
@@ -492,11 +493,7 @@
   &__promise-block {
     @extend .mb-md;
     & > h4 {
-      @extend .font-lr;
-      @extend .mb-sm;
-      @include mq(md) {
-        text-align: center;
-      }
+      text-align: left;
     }
   }
   &__promise {
@@ -636,9 +633,10 @@
   @extend .pt-md;
   @extend .mb-lg;
   &__mainTit {
-    font-size: clamp(18px, 4vw, 36px);
+    font-size: clamp(14px, 4vw, 25px);
     @extend .mb-md;
     line-height: 1.8;
+    @extend .content-width;
     @include mq(lg) {
       text-align: center;
     }
@@ -813,8 +811,9 @@
     flex-basis: 68%;
 
     & > h3 {
-      @extend .font-md;
+      font-size: clamp(12px, 3vw, 19px);
       margin-bottom: 20px;
+      line-height: 2.2;
       & > span {
         position: relative;
         &::before {
@@ -838,7 +837,7 @@
   &__top-img {
     flex-basis: 30%;
     max-width: 400px;
-    @extend .mb-sm;
+    @extend .mb-md;
     & > img {
       margin-bottom: 10px;
     }
@@ -1004,7 +1003,8 @@
       }
       & > a {
         font-size: 14px;
-        width: 250px;
+        min-width: 260px;
+        margin: 0 auto;
       }
     }
     &-label {
@@ -1012,6 +1012,14 @@
       color: $cWhite;
       padding: 2px 3px;
       border-radius: 3px;
+    }
+    &-line {
+      margin-bottom: 10px;
+      display: inline-block;
+      width: 100%;
+      @include mq(md) {
+        flex-basis: 49%;
+      }
     }
   }
 }
