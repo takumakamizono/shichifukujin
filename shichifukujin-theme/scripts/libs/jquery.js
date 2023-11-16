@@ -70,13 +70,15 @@ $(document).ready(function () {
 
 $(function () {
   $(".slider").slick({
-    arrows: false,
+    arrows: true,
     autoplay: true,
     adaptiveHeight: true,
     centerMode: true,
     centerPadding: "20%",
     slidesToShow: 2,
     dots: true,
+    prevArrow: '<span class="slide-arrow prev-arrow"></span>',
+    nextArrow: '<span class="slide-arrow next-arrow"></span>',
     responsive: [
       {
         breakpoint: 960,
