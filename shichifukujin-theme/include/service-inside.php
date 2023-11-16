@@ -32,23 +32,6 @@
                 <?php  else: ?> 
                   <a class="btn shadow" href="<?php the_permalink(); ?>">施設詳細はこちら</a>
                   <?php endif;?>
+                    </div>     
                     </div>
-                   
-              
-                    <div class="service__desc">
-                    <?php
-$top_comment = get_field('top_comment');
-
-// カスタムフィールドの値が存在する場合
-if ($top_comment) {
-    $excerpt = wp_strip_all_tags($top_comment); // HTMLタグを削除
-     // 20ワードに制限
-}
-?>
-                      <p><?= wp_trim_words($excerpt, 100);?></p>
-                    </div>
-                   
-                    </div>
-                 
-          
                   </div>
