@@ -1,12 +1,6 @@
 <?php $post_slug = get_post_field('post_name', get_post());?>
 <div class="summary-content">
-<?php if($post_slug === 'lalachance'|| $post_slug === 'fanfan' ): ?>
-   <?php get_template_part('service_inc/facility-slide'); ?>
-   <?php endif; ?>
    <div class="summary-content__inner">
-  
-   
-  
     <div class="summary-content__box">
     <div class="section-titles">
     <?php if($post_slug === 'school'): ?>
