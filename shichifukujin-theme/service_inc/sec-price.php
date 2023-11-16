@@ -1,6 +1,6 @@
 <div class="sec-price">
     <div class="section-titles">
-   <h3 class="main-title"><span>ご料金について</span></h3>            
+   <h3 class="main-title"><span>料金について</span></h3>            
  </div>
  <div class="sec-price__inner">
 

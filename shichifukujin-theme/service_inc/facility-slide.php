@@ -1,9 +1,10 @@
+<section class="surround-contents">
 <?php if(get_field('slide01')): ?>
 <div class="section-titles">
-   <h3 class="main-title"><span>施設の紹介</span></h3>            
+   <h3 class="main-title"><span>施設の写真</span></h3>            
  </div>
  <div class="slide-items__wrap">
-    <ul class="slider">
+    <ul class="sample-slide slider">
   <li class="slider__li">
     <img src="<?php the_field('slide01');?>" alt="">
     <p><?php the_field('title01');?></p>
@@ -60,7 +61,7 @@
   <?php if(get_field('planimg01')): ?>
 <div class="surround-contents__box">
 <h4 class="sub-title ">
-                        <span>施設の館内図</span>
+                        <span>見取り図</span>
                      </h4>
     <ul class="image-display">
     
@@ -77,4 +78,5 @@
     </ul>
     </div>
     <?php endif; ?>
+    </section>
    
