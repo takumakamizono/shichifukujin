@@ -1,14 +1,18 @@
 <?php
 define("DIRE", get_template_directory_uri());
-function add_async_defer_script($url) {
-    if (strpos($url, '#async'))
-    return str_replace('#async', '', $url)."' async='async";
-    elseif (strpos($url, '#defer'))
-      return str_replace('#defer', '', $url)."' defer='defer";
-    else
-      return $url;
+/* JS非同期読み込み defer */
+if(!is_admin()){
+  if ( !function_exists( 'defer_parsing_of_js' ) ){
+  function defer_parsing_of_js( $url ) {
+    if ( FALSE === strpos( $url, '.js' ) ) return $url;
+    if ( strpos( $url, 'wp-i18n-js' ) ) return $url;
+    if ( strpos( $url, 'wp-hooks-js' ) ) return $url;
+    
+    return str_replace( " src", " defer src", $url );
   }
-  add_filter('clean_url', 'add_async_defer_script', 11, 1);
+  }
+  add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 , 2);
+  }
 
 
   function enqueue_scripts() {
@@ -18,24 +22,36 @@ function add_async_defer_script($url) {
     $script_version = filemtime(get_stylesheet_directory() . '/scripts/main.min.js');
 
     wp_enqueue_style('css-reset',DIRE.'/styles/vendors/css-reset.css',array(), $version);
-    wp_enqueue_style('fonts-googleapis','https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:wght@400;800|family=Noto+Sans+JP:wght@400;600|family=Noto+Serif+JP:wght@900&display=swap', false);
+    wp_enqueue_style('fonts-googleapis','https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:wght@400;800|family=Noto+Sans+JP:wght@400;600|family=Noto+Serif+JP:wght@900&display=swap', array(), $version);
     wp_enqueue_style('swiper-bundle.min.css',DIRE.'/styles/vendors/swiper-bundle.min.css',array(), $version);
     wp_enqueue_style('style.css',DIRE.'/style.css',array(),$style_version);
-    wp_enqueue_style('slick-theme.css','https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css',false);
-    wp_enqueue_style('slick.css','https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css',false);
-    wp_enqueue_script('google-maps-api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAg5LKfmVKJjTlwupDtGGFGRPuxtbj2YdE');
-    wp_enqueue_script('fontawesome','https://kit.fontawesome.com/2bf622374b.js', false);
-    wp_enqueue_script('jquery-min', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js', false);
-    wp_enqueue_script('jquery.js', DIRE.  '/scripts/libs/jquery.min.js#defer', array(), $version);
-    wp_enqueue_script('slick.js', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',false);
-    wp_enqueue_script('scroll-polyfill.js', DIRE.  '/scripts/vendors/scroll-polyfill.js#defer', array(), $version);
-    wp_enqueue_script('gsap.min.js', DIRE.  '/scripts/vendors/gsap.min.js#defer', array(), $version);
-    wp_enqueue_script('swiper-bundle.min.js', DIRE.  '/scripts/vendors/swiper-bundle.min.js#defer', array(), $version);
-    wp_enqueue_script('hero-slider.js', DIRE.  '/scripts/libs/hero-slider.min.js#defer', array(), $version);
-    wp_enqueue_script('scroll.js', DIRE.  '/scripts/libs/scroll.min.js#defer', array(), $version);
-    wp_enqueue_script('text-animation.js', DIRE.  '/scripts/libs/text-animation.min.js#defer', array(), $version);
-    wp_enqueue_script('mobile-menu.js', DIRE.  '/scripts/libs/mobile-menu.min.js#defer', array(), $version);
-    wp_enqueue_script('main.js', DIRE.  '/scripts/main.min.js#defer', array(), $script_version);
+    wp_enqueue_style('slick-theme.css','https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css', array(), $version);
+    wp_enqueue_style('slick.css','https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), $version);
+    wp_enqueue_script('google-maps-api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAg5LKfmVKJjTlwupDtGGFGRPuxtbj2YdE', array(), null, false);
+    wp_script_add_data('google-maps-api', 'defer', true);
+    wp_enqueue_script('fontawesome','https://kit.fontawesome.com/2bf622374b.js',array(),$version, false);
+    wp_script_add_data('fontawesome', 'defer', true);
+    wp_enqueue_script('jquery-min', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js', array(), $version, false);
+    wp_enqueue_script('jquery.js', DIRE.  '/scripts/libs/jquery.min.js', array(), $version,false);
+    wp_script_add_data('jquery.js', 'defer', true);
+    wp_enqueue_script('slick.js', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',array(), $version,false);
+    wp_script_add_data('slick.js', 'defer', true);
+    wp_enqueue_script('scroll-polyfill.js', DIRE.  '/scripts/vendors/scroll-polyfill.js', array(), $version, false);
+    wp_script_add_data('scroll-polyfill.js', 'defer', true);
+    wp_enqueue_script('gsap.min.js', DIRE.  '/scripts/vendors/gsap.min.js', array(), $version, false);
+    wp_script_add_data('gsap.min.js', 'defer', true);
+    wp_enqueue_script('swiper-bundle.min.js', DIRE.  '/scripts/vendors/swiper-bundle.min.js', array(), $version, false);
+    wp_script_add_data('swiper-bundle.min.js', 'defer', true);
+    wp_enqueue_script('hero-slider.js', DIRE.  '/scripts/libs/hero-slider.min.js', array(), $version, false);
+    wp_script_add_data('hero-slider.js', 'defer', true);
+    wp_enqueue_script('scroll.js', DIRE.  '/scripts/libs/scroll.min.js', array(), $version, false);
+    wp_script_add_data('scroll.js', 'defer', true);
+    wp_enqueue_script('text-animation.js', DIRE.  '/scripts/libs/text-animation.min.js', array(), $version, false);
+    wp_script_add_data('text-animation.js', 'defer', true);
+    wp_enqueue_script('mobile-menu.js', DIRE.  '/scripts/libs/mobile-menu.min.js', array(), $version, false);
+    wp_script_add_data('mobile-menu.js', 'defer', true);
+    wp_enqueue_script('main.js', DIRE.  '/scripts/main.min.js', array(), $script_version,false);
+    wp_script_add_data('main.js', 'defer', true);
   }
   add_action('wp_enqueue_scripts', 'enqueue_scripts');
   
