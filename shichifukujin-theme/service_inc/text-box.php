@@ -26,6 +26,19 @@
                
                
                 <?php endif; ?>
+                <?php if(get_field('text-title03')):?>       
+<div class="text-box__wrap">
+                      <h4 class="sub-title ">
+                        <span><?php the_field('text-title03');?></span>
+                     </h4>
+                     <div class="text-box__inner">
+                     <div class="text-box__desc">
+                      <?php the_field('text-desc03');?>
+                     </div>    
+                     
+                    </div>
+                    </div>
+                <?php endif; ?>
                 
                 </div>
                 <?php endif; ?>
