@@ -26,7 +26,9 @@ $count = get_term($term_id, $taxonomy)->count;
             <?php  get_template_part('include/warning');?>
             <?php get_template_part('include/breadcrumb'); ?> 
             <section class="service">
-             <?php $facility =  get_queried_object(); ?>
+             <?php $facility =  get_queried_object();    
+             $slug = $facility->slug;
+             ?>
                 <div class="section-titles">
                   <h2 class="main-title">
                     <span>
@@ -37,7 +39,13 @@ $count = get_term($term_id, $taxonomy)->count;
                   </h2>
                 </div>
                 <div class="number-of-facilities">
-                  <p ><?= esc_html($facility->name);?><span><?= esc_html($count);?>施設</span>をご紹介します</p>
+                  <p class="number-of-facilities__count"><?= esc_html($facility->name);?><span><?= esc_html($count);?>施設</span>をご紹介します</p>
+                  <?php if ($slug === 'nursing'):?>
+                  <p class="number-of-facilities__txt">施設は「家庭的な環境」＋「プロの介護力」が備わった場所です。</p>
+                  <?php elseif ($slug === 'group'):?>
+                  <p class="number-of-facilities__txt">施設は「家庭的な環境」＋「プロの介護力」が備わった場所です。認知症の症状はお一人おひとり異なります。認知症ケアのプロがチームで協力しながらその方の世界に入り支援しています。</p>
+
+                  <?php endif;?>
                 </div>
 
               
