@@ -85,16 +85,16 @@
 }
 
 .service {
-  @extend .pb-lg;
+  @extend .pb-lr;
   background: $BgColor;
   @extend .pt-md;
   &__inner {
     @extend .content-width;
   }
-  // &__blocks {
-  //   @extend .flex960;
-  //   justify-content: space-between;
-  // }
+  &__blocks {
+    max-width: $contentMaxWidth1000;
+    margin: 0 auto;
+  }
   &__item {
     background: $BgSubColor;
     justify-content: space-between;
@@ -348,22 +348,25 @@
 
 .number-of-facilities {
   @extend .content-width;
-  @extend .mb-lr;
+  max-width: $contentMaxWidth1000;
+  @extend .mb-md;
   display: flex;
   justify-content: center;
-  & p {
-    margin: 0 auto;
-    @extend .font-lr;
+  flex-direction: column;
+  align-items: center;
+
+  &__count {
     font-weight: 600;
-    max-width: 900px;
+    @extend .font-md;
+    margin-bottom: 10px;
 
     & > span {
       color: $cOrange;
       padding: 0 10px;
     }
-    @include mq(lg) {
-      text-align: center;
-    }
+  }
+  &__txt {
+    @extend .font-sm;
   }
 }
 
@@ -745,6 +748,10 @@
     & > ul {
       list-style: none;
       padding: 20px 10px;
+      & p {
+        margin-left: 20px;
+        margin-bottom: 10px;
+      }
       & li {
         &::before {
           content: "\f058";
@@ -800,11 +807,11 @@
 }
 
 .surround-contents {
-  @extend .mb-lg;
+  @extend .mb-md;
   position: relative;
   &__box {
     @extend .content-width1000;
-    @extend .mb-lr;
+
     background: white;
     padding: 10px;
     border-radius: 10px;
@@ -828,8 +835,8 @@
       position: absolute;
       width: 100%;
       @include mq(lg) {
-        top: -295px;
-        height: 296px;
+        top: -336px;
+        height: 336px;
         background: url(./images/detailed-bg-t.png) no-repeat center/cover;
       }
     }
@@ -841,8 +848,8 @@
       position: absolute;
       background: url(./images/detailed-bg-sp.png) no-repeat center/cover;
       @include mq(lg) {
-        bottom: -296px;
-        height: 296px;
+        bottom: -336px;
+        height: 336px;
         background: url(./images/detailed-bg.png) no-repeat center/cover;
       }
     }
