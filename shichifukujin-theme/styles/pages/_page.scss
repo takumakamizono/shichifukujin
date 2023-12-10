@@ -876,7 +876,6 @@
 }
 
 .page-guide {
-  background: $SubColor;
   &__inner {
     @extend .content-width;
     @extend .pt-md;
@@ -884,9 +883,14 @@
   &__topTxt {
     @extend .mb-lr;
     background: $cWhite;
-    padding: 20px 30px;
     border-radius: 10px;
     @extend .font-md;
+    & .main-title {
+      @extend .mb-md;
+    }
+    & p {
+      @extend .font-md;
+    }
     @include mq(lg) {
       padding: 50px 60px;
     }
@@ -914,9 +918,10 @@
         transform: translate(-50%, 66px);
         font-family: "Font Awesome 5 free";
         font-weight: 600;
-        color: $mainColor;
+        color: $SubColor;
         content: "\f103";
         font-size: 4em;
+        z-index: 10;
       }
       @include mq(lg) {
         &::before {
@@ -956,7 +961,7 @@
     }
   }
   &__box-leftTitle {
-    @extend .font-lr;
+    font-size: clamp(16px, 4vw, 25px);
     text-align: center;
     & span {
       &:nth-child(2) {
@@ -989,16 +994,17 @@
     }
     & dd {
       font-size: 14px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
+
       padding: 10px 0;
       border-bottom: 1px dotted $lightGray;
       & ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
         padding: 15px;
         & li {
           margin-bottom: 10px;
+          flex-basis: 30%;
         }
       }
       & > a {
@@ -1021,5 +1027,24 @@
         flex-basis: 49%;
       }
     }
+  }
+}
+.page-family {
+  &__topTxt {
+    @extend .mb-lr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @extend .font-md;
+  }
+  &__sampleImg {
+    @extend .mb-lr;
+  }
+  &__descTxt {
+    @extend .mb-md;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @extend .font-sm;
   }
 }

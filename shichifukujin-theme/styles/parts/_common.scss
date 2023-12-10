@@ -176,8 +176,12 @@ img {
   letter-spacing: 0.16em;
   line-height: 2.2;
   font-size: clamp(14px, 3vw, 19px);
-  @extend .mb-sm;
+  margin-bottom: 30px;
   text-align: center;
+
+  @include mq(lg) {
+    margin-bottom: 40px;
+  }
 
   & > span {
     position: relative;
@@ -372,6 +376,7 @@ img {
     & > p {
       display: flex;
       align-items: center;
+      text-align: left;
     }
     @include mq(lg) {
       margin-bottom: 0;

@@ -35,12 +35,12 @@
                   <div class="sl-service__inner">
                     <?php if ($term->slug === 'nursing'):?>
                   <?php get_template_part('service_inc/single-nursing'); ?>
-                  <?php elseif($term->slug === 'group'): ?>
+                  <?php elseif($term->slug === 'group'||$term->slug === 'handi-group'): ?>
                   <?php get_template_part('service_inc/single-group'); ?>
                   <?php elseif($term->slug === 'day'): ?>
                   <?php get_template_part('service_inc/single-day'); ?>
-                  <?php elseif($term->slug === 'support'|| $term->slug === 'school'|| $term->slug === 'interact'): ?>
-                  <?php get_template_part('service_inc/single-support'); ?>
+                  <?php elseif($term->slug === 'support'|| $term->slug === 'school'|| $term->slug === 'interact'||$term->slug === 'consultation'): ?>
+                  <?php get_template_part('service_inc/single-others'); ?>
                  <?php endif; ?> 
                  <?php endforeach; ?> 
                  <?php endif; ?>  

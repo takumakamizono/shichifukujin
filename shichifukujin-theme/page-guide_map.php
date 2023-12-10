@@ -31,9 +31,9 @@
                 <div class="page-guide">
                   <div class="page-guide__inner">
                   <div class="page-guide__topTxt">
-                  <div class="section-titles">
+             
    <h3 class="main-title"><span>七福神がお手伝いできること</span></h3>            
- </div>
+
                     <p>利用者様は、もと会社員、公務員、教師､弁護士、役員、自営業、 スポーツ選手、自衛官、警察官、主婦等々、色々な現役時代を過ごしてきた方々がたくさんいらっしゃっています。
 利用者様･ご家族様のお困りごとに対して、七福神がお手伝いできることをガイドマップにしました。 それぞれのお困りごとに合ったサービスをご提案いたします。</p>
                   </div>
@@ -43,7 +43,7 @@
  <div class="page-guide__box"> 
 <div class="page-guide__box-head">
                       <h4 class="page-guide__box-leftTitle">
-                        <span>利用者様のお困りごと その１</span>
+                        <span>いつまでも自宅で暮らしたい・・・</span>
                      </h4>
                      </div>
                      <div class="page-guide__box-desc">
@@ -112,7 +112,7 @@
  <div class="page-guide__box"> 
 <div class="page-guide__box-head">
                       <h4 class="page-guide__box-leftTitle">
-                        <span>利用者様のお困りごと その２</span>
+                        <span>日々の暮らしに不安が増えてきた・・・</span>
                      </h4>
                      </div>
                      <div class="page-guide__box-desc">
@@ -120,7 +120,17 @@
 <dd>&#9632; 色々な支援を受けても､ 自宅での生活が困難である(薬 食事 お風呂)</dd>
 </dl>
 <dl>
-<dd>&#9632; 認知症状が激しくなってきたのでそろそろプロの手を借りたい</dd>
+<dd>
+  &#9632; 認知症状が激しくなってきたのでそろそろプロの手を借りたい
+<ul>
+  <li>物忘れ</li>
+  <li>徘徊</li>
+  <li>道に迷う</li>
+  <li>昼夜逆転</li>
+  <li>幻覚</li>
+  <li>幻聴</li>
+</ul>
+</dd>
 </dl>
 <dl>
 <dd >&#9632; 要介護3以上</dd>

@@ -50,7 +50,7 @@
 <p>一度見学にいらっしゃるとガラッとイメージが変わると思います。</p>
                     </div>
                     <div class="page-procedure__block-img">
-                    <img src="<?= get_template_directory_uri(); ?>/images/procedure02.png" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/images/procedure01.png" alt="">
                     </div>
                   </div>
                   </div>
@@ -70,7 +70,7 @@
 <p>何よりもご家族様が心にゆとりをもち、体も気持ちも元気でいてくださることが大事ですので、息抜きショートステイを大いに活用してください｡</p>
                     </div>
                     <div class="page-procedure__block-img">
-                    <img src="<?= get_template_directory_uri(); ?>/images/procedure01.png" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/images/procedure02.png?v2" alt="">
                     </div>
                   </div>
                   </div>

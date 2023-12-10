@@ -599,7 +599,6 @@
   &__inner {
     @extend .content-width1000;
     background: $cWhite;
-    padding: 30px 10px;
     border-radius: 10px;
     @include mq(lg) {
       padding-top: 50px 0;
@@ -878,16 +877,13 @@
 }
 
 .cardinfo {
-  padding-top: 40px;
   @extend .mb-lg;
-  @include mq(lg) {
-    padding-top: 80px;
-  }
+
   &__inner {
     max-width: $contentMaxWidth1000;
     margin: 0 auto;
     width: 90%;
-    @extend .mb-lg;
+    @extend .mb-md;
   }
   &__blocks {
     @extend .flex;
@@ -895,7 +891,6 @@
   }
 
   &__block {
-    @extend .mb-md;
     @include mq(md) {
       flex-basis: 49%;
     }
@@ -926,17 +921,6 @@
     }
     & > p {
       font-size: 14px;
-    }
-  }
-  &__desc {
-    @extend .font-sm;
-    line-height: 2;
-    letter-spacing: 0.06em;
-    & ul {
-      padding-left: 10px;
-      & li {
-        margin-bottom: 10px;
-      }
     }
   }
 }

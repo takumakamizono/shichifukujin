@@ -98,7 +98,7 @@ function custom_wpcf7_validate_kana($result,$tag)
     $value = isset($_POST[$name]) ? trim(wp_unslash(strtr((string) $_POST[$name], "\n", " "))) : "";
  
     //全角カタカナ又は平仮名の入力チェック
-    if ($name === "your-kana") {
+    if ($name === "your-kana"||$name==="tenant-kana") {
         if(!preg_match("/^[ア-ヶーぁ-ん]+$/u", $value)) {
             $result->invalidate( $tag,"全角カタカナ又は平仮名で入力してください。");
         }
@@ -111,14 +111,16 @@ add_filter('wpcf7_validate_text*', 'custom_wpcf7_validate_kana', 11, 2);
 //お問い合わせと送信完了（固定ページ）のスラッグをセットする
 $contact = 'contact';
 $thanks = 'thanks';
+$familyPage ='family-page';
 
-//お問い合わせフォームの送信後にサンクスページへ飛ばす
+//フォームの送信後にサンクスページへ飛ばす
 add_action( 'wp_footer', 'redirect_thanks_page' );
 function redirect_thanks_page() {
   global $contact;
   global $thanks;
+  global $familyPage;
   ?>
-  <?php if( is_page($contact)):?>
+  <?php if( is_page($contact) || is_page($familyPage)):?>
   <script>
     document.addEventListener( 'wpcf7mailsent', function( event ) {
       location = '<?php echo home_url('/'.$thanks); ?>'; // 遷移先のURL
@@ -176,8 +178,7 @@ add_filter( 'get_terms_orderby', 'taxonomy_orderby_description', 10, 2 );
 
 add_action( 'admin_init', function() {
   $taxonomy = 'facility'; 
-  $term_slug = ['nursing','group','day','support','interact','school'
-  ];
+  $term_slug = ['nursing','group','day','support','interact','school','consultation','handi-group'];
   $post_type = 'service'; 
 
   global $pagenow;

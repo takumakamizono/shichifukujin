@@ -33,6 +33,7 @@
    <?php
     $post_type = 'service';
     $post_type_object = get_post_type_object($post_type);
+    
     ?>
       <div class="hero-sub">    
         <div class="hero-sub__inner">
@@ -44,16 +45,14 @@
                   $cat_name = $category->cat_name;
                   ?>               
               <h2 class="hero-sub__maintitle "><?=  esc_html($cat_name); ?></h2>
-              <p class="hero-sub__subtitle">お知らせ情報</p>
+              <?php elseif (is_tax()) :
+    $term = get_queried_object();
+    ?>
+    <h2 class="hero-sub__maintitle"><?= esc_html($term->name); ?></h2>
+   
+
               <?php  elseif($post_type_object):?> 
-                <?php
-                $menu_name = $post_type_object->labels->menu_name;
-                $name = $post_type_object->name;
-                
-                
-                 ?> 
-              <h2 class="hero-sub__maintitle "><?=  esc_html($menu_name); ?></h2>
-              <p class="hero-sub__subtitle"><?=  esc_html($name); ?></p>
+              <h2 class="hero-sub__maintitle "><?=  post_type_archive_title('', false);?></h2>       
               <?php endif; ?>        
               </div>
               <div class="hero-sub__img"> 
@@ -87,19 +86,16 @@
     }
     ?>
     <h2 class="hero-sub__maintitle"><?= esc_html($cat_name); ?></h2>
-    <p class="hero-sub__subtitle">お知らせ情報</p>
-
-            
-              <?php elseif($post_type_object):  ?> 
+              <?php elseif(is_singular('service')):  ?> 
                 <?php
-                $menu_name = $post_type_object->labels->menu_name;
-                $name = $post_type_object->name;
+               $terms = get_the_terms(get_the_ID(), 'facility'); 
+               if ($terms && !is_wp_error($terms)):
+                foreach ($terms as $term):
                  ?> 
-                <h2 class="hero-sub__maintitle "><?=  esc_html($menu_name)?></h2>
-              <p class="hero-sub__subtitle"><?=  esc_html($name); ?></p>  
-       
-               
-              <?php endif; ?>       
+                <h2 class="hero-sub__maintitle "><?=  esc_html( $term->name);?></h2>
+              <?php endforeach;       
+               endif;       
+               endif; ?>       
               </div>
               <div class="hero-sub__img"> 
                 <?php if(is_single()&& get_post_type() === 'post'):  ?>  
@@ -114,13 +110,12 @@
       <?php elseif(is_page()) : ?>
         <?php
 $page = get_post( get_the_ID() );
-$slug = $page->post_name;
 ?>
         <div class="hero-sub">    
         <div class="hero-sub__inner">
               <div class="hero-sub__titles">
               <h2 class="hero-sub__maintitle "><?php the_title(); ?></h2>
-              <p class="hero-sub__subtitle"><?= strtoupper($post->post_name); ?></p>
+   
               </div>
               <div class="hero-sub__img">                     
               <?php the_post_thumbnail(); ?> 

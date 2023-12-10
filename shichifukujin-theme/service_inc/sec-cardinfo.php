@@ -66,9 +66,7 @@
         </div>
         <?php endif; ?>
     </div>
-    <div class="cardinfo__desc">
-        <p><?php the_field('cardinfo-desc'); ?></p>
-    </div>
+   
     </div>
 
  
