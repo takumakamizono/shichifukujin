@@ -1,9 +1,11 @@
 <div class="txtimg-block">
-<div class="section-titles">
+
+    <div class="txtimg-block__inner">
+    
+    <div class="txtimg-block__box">
+    <div class="section-titles">
    <h3 class="main-title"><span>無料体操教室</span></h3>            
  </div>
-    <div class="txtimg-block__inner">
-    <div class="txtimg-block__box">
       <div class="txtimg-block__box-inner">
                       <div class="txtimg-block__texts">
                         <div class="txtimg-block__texts-inner">
@@ -17,7 +19,7 @@
                       </div>          
                     </div>
                     <div class="txtimg-block__bottom">
-                      <p class="txtimg-block__bottom-tit">開催日程・開催場所</p>
+                      <p class="sub-title02"><span>開催日程・開催場所</span></p>
                       <div class="txtimg-block__bottom-desc">
                     <?php the_field('schedule-desc');  ?>
                     </div>
@@ -27,5 +29,5 @@
               
                 </div>
                 </div>
-                </div>
+               
                

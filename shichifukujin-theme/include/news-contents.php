@@ -18,7 +18,4 @@
                       <?php the_content(); ?>
                        </div>
                     </div>
-                    <div class="postLinks">
-                      <div class="postLinks__link postLinks__link-prev"><?php previous_post_link('戻る%link','%title',true,'') ?></div>
-                      <div class="postLinks__link postLinks__link-next"><?php next_post_link('次へ%link','%title',true,'') ?></div>
-                    </div>
+                   

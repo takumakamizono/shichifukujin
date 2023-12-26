@@ -3,24 +3,25 @@
    <h3 class="main-title"><span><?php the_field('section-title'); ?></span></h3>            
  </div>
     <div class="cardinfo__inner">
-    <div class="cardinfo__blocks">
-        <div class="cardinfo__block">
+    <ul class="cardinfo__blocks">
+        <li class="cardinfo__block">
             <div class="cardinfo__img">
                     <img src="<?php the_field('cardinfo-img01'); ?>" alt="">
             </div>
             <div class="cardinfo__txt">
                 <h5><?php the_field('cardinfo-title01'); ?></h5>
             </div>
-        </div>
-        <div class="cardinfo__block">
+</li>
+        <li class="cardinfo__block">
             <div class="cardinfo__img">
                 <img src="<?php the_field('cardinfo-img02'); ?>" alt="">       
             </div>
             <div class="cardinfo__txt">
                 <h5><?php the_field('cardinfo-title02'); ?></h5>
             </div>
-        </div>
-        <div class="cardinfo__block">
+</li>
+        <?php if(get_field('cardinfo-title03')): ?>
+        <li class="cardinfo__block">
             <div class="cardinfo__img">
            
                 <img src="<?php the_field('cardinfo-img03'); ?>" alt="">       
@@ -30,19 +31,20 @@
                 <h5><?php the_field('cardinfo-title03'); ?></h5>
            
             </div>
-        </div>
+        </li>
+        <?php  endif;?>
         <?php if(get_field('cardinfo-title04')): ?>
-        <div class="cardinfo__block">
+        <li class="cardinfo__block">
             <div class="cardinfo__img"> 
                 <img src="<?php the_field('cardinfo-img04'); ?>" alt="">        
             </div>
             <div class="cardinfo__txt">
                 <h5><?php the_field('cardinfo-title04'); ?></h5>
             </div>
-        </div>
+        </li>
         <?php  endif;?>
         <?php if(get_field('cardinfo-title05')): ?>
-        <div class="cardinfo__block">
+        <li class="cardinfo__block">
             <div class="cardinfo__img">         
                     <img src="<?php the_field('cardinfo-img05'); ?>" alt="">                       
             </div>
@@ -50,10 +52,10 @@
                 <h5><?php the_field('cardinfo-title05'); ?></h5>
        
             </div>
-        </div>
+        </li>
         <?php endif; ?>
         <?php if(get_field('cardinfo-title06')): ?>
-        <div class="cardinfo__block">
+        <li class="cardinfo__block">
             <div class="cardinfo__img">
           
                     <img src="<?php the_field('cardinfo-img06'); ?>" alt="">              
@@ -63,10 +65,11 @@
                 <h5><?php the_field('cardinfo-title06'); ?></h5>
      
             </div>
-        </div>
+        </li>
         <?php endif; ?>
-    </div>
+        </ul>
    
+    </div>
     </div>
 
  

@@ -20,11 +20,11 @@
         <div id="content">
         <?php get_template_part('include/hero'); ?>
           <div id="main-content">
-
+          <?php if(have_posts()): ?>
+            <?php while(have_posts()):the_post(); ?>
             <main>
             <?php  get_template_part('include/warning');?>
-            <?php if(have_posts()): ?>
-            <?php while(have_posts()):the_post(); ?>
+         
          
               <?php get_template_part('include/breadcrumb'); ?> 
           
@@ -84,16 +84,16 @@
                      </div>
                      <div class="page-guide__box-desc">
                      <dl>
-<dd><span class="page-guide__box-desc-line">&#9632; 七福神ララの家</span> <a class="btn"  href="https://729729.jp/service/larashouse/">七福神ララの家へ</a></dd>
+<dd><a class="btn"  href="https://729729.jp/service/larashouse/">七福神ララの家へ</a></dd>
 </dl>
 <dl>
-<dd><span class="page-guide__box-desc-line">&#9632; サポートセンターチャオ</span> <a class="btn"  href="https://729729.jp/service/chao/">サポートセンターチャオへ</a></dd>
+<dd><a class="btn"  href="https://729729.jp/service/chao/">サポートセンターチャオへ</a></dd>
 </dl>
 <dl>
-<dd><span class="page-guide__box-desc-line">&#9632; デイサービスセンター七福神</span> <a  class="btn" href="https://729729.jp/service/servicecenter/">デイサービスセンター七福神へ</a></dd>
+<dd><a  class="btn" href="https://729729.jp/service/servicecenter/">デイサービスセンター七福神へ</a></dd>
 </dl>
 <dl>
-<dd><span class="page-guide__box-desc-line">&#9632; デイサービスよかなぁ七福神</span> <a class="btn"  href="https://729729.jp/service/yokana/">デイサービスよかなぁ七福神へ</a></dd>
+<dd><a class="btn"  href="https://729729.jp/service/yokana/">デイサービスよかなぁ七福神へ</a></dd>
 </dl> 
 <dl>
 <dd>&#9632; 無料体操教室</dd>
@@ -151,13 +151,13 @@
                      <div class="page-guide__box-desc">
                      <dl>
 <dd><span class="page-guide__box-desc-label">介護３以上なら</span></dd>
-<dd><span class="page-guide__box-desc-line">&#9632; 特別養護老人ホーム 七福神</span><a class="btn"  href="https://729729.jp/service/tokuyou/">特別養護老人ホーム七福神へ</a></dd>
-<dd><span class="page-guide__box-desc-line">&#9632; シルクロード七福神</span><a class="btn"  href="https://729729.jp/service/silkroad/">シルクロード七福神へ</a></dd>
+<dd><a class="btn"  href="https://729729.jp/service/tokuyou/">特別養護老人ホーム七福神へ</a></dd>
+<dd><a class="btn"  href="https://729729.jp/service/silkroad/">シルクロード七福神へ</a></dd>
 </dl>
 <dl>
 <dd><span class="page-guide__box-desc-label">認知症なら</span></dd>
-<dd><span class="page-guide__box-desc-line">&#9632; ララシャンス七福神</span><a class="btn"  href="https://729729.jp/service/lalachance/">ララシャンス七福神へ</a></dd>
-<dd><span class="page-guide__box-desc-line">&#9632; ふぁん2テラス七福神</span><a class="btn"  href="https://729729.jp/service/fanfan/">ふぁん2テラス七福神へ</a></dd>
+<dd><a class="btn"  href="https://729729.jp/service/lalachance/">ララシャンス七福神へ</a></dd>
+<dd><a class="btn"  href="https://729729.jp/service/fanfan/">ふぁん2テラス七福神へ</a></dd>
 </dl>
                      </div>          
         </div>
@@ -212,9 +212,7 @@
 <dl>
 <dd>&#9632; 家族会</dd>
 </dl>
-<dl>
-<dd>&#9632; 学び場 「en｣</dd>
-</dl>
+
 <dl>
 <dd>&#9632; 無料セミナー</dd>
 </dl>
@@ -233,19 +231,13 @@
 
                   </div>
 
+                </div>          
                 </div>
-            
-                </div>
-              
-               
-            <?php endwhile; ?>
-            <?php endif; ?>
-            
-             
-         
             <?php get_template_part('include/contact'); ?>
             
             </main>
+            <?php endwhile; ?>
+            <?php endif; ?>
           
           </div>
         </div>

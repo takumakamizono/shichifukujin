@@ -5,6 +5,8 @@
     <div class="section-titles">
     <?php if($post_slug === 'school'): ?>
     <h4 class="main-title"><span>講座内容</span></h4>
+    <?php elseif($post_slug === 'chao'||$post_slug === 'larashouse'): ?>
+    <h4 class="main-title"><span>概要</span></h4>
     <?php else: ?>  
     <h4 class="main-title"><span>施設概要</span></h4>
     <?php endif; ?>  

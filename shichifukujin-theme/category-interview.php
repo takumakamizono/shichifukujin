@@ -38,6 +38,8 @@
                 </div>
                 <?php if(function_exists('wp_pagenavi')){wp_pagenavi();}  ?>
               </section>
+            <?php get_template_part('include/contact'); ?>
+
             </main>
           
           

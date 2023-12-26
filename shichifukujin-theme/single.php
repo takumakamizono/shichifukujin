@@ -14,36 +14,42 @@
         <div id="content">
         <?php get_template_part('include/hero'); ?>
           <div id="main-content">
-           
-        
             <main>
               <?php get_template_part('include/breadcrumb'); ?> 
             <section class="single">
               <div class="single__inner">
                 <?php if(have_posts()): ?>
                   <?php while(have_posts()):the_post(); ?> 
-                  <article id="post-<?php the_ID(); ?>" <?php post_class('single__content') ?> >
+                  
                 <?php if(in_category("interview")): ?>
+                  <article id="post-<?php the_ID(); ?>" <?php post_class('single__content ') ?> >
 		             <?php get_template_part( "include/interview"); ?>
+                 </article >
              <?php else: ?>
+              <div class="single__grid">
+              <article id="post-<?php the_ID(); ?>" <?php post_class('single__content news__main') ?> >
+
               <?php get_template_part( 'include/news-contents' ); ?>
+              </article >
+              <?php get_template_part('include/archive-list'); ?>  
+              </div>
            <?php endif; ?>
                 
-                  </article >
+               
+                 
+
                   <?php endwhile; ?>   
                 <?php endif; ?> 
-                <?php 
-$cat = get_the_category(); 
-$cat_id = $cat[0]->cat_ID; 
-$cat_name =$cat[0]->cat_name;
-$link = get_category_link($cat_id);
-?>
-<div class="single__list-btn">
-<a class="btn slide-bg" href="<?= esc_url($link); ?>"><?= esc_html($cat_name); ?>の一覧へ戻る</a> 
-</div>
+               
+          
               
               </div>
+              <ul class="postLinks">
+    
+    <?php custom_category_paging_links(); ?>
+</ul>
               </section>     
+            <?php get_template_part('include/contact'); ?>  
             </main>
           
           </div>

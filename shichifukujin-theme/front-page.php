@@ -15,7 +15,6 @@
         <?php get_template_part('include/hero'); ?>
           <div id="main-content">
            
-            <!-- <?php get_template_part('include/side-left'); ?> -->
             <main>
               <?php  get_template_part('include/warning');?>
               <?php get_template_part('include/family-page'); ?>
@@ -27,7 +26,7 @@
           
             
             </main>
-            <!-- <?php get_template_part('include/side-right'); ?> -->
+        
           
           </div>
         </div>

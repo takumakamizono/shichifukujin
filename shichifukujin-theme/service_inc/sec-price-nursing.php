@@ -1,16 +1,17 @@
 <section class="sec-price">
    
  <div class="sec-price__inner">
- <div class="sec-price__desc">
+ <div class="sec-price__box">
    <h4 class="sub-title"><span>主な身の回り品として日常生活に必要なもの</span></h4>  
   <div class="table-wrap">
 <table class="table02">
   <tr>
-    <td>歯ブラシ</td>
+    <td>歯ブラシ・入れ歯</td>
     <td>石鹸</td>
     <td>ティッシュ</td>
     <td>化粧品</td>
     <td>衣類</td> 
+    <td>お薬</td> 
   </tr>
 </table>
 <ul class="table-wrap__ul">
@@ -82,11 +83,14 @@ foreach ($levels as $level) {
     <td><?= $formatted_values[11] . '円'; ?></td>
   </tr>
 </table>
+
 <div class="table-desc">
   <p>負担割合１割の方の費用（居住費・食費を含む）/月額（概算）</p>
-  <span>2021年8月現在</span>
+  <span><?php the_field("price_date")?></span>
 </div>
 </div>
+</div>
+<div class="sec-price__box">
 <h4 class="sub-title"><span>その他の主な費用</span></h4>  
 <div class="table-wrap">
 <table class="table02">
@@ -97,15 +101,15 @@ foreach ($levels as $level) {
     <td>外来受診</td> 
 </table>
 </div>
-<div class="sec-price__desc">
+
   <ul class="sec-price__ul">
     <li>日額・月額の自己負担額は第４段階の最高額にて計算しています。（月＝３０日）</li>
-    <li>第2段階～第3段階①は介護保険負担限度額認定証の申請により食材料費が軽減されたものになります。</li>
+    <li>第2段階～第3段階②は介護保険負担限度額認定証の申請により食材料費が軽減されたものになります。</li>
     <li>非課税世帯及び生活保護受給者の料金についてはお問い合わせください。個人の状況により利用料金が異なります。</li>
   </ul>
 </div>
 
-  </div>
+ 
   <div class="sec-price__box border-frame">
     <h5 class="sec-price__innerTitle">費用負担軽減制度が使える方の場合</h5>
     <div class="sec-price__innerDesc">
@@ -127,6 +131,9 @@ foreach ($levels as $level) {
     <span>非課税世帯２段階の方</span>
     <p>市町村民税非課税世帯のうち合計所得金額と年金収入の合計が８０万円以下の方の費用</p>
     </div>
+  </div>
+  <div class="sec-price__pdfBtn">
+    <a href="<?php the_field("application_pdf")?>" class="btn" target="_blank" rel="noopener noreferrer">申込に関する資料はこちら</a>
   </div>
  </div>
  </section >

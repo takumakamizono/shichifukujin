@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: 決算報告書ページ
+Template Post Type: page
+*/
+?>
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -23,13 +29,11 @@
             <?php get_template_part('include/breadcrumb'); ?> 
             <div class="page-content">
               <div class="page-content__inner">
-               <?php the_content(); ?>
+              <?php get_template_part('include/news-report'); ?>
                 </div>
           </div>
-          <?php if (is_page('contact')): ?>
-          <?php get_template_part('include/facility-list'); ?>
-          <?php endif; ?>
-            <?php get_template_part('include/contact'); ?>  
+        
+              
             </main>
             <?php endwhile; ?>
             <?php endif; ?> 

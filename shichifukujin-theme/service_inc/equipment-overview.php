@@ -2,7 +2,7 @@
    <div class="surround-contents__inner">
     <div class="surround-contents__box">
     <div class="section-titles">
-    <h4 class="main-title"><span>設備概要</span></h4>
+    <h4 class="main-title"><span>施設概要</span></h4>
   </div>
  
 <table class="table01">

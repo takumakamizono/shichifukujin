@@ -26,7 +26,7 @@
            </a>
             </div>
             <ul class="footer__address">
-              <li>〒890-0082 鹿児島県鹿児島市紫原５-13-18</li>
+              <li>〒890-0082 鹿児島県鹿児島市紫原5-13-18</li>
               <li>TEL :<?php the_field('access-tel',884);?></li>
               <li>FAX :<?php the_field('access-fax',884);?></li>
               <li>

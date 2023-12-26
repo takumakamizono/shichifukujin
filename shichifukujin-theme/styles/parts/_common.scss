@@ -3,7 +3,7 @@
 body {
   color: $main-txt;
   font-weight: 500;
-  font-family: "M PLUS Rounded 1c", "Noto Sans JP", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0.1em;
 }
 
@@ -145,6 +145,7 @@ img {
 }
 
 .main-title {
+  font-family: "M PLUS Rounded 1c";
   @extend .font-lr;
   margin-bottom: 0;
   display: flex;
@@ -157,7 +158,7 @@ img {
     &::after {
       bottom: -16px;
       height: 16px;
-      background-size: 16px auto;
+      background-size: 12px auto;
       position: absolute;
       width: 100%;
       content: "";
@@ -176,11 +177,40 @@ img {
   letter-spacing: 0.16em;
   line-height: 2.2;
   font-size: clamp(14px, 3vw, 19px);
-  margin-bottom: 30px;
+
   text-align: center;
+  margin-bottom: 30px !important;
 
   @include mq(lg) {
-    margin-bottom: 40px;
+    margin-bottom: 50px !important;
+  }
+
+  & > span {
+    position: relative;
+    display: inline-block;
+    &::after {
+      bottom: -4px;
+      height: 5px;
+      background-size: 16px auto;
+      position: absolute;
+      width: 100%;
+      content: "";
+      background-repeat: space repeat;
+      background-image: url(images/bg_dot03.png);
+      left: 0;
+    }
+  }
+}
+.sub-title02 {
+  letter-spacing: 0.16em;
+  line-height: 2.2;
+  font-size: clamp(14px, 3vw, 19px);
+
+  text-align: center;
+  margin-bottom: 16px !important;
+
+  @include mq(lg) {
+    margin-bottom: 20px !important;
   }
 
   & > span {
@@ -304,15 +334,82 @@ img {
 }
 
 .postLinks {
-  @extend .flex;
+  display: flex;
   justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  max-width: 300px;
+  margin: 0 auto;
 
   @extend .mb-md;
+  &__link {
+    flex: 1;
+    text-align: center;
+    & .btn {
+      color: $cWhite;
+      font-size: 12px;
+      padding: 20px 2px;
+      text-decoration: none;
+      width: 100%;
+      display: inline-block;
+      min-width: 160px;
+    }
+    &-prev {
+      position: relative;
+      &::after {
+        content: "\f061";
+        font-family: "Font Awesome 5 free";
+        font-weight: 600;
+        position: absolute;
+        left: 0px;
+        top: 20px;
+        transform: rotate(180deg);
+      }
+    }
+    &-next {
+      position: relative;
+      &::after {
+        content: "\f061";
+        font-family: "Font Awesome 5 free";
+        font-weight: 600;
+        position: absolute;
+        right: 0px;
+        top: 20px;
+      }
+    }
+    &-prev,
+    &-next {
+      text-align: center;
+      & > a {
+        font-size: 14px;
+        padding: 20px 2px;
+        text-decoration: none;
+        width: 100%;
+        display: inline-block;
+        color: $main-txt;
+      }
+    }
+  }
+}
+.centered {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+
+.service-postLinks {
+  @extend .content-width1000;
+  @extend .flex;
+  justify-content: space-between;
+  list-style: none;
+
+  @extend .mb-md;
+  @extend .pt-md;
   &__link {
     border-top: 1px solid $lightGray;
     border-bottom: 1px solid $lightGray;
     flex-basis: 50%;
-    padding: 20px 0;
+
     border-right: 1px solid $lightGray;
     &:first-child {
       border-right: none;
@@ -327,18 +424,41 @@ img {
     }
     & > a {
       color: $main-txt;
-      font-size: 12px;
-      padding: 20px 2px;
+      font-size: 14px;
       text-decoration: none;
       width: 100%;
-      display: inline-block;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      justify-content: space-between;
     }
-    &-prev {
-      text-align: left;
-    }
+
     &-next {
-      text-align: right;
+      & > a {
+        @include mq(md) {
+          flex-direction: row-reverse;
+        }
+      }
     }
+    &-img {
+      display: inline-block;
+      height: 100%;
+      & > img {
+        object-fit: contain;
+        height: 100%;
+      }
+    }
+    &-txt {
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+    }
+  }
+  &__btn {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    @extend .mt-md;
   }
 }
 
@@ -595,6 +715,7 @@ img {
     }
   }
   & td {
+    width: 100%;
     @extend .font-sm;
     line-height: 1.8;
     & p {
@@ -634,6 +755,7 @@ img {
     border: 1px solid $cOrange;
     border-radius: 3px;
     padding: 3px 4px 3px 30px;
+    margin-bottom: 10px;
     & dt {
       color: $cOrange;
       font-weight: 700;
@@ -656,10 +778,10 @@ img {
   table-layout: fixed;
   width: 100%;
   @extend .font-sm;
-  white-space: nowrap;
+
   border-spacing: 5px;
-  min-width: 630px;
-  margin-bottom: 16px;
+  min-width: 990px;
+  margin-bottom: 6px;
 
   & th,
   & td {
@@ -838,4 +960,8 @@ li {
   &::marker {
     color: $cOrange;
   }
+}
+
+.orange {
+  color: $cOrange;
 }

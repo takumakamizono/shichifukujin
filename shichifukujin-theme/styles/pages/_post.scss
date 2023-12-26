@@ -7,8 +7,12 @@
   @extend .pt-md;
   &__inner {
     @extend .content-width;
-    max-width: $contentMaxWidth1000;
-    @extend .pb-lg;
+    @extend .mb-md;
+    border-bottom: 1px solid $lightGray;
+  }
+  &__grid {
+    @extend .flex960;
+    justify-content: space-between;
   }
   &__content {
     &-header {
@@ -58,14 +62,7 @@
       }
     }
     &-text {
-      background: $BgColor;
-
-      padding: 12px;
-      border-radius: 10px;
-      min-height: 150px;
-      @include mq(lg) {
-        padding: 30px;
-      }
+      min-height: 200px;
       & p {
         @extend .font-sm;
         margin-bottom: 10px;
@@ -109,10 +106,11 @@
   }
   &__img {
     flex-basis: 35%;
-    @extend .mb-sm;
+
     & > img {
       margin-bottom: 10px;
       width: 100%;
+      height: 100%;
 
       object-fit: cover;
       border-radius: 10px;
@@ -140,13 +138,21 @@
   &__location {
     @extend .font-sm;
     @extend .mb-sm;
-    line-height: 1.8em;
+
     min-height: 58px;
+    font-size: 14px;
+    & p {
+      font-weight: 600;
+      margin-bottom: 8px;
+      & > span {
+        margin-left: 10px;
+      }
+    }
     &-tels {
       @extend .flex;
       & > span {
         &:nth-child(1) {
-          margin-right: 10px;
+          margin-right: 20px;
         }
       }
     }
@@ -199,10 +205,7 @@
     @extend .mb-md;
     letter-spacing: 0.16em;
     line-height: 1.5;
-    text-align: center;
-    @include mq(lg) {
-      text-align: left;
-    }
+    text-align: left;
   }
   &__sec01-desc {
     line-height: 2;
@@ -486,29 +489,6 @@
     @include mq(lg) {
       padding: 20px 30px;
     }
-
-    // &:nth-child(3) {
-    //   .interview__content-inner {
-    //     @include mq(md) {
-    //       flex-direction: row-reverse;
-    //     }
-    //   }
-    //   .interview__img {
-    //     justify-content: flex-end;
-    //   }
-    // }
-    // &:last-child {
-    //   .interview {
-    //     &__content-inner {
-    //       flex-direction: column;
-    //     }
-    //     &__img,
-    //     &__texts {
-    //       flex-basis: 100%;
-    //       justify-content: center;
-    //     }
-    //   }
-    // }
   }
 }
 
@@ -677,24 +657,28 @@
   &__inner {
     @extend .flex;
     justify-content: space-between;
-    @extend .content-width1000;
+    @extend .content-width;
   }
 
   &__img {
-    @extend .mb-sm;
-    & > img {
-      object-fit: cover;
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 10px;
-      font-size: 14px;
-      height: 200px;
-    }
+    @extend .mb-md;
+    width: 100%;
+    height: 250px;
     @include mq(md) {
       flex-basis: 49%;
     }
     @include mq(lg) {
       flex-basis: 33%;
+      height: 300px;
+    }
+
+    & > img {
+      object-fit: cover;
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+
+      height: 100%;
     }
   }
 }
@@ -705,6 +689,9 @@
     max-width: $contentMaxWidth1000;
     margin: 0 auto;
     width: 90%;
+  }
+  &__box {
+    @extend .mb-md;
   }
   &__ul {
     padding: 0;
@@ -765,6 +752,27 @@
       margin-top: 8px;
     }
   }
+  &__pdfBtn {
+    text-align: center;
+
+    & .btn {
+      position: relative;
+      padding: 10px 30px;
+
+      &::before {
+        content: "\f1c1";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        font-size: 17px;
+
+        position: absolute;
+        top: 50%;
+
+        transform: translateY(-50%);
+        left: 10px;
+      }
+    }
+  }
 }
 
 .image-display {
@@ -819,7 +827,7 @@
     }
   }
   &__bg {
-    height: 94%;
+    height: 165%;
     background: $BgColor;
     position: absolute;
     bottom: 0;
@@ -880,12 +888,11 @@
   @extend .mb-lg;
 
   &__inner {
-    max-width: $contentMaxWidth1000;
-    margin: 0 auto;
-    width: 90%;
-    @extend .mb-md;
+    @extend .content-width;
   }
   &__blocks {
+    list-style: none;
+    padding: 0;
     @extend .flex;
     justify-content: space-between;
   }
@@ -900,9 +907,11 @@
   }
   &__img {
     width: 100%;
+    height: 300px;
     margin-bottom: 20px;
     & > img {
       width: 100%;
+      height: 100%;
       object-fit: cover;
       border-radius: 10px;
     }
@@ -991,9 +1000,6 @@
     width: 100%;
     padding: 30px 10px;
     border-radius: 10px;
-    @include mq(lg) {
-      padding: 30px 40px;
-    }
   }
   &__bottom-tit {
     text-align: center;
@@ -1212,6 +1218,8 @@
 
 .news-report {
   @extend .mb-md;
+  max-width: $contentMaxWidth1000;
+  margin: 0 auto;
 
   &__year {
     & > span {
@@ -1254,7 +1262,7 @@
     @extend .mb-sm;
     background: $BgColor;
 
-    padding: 15px 20px;
+    padding: 15px 5px 15px 20px;
     border-radius: 10px;
     @include mq(lg) {
       padding: 25px 30px;

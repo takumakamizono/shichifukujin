@@ -32,12 +32,9 @@
                         <p>各施設の七福神スタッフにインタビューしました。</p>
 
                             </div>
-                           <?php
-                            $interview  = get_term_by('slug','interview','category');
-                            $interview_link = get_term_link($interview,'category');
-                           ?>
+                          
                     <div class="detailed-info__btn">
-                        <a class="btn slide-bg" href="<?= esc_url($interview_link); ?>" >
+                        <a class="btn slide-bg" href="<?= home_url('/staff-interview/') ?>" >
                         詳細はこちら
                        </a>
                        </div>

@@ -23,11 +23,11 @@ Template Post Type: page
         <div id="content">
         <?php get_template_part('include/hero'); ?>
           <div id="main-content">
-           
+          <?php if(have_posts()): ?>
+            <?php while(have_posts()):the_post(); ?>
             <main>
             <?php  get_template_part('include/warning');?>
-            <?php if(have_posts()): ?>
-            <?php while(have_posts()):the_post(); ?>
+          
             <?php get_template_part('include/breadcrumb'); ?> 
             <div class="page-content">
               <div class="page-content__inner">
@@ -194,11 +194,12 @@ echo '<ul class="sm-list sm-list-post">';
 </div>
                 </div>
           </div>
-            <?php endwhile; ?>
-            <?php endif; ?>
+         
             
                    
             </main>
+            <?php endwhile; ?>
+            <?php endif; ?>
           
           </div>
         </div>

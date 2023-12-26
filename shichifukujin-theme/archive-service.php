@@ -38,7 +38,9 @@ $total_posts = $count_posts->publish;
                 'taxonomy'=>'facility',
                 'parent'   => 0,
                 'orderby'  => 'description',
-                'order'    => 'ASC']);
+                'order'    => 'ASC'
+                ]
+              );
                 if(!empty($facilitys)):
                 ?>
                 <div class="service-pageNav">
@@ -70,6 +72,8 @@ $total_posts = $count_posts->publish;
                       'taxonomy' => 'facility',
                       'terms'=>$facility -> slug,
                       'field' => 'slug',
+                      'orderby' => 'date', // 日付で並べ替え
+                      'order' => 'DESC', // 降順（古い順）
                      ];
                      $args['tax_query']= $taxquerysp;
      

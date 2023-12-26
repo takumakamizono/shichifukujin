@@ -29,84 +29,78 @@
           </div>
 
 
-   <?php elseif(is_archive()):?>
-   <?php
-    $post_type = 'service';
-    $post_type_object = get_post_type_object($post_type);
-    
-    ?>
-      <div class="hero-sub">    
-        <div class="hero-sub__inner">
-              <div class="hero-sub__titles">    
-              <?php if(is_category()):  ?>  
-                <?php
-                  $category = get_queried_object();
-                  $cat_slug = $category->category_nicename;
-                  $cat_name = $category->cat_name;
-                  ?>               
-              <h2 class="hero-sub__maintitle "><?=  esc_html($cat_name); ?></h2>
-              <?php elseif (is_tax()) :
-    $term = get_queried_object();
-    ?>
-    <h2 class="hero-sub__maintitle"><?= esc_html($term->name); ?></h2>
-   
+        <?php  elseif (is_archive()):
+        
+        $post_type = 'service';
+        $post_type_object = get_post_type_object($post_type);
+       
+        
+    $title = '';
 
-              <?php  elseif($post_type_object):?> 
-              <h2 class="hero-sub__maintitle "><?=  post_type_archive_title('', false);?></h2>       
-              <?php endif; ?>        
-              </div>
-              <div class="hero-sub__img"> 
-                <?php if(is_category('news') || in_category('news')):  ?>      
-                  <img src="<?php the_field('news_img',312);?>" alt="お知らせのヘッダー画像">   
-            
-                <?php elseif($post_type):  ?>      
-                  <img src="<?php the_field('service_img',312);?>" alt="サービス紹介のヘッダー画像">   
-            
-             <?php endif; ?>
-            </div>     
-        </div>
-      </div>
-      <?php elseif(is_single()):?>
-        <?php
-    $post_type = 'service';
-    $post_type_object = get_post_type_object($post_type);
-   
-    ?>
-   
-      <div class="hero-sub">    
-        <div class="hero-sub__inner">
-              <div class="hero-sub__titles">  
-              <?php if(is_singular('post')): ?>
-    <?php
-    $categories = get_the_category();
-   
-    if (!empty($categories)) {
-      $cat_slug = $categories[0]->slug;
-      $cat_name = $categories[0]->name;
+    if (is_month()) {
+        $title = get_the_date('Y年n月', get_queried_object_id());
+    } elseif (is_category()) {
+        $category = get_queried_object();
+        $title = $category->cat_name;
+    } elseif (is_tax()) {
+        $term = get_queried_object();
+        $title = $term->name;
+    } elseif ($post_type_object) {
+        $title = post_type_archive_title('', false);
     }
     ?>
-    <h2 class="hero-sub__maintitle"><?= esc_html($cat_name); ?></h2>
-              <?php elseif(is_singular('service')):  ?> 
-                <?php
-               $terms = get_the_terms(get_the_ID(), 'facility'); 
-               if ($terms && !is_wp_error($terms)):
-                foreach ($terms as $term):
-                 ?> 
-                <h2 class="hero-sub__maintitle "><?=  esc_html( $term->name);?></h2>
-              <?php endforeach;       
-               endif;       
-               endif; ?>       
-              </div>
-              <div class="hero-sub__img"> 
-                <?php if(is_single()&& get_post_type() === 'post'):  ?>  
-                 <img src="<?php the_field('news_img',312);?>" alt="お知らせのヘッダー画像">
-                 <?php elseif($post_type):  ?>      
-                  <img src="<?php the_field('service_headimage');?>" alt="サービス紹介のヘッダー画像">   
-            
-             <?php endif; ?>
-            </div>     
+    <div class="hero-sub">
+        <div class="hero-sub__inner">
+            <div class="hero-sub__titles">
+                <?php if (!empty($title)) : ?>
+                    <h2 class="hero-sub__maintitle"><?= esc_html($title); ?></h2>
+                <?php endif; ?>
+            </div>
+            <div class="hero-sub__img">
+                <?php if (is_category('news') || in_category('news')) : ?>
+                    <img src="<?php the_field('news_img', 312); ?>" alt="お知らせのヘッダー画像">
+                <?php elseif ($post_type) : ?>
+                    <img src="<?php the_field('service_img', 312); ?>" alt="サービス紹介のヘッダー画像">
+                <?php endif; ?>
+            </div>
         </div>
-      </div>
+    </div>
+    <?php elseif(is_single()): ?>
+    <?php
+    $post_type = 'service';
+    $post_type_object = get_post_type_object($post_type);
+    ?>
+   
+    <div class="hero-sub">
+        <div class="hero-sub__inner">
+            <div class="hero-sub__titles">
+                <?php
+                if(is_singular('post')) {
+                    $categories = get_the_category();
+                    if (!empty($categories)) {
+                        $cat_slug = $categories[0]->slug;
+                        $cat_name = $categories[0]->name;
+                        echo '<h2 class="hero-sub__maintitle">' . esc_html($cat_name) . '</h2>';
+                    }
+                } elseif(is_singular('service')) {
+                    $terms = get_the_terms(get_the_ID(), 'facility'); 
+                    if ($terms && !is_wp_error($terms)) {
+                        foreach ($terms as $term) {
+                            echo '<h2 class="hero-sub__maintitle">' . esc_html($term->name) . '</h2>';
+                        }
+                    }
+                }
+                ?>
+            </div>
+            <div class="hero-sub__img">
+                <?php if(is_single() && get_post_type() === 'post'): ?>
+                    <img src="<?php the_field('news_img', 312); ?>" alt="お知らせのヘッダー画像">
+                <?php elseif($post_type): ?>
+                    <img src="<?php the_field('service_headimage'); ?>" alt="サービス紹介のヘッダー画像">
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
       <?php elseif(is_page()) : ?>
         <?php
 $page = get_post( get_the_ID() );

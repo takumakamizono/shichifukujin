@@ -6,8 +6,6 @@
 <?php get_template_part('service_inc/sec-try'); ?>
 <?php if($post_slug === 'lalachance' || $post_slug === 'fanfan' ): ?>
    <?php get_template_part('service_inc/facility-slide'); ?>
-   <?php endif; ?>
-   <?php if($post_slug === 'lalachance'): ?>
    <?php get_template_part('service_inc/sec-price'); ?>
    <?php endif; ?>
 

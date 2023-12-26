@@ -240,6 +240,11 @@
 .overview {
   @extend .content-width1000;
   @extend .mb-lg;
+  &__report {
+    & > a {
+      color: $main-txt;
+    }
+  }
 }
 .overview-table {
   border-collapse: collapse;
@@ -253,6 +258,7 @@
   }
   & th {
     position: relative;
+    @extend .font-sm;
     text-align: left;
     width: 100%;
     background-color: $mainColor;
@@ -372,7 +378,10 @@
 
 .philosophy {
   &__wrap {
-    @extend .mb-lr;
+    @extend .content-width1000;
+    &:nth-child(1) {
+      @extend .pt-md;
+    }
     &:nth-child(even) {
       .philosophy__wrap-inner {
         @include mq(lg) {
@@ -386,55 +395,45 @@
     justify-content: space-between;
   }
   &__wrap-texts {
-    flex-basis: 49%;
+    flex-basis: 47%;
     display: flex;
     justify-content: center;
     align-items: center;
     & h3 {
       @extend .mb-sm;
-      @extend .font-lr;
+      font-size: clamp(16px, 4vw, 24px);
+    }
+    & p {
+      @extend .font-sm;
     }
   }
 
   &__wrap-img {
-    flex-basis: 48%;
+    flex-basis: 49%;
 
     margin: 0 auto;
     @extend .mb-sm;
   }
   &:nth-child(1) {
-    @extend .pb-lg;
+    @extend .pb-lr;
   }
-  &:nth-child(2) {
-    position: relative;
-    &::after {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      background-image: url(./images/about_idea_bg2.png);
-      height: 100%;
-      width: 100%;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: bottom;
-      z-index: 100;
+  &__blocks {
+    @include mq(lg) {
+      margin: 0 auto;
+      width: 90%;
+      max-width: $contentMaxWidth1000;
     }
   }
-
-  &__inner {
-    @extend .content-width;
-  }
-
   &__block {
     position: relative;
     z-index: 50;
     @extend .mb-md;
-    padding: 15px 20px;
-    border-radius: 10px;
+    padding: 20px;
+
     background: $cWhite;
     @include mq(lg) {
-      padding: 30px 25px;
+      padding: 50px 40px;
+      border-radius: 10px;
     }
   }
   &__main {
@@ -455,10 +454,10 @@
     }
   }
   &__bg {
-    height: 90%;
+    height: 130%;
     background: $BgColor;
     position: absolute;
-    bottom: -80px;
+    bottom: -20px;
     left: 0;
     width: 100%;
     z-index: -1;
@@ -495,13 +494,17 @@
     & > h4 {
       text-align: left;
     }
+    & p {
+      @extend .font-sm;
+    }
   }
   &__promise {
     background: $cWhite;
-    border-radius: 10px;
-    padding: 20px 10px;
+
+    padding: 20px;
     @include mq(lg) {
       padding: 50px 40px;
+      border-radius: 10px;
     }
     &-inner {
       max-width: $contentMaxWidth1000;
@@ -511,6 +514,23 @@
 }
 .philosophys {
   position: relative;
+}
+.seven-bg {
+  @extend .pt-md;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 10%;
+    left: 0;
+    background-image: url(./images/about_idea_bg2.png);
+    height: 60%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    z-index: 100;
+  }
 }
 
 .accordion-table {
@@ -631,7 +651,7 @@
 
 .page-procedure {
   @extend .pt-md;
-  @extend .mb-lg;
+
   &__mainTit {
     font-size: clamp(14px, 4vw, 25px);
     @extend .mb-md;
@@ -645,9 +665,8 @@
     }
   }
   &__wrap {
-    @extend .mb-lg;
     background: $BgColor;
-    @extend .pb-md;
+    @extend .pb-lr;
     @extend .pt-md;
   }
   &__block {
@@ -729,6 +748,7 @@
     }
   }
   &__flow {
+    @extend .pb-lr;
     &-inner {
       @extend .content-width1000;
     }
@@ -793,39 +813,36 @@
 }
 
 .greeting {
-  @extend .mb-lg;
+  @extend .mb-lr;
 
   &__inner {
     @extend .content-width1000;
-
-    @include mq(lg) {
-      padding: 30px 20px;
-    }
   }
   &__top-inner {
     @extend .flex960;
     justify-content: space-between;
-    align-items: center;
   }
   &__top-desc {
-    flex-basis: 68%;
+    flex-basis: 60%;
 
     & > h3 {
-      font-size: clamp(12px, 3vw, 19px);
+      font-size: clamp(14px, 3vw, 19px);
       margin-bottom: 20px;
       line-height: 2.2;
       & > span {
         position: relative;
-        &::before {
-          bottom: -13px;
-          height: 16px;
-          background-size: 16px auto;
-          position: absolute;
-          width: 100%;
-          content: "";
-          background-repeat: space repeat;
-          background-image: url(images/bg_dot01.png);
-          left: 0;
+        @include mq(md) {
+          &::before {
+            bottom: -13px;
+            height: 16px;
+            background-size: 16px auto;
+            position: absolute;
+            width: 100%;
+            content: "";
+            background-repeat: space repeat;
+            background-image: url(images/bg_dot01.png);
+            left: 0;
+          }
         }
       }
     }
@@ -835,7 +852,7 @@
     }
   }
   &__top-img {
-    flex-basis: 30%;
+    flex-basis: 38%;
     max-width: 400px;
     @extend .mb-md;
     & > img {

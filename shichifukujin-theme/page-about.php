@@ -20,11 +20,11 @@
         <div id="content">
         <?php get_template_part('include/hero'); ?>
           <div id="main-content">
-           
+          <?php if(have_posts()): ?>
+            <?php while(have_posts()):the_post(); ?>
             <main>
             <?php  get_template_part('include/warning');?>
-            <?php if(have_posts()): ?>
-            <?php while(have_posts()):the_post(); ?>
+          
          
              
               <?php get_template_part('include/breadcrumb'); ?> 
@@ -58,7 +58,7 @@
 <p> 私たちは、“地域ぐるみでお互い様”の関係性づくりを目指し、 まずはできることから活動の輪を広げ、地域社会から愛され親しまれる組織を目指してまいります。</p>
 </div>
 <div class="greeting__top-img">
-  <img src="<?= get_template_directory_uri(); ?>/images/president.png" alt="">
+  <img src="<?= get_template_directory_uri(); ?>/images/president.png?v2" alt="">
   <p><span>理事長</span>長田 祐里華</p>
 </div>
 </div>
@@ -135,7 +135,12 @@
                     </div>
                     </div>
                 
-                      <div class="philosophy__promise">
+            
+                 
+                    </div>
+                  </section>
+                  <section class="philosophy">
+                  <div class="philosophy__promise">
                       <div class="section-titles">
                   <h2 class="main-title">
                     <span>お客様とのお約束</span>             
@@ -163,18 +168,15 @@
                    
 
                     </div>  
-                 
-                    </div>
-                  </section>
-                  <section class="philosophy">
                     
-                  <div class="section-titles">
+                 
+                    <div class="philosophy__blocks seven-bg">
+                    <div class="section-titles">
                   <h3 class="main-title">
                    <span> 七福神の７つの心・２つの力・９つの行動</span>
                   </h3>
               
                 </div>
-                    <div class="philosophy__inner">
                       <div class="philosophy__block">
                       <h4 class="content-subtitle">７つの心</h4>
                     
@@ -222,8 +224,7 @@
                 </div>
                 
           
-            <?php endwhile; ?>
-            <?php endif; ?>
+
             <section class="overview">
                   <div class="section-titles">
                   <h2 class="main-title">
@@ -267,8 +268,11 @@
   </tr> 
 </table>
   </div>
+  <div class="overview__report">
+  <a href="<?= esc_url(home_url('report')); ?>" class="btn02">決算報告書等はこちら</a>
+</div>    
  </section> 
-            <?php get_template_part('include/news-report'); ?>
+       
             <?php get_template_part('include/facility-list'); ?> 
             <section class="aboutpage-access">
                     <div class="aboutpage-access__inner">
@@ -295,10 +299,12 @@
                     </div>
                   </section>    
 
-      
+               
             <?php get_template_part('include/contact'); ?>
             
             </main>
+            <?php endwhile; ?>
+            <?php endif; ?>
           
           </div>
         </div>
@@ -307,6 +313,7 @@
       </div>
       <?php get_template_part('include/mobile-menu');?>
     </div>
+   
     <?php wp_footer(); ?>
   </body>
 </html>
