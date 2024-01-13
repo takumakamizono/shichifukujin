@@ -95,12 +95,12 @@ function custom_wpcf7_validate_kana($result,$tag)
 {
     $tag   = new WPCF7_Shortcode($tag);
     $name  = $tag->name;
-    $value = isset($_POST[$name]) ? trim(wp_unslash(strtr((string) $_POST[$name], "\n", " "))) : "";
+    $value = isset($_POST[$name]) ? wp_unslash(strtr((string) $_POST[$name], "\n", " ")) : "";
  
     //全角カタカナ又は平仮名の入力チェック
     if ($name === "your-kana"||$name==="tenant-kana") {
-        if(!preg_match("/^[ア-ヶーぁ-ん]+$/u", $value)) {
-            $result->invalidate( $tag,"全角カタカナ又は平仮名で入力してください。");
+        if(!preg_match("/^[ア-ヶーぁ-ん　]+$/u", $value)) {
+            $result->invalidate( $tag,"全角カタカナ又は平仮名で入力してください。名字と名前の間は全角スペースです。");
         }
     }
     return $result;
