@@ -168,28 +168,7 @@ echo '<ul class="sm-list sm-list-post">';
   }
   ?>
 </div>
-<div class="site-map__box">
-  <?php
-  $category_slug = 'interview'; // 取得するカテゴリのスラッグ
-  $category = get_category_by_slug($category_slug);
-  if ($category) {
-    echo '<h2><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></h2>';
-    $myposts = get_posts(array(
-      'numberposts' => -1,
-      'category' => $category->term_id
-    ));
-    if ($myposts) {
-      echo '<ul class="sm-list sm-list-post">';
-      foreach ($myposts as $post) {
-        setup_postdata($post);
-        echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
-      }
-      echo '</ul>';
-      wp_reset_postdata();
-    }
-  }
-  ?>
-</div>
+
  
 </div>
                 </div>
