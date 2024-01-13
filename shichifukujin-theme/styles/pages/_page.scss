@@ -1065,3 +1065,11 @@
     @extend .font-sm;
   }
 }
+
+.iframe-aspect {
+  aspect-ratio: 16 / 9;
+  & iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
